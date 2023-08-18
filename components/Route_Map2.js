@@ -16,13 +16,13 @@ import { LogBox } from 'react-native';
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs();//Ignore all log notifications
 
-export default function Map1() {
+export default function Map2() {
   const [latitude, setLatitude] = useState(0);
   const [longitude, setLongitude] = useState(0);
 
   useEffect(() => {
     const db = FIREBASE_DB;
-    const dbPath = 'user'; // Change this path to match your Firebase data structure
+    const dbPath = 'Map2'; // Change this path to match your Firebase data structure
 
     const fetchData = () => {
       const databaseRef = ref(db, dbPath);
