@@ -20,12 +20,12 @@ export default function App() {
       /> 
       <Stack.Screen 
         name="Student"
-        component={Student_route_select}
+        component={Student_route}
         options={{ headerShown: false,}}
       /> 
       <Stack.Screen 
         name="Student"
-        component={Driver_Route_Select}
+        component={Driver_route_select}
         options={{ headerShown: false,}}
       />
       </Stack.Navigator>
