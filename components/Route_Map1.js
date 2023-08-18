@@ -25,7 +25,7 @@ export default function Map1() {
 
   useEffect(() => {
     const db = FIREBASE_DB;
-    const dbPath = 'user'; // Change this path to match your Firebase data structure
+    const dbPath = 'Map1'; // Change this path to match your Firebase data structure
 
     const fetchData = () => {
       const databaseRef = ref(db, dbPath);
