@@ -23,7 +23,11 @@ export default function App() {
         component={Student_route_select}
         options={{ headerShown: false,}}
       /> 
-
+      <Stack.Screen 
+        name="Student"
+        component={Driver_Route_Select}
+        options={{ headerShown: false,}}
+      />
       </Stack.Navigator>
       </NavigationContainer>
   );
