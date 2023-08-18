@@ -12,13 +12,13 @@ const data =[
     id : "123",
     title : "STUDENT",
     image: require("../../assets/studenticon.png"),
-    screen: 'Student_route_select' ,
+    screen: 'Student_route' ,
 },
 {
 id:"456",
 title: "DRIVER",
 image: require("../../assets/drivericon.png"),
-screen:"DriverLogin",
+screen:"Driver_Login",
 
 },
 ];
