@@ -2,7 +2,7 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getDatabase } from 'firebase/database';
 
-const firebaseConfig = {
+const firebase = {
     apiKey: "AIzaSyAnTW3WFfq9JSAm9cTsbFkHOwEUj5RD694",
     authDomain: "database-1afa1.firebaseapp.com",
     databaseURL: "https://database-1afa1-default-rtdb.firebaseio.com",
@@ -13,7 +13,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase app
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebase);
 
 // Get Firebase Auth instance
 const auth1 = getAuth(app);

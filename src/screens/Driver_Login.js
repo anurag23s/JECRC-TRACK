@@ -52,7 +52,7 @@ const Login = (props) => {
   return (
     <ImageBackground
       style={styles.container}
-      source={require('../../assets/ocean.jpg')}
+      source={require('./ocean.jpg')}
     >
       <View style={styles.innerContainer}>
         <KeyboardAvoidingView behavior='padding'>

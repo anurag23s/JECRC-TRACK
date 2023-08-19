@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import LottieView from 'lottie-react-native';
+//import LottieView from 'lottie-react-native';
 
 const TnC = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>JECRC Track Terms and Conditions</Text>
-      <View style={styles.lottie}>
+      {/*<View style={styles.lottie}>
             <LottieView source={require('../../assets/animation_lldyzgmo.json')} autoPlay loop />
-    </View>
+  </View>*/}
       <View style={styles.section}>
         <Text style={styles.heading}>1. App Usage</Text>
         <Text style={styles.paragraph}>

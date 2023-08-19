@@ -30,7 +30,7 @@ const OnboardingScreen = ({ navigation }) => {
       setCurrentPage(currentPage + 1);
     } else {
       // Navigate to the main app screen after onboarding completion
-      navigation.navigate('MainApp');
+      navigation.navigate('Chooseuser');
     }
   };
 
@@ -52,7 +52,7 @@ const OnboardingScreen = ({ navigation }) => {
           </TouchableOpacity>
         )}
         <View style={{ flex: 1 }} />
-        <TouchableOpacity style={styles.button} onPress={navigation.navigate(Chooseuser)}>
+        <TouchableOpacity style={styles.button} onPress={navigation.navigate(handleNext)}>
           <Text style={styles.buttonText}>{currentPage === pages.length - 1 ? 'Get Started' : 'Next'}</Text>
         </TouchableOpacity>
       </View>
