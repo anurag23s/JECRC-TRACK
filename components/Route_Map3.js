@@ -17,7 +17,7 @@ LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs();//Ignore all log notifications
 
 
-export default function Map2() {
+export default function Route_Map3() {
   const [latitude, setLatitude] = useState(0);
   const [longitude, setLongitude] = useState(0);
 
@@ -53,8 +53,7 @@ export default function Map2() {
     };
   }, []);
 
-  const name = [
-        
+  const name = [     
     {text:'GANDHI NAGAR PULIYA'},
     {text:'CHITRAKOOT CHAURAHA'},
     {text:'AKSHAR DHAM'},
@@ -62,20 +61,16 @@ export default function Map2() {
     {text:'NIRMAN NAGAR'},
     {text:'SHYAM NAGAR'},          
     {text:'SANJEEVANI HOSPITAL'},
-    
     {text:'VIVEK VIHAR'},
     {text:'GURJAR KI THADI'}, 
     {text:'RIDDHI SIDDHI'},   
-
     {text:'TRIVENI NAGAR CHAURAHA'},
     {text:'GOPAL PURA CHOKI'},
     {text:' MAHAVEER NAGAR'},
-    {text:'DURGAPURA ROAD'}, 
-    
+    {text:'DURGAPURA ROAD'},     
     {text:'JECRC COLLEGE'}, 
     {text:'END'}
     
- 
   ];
 
 
@@ -208,78 +203,65 @@ export default function Map2() {
       
       <Marker
       coordinate={loca}
-      title="NIWARU"
+      title="GANDHI NAGAR PULIYA"
     />
     <Marker
       coordinate={locb}
-      title="AMBEY HOSPITAL"
+      title="CHITRAKOOT CHAURAHA"
     />
   <Marker
       coordinate={ locc}
-      title="VAIDH Jl"
+      title="AKSHAR DHAM "
     />
   <Marker
       coordinate={ locd}
-      title="NATH JI Kl THADI NIWARU ROAD"
+      title="SBI BANK"
     />
-  <Marker
+
+<Marker
       coordinate={ loce }
-      title="NIWARU BYE PASS"
+      title="NIRMAN NAGAR"
     />
   <Marker
       coordinate={ locf }
-      title=" KHIRNI PHATAK"
+      title=" SHYAM NAGAR"
     />
-  <Marker
-      coordinate={locg }
-      title="HANUMAN NAGAR (JODHPUR SWEET)"
-    />
+ 
   <Marker
       coordinate={ loch }
-      title="  VAISHALI CIRCLE "
+      title=" SANJEEVANI HOSPITAL  "
     />
-    <Marker
-      coordinate={ loci}
-      title=" GUPTA STORE"
-    />
+    
+
     <Marker
       coordinate={locj}
-      title=" BHARAT APPARTMENT"
+      title="VIVEK VIHAR "
     />
     <Marker
       coordinate={lockk}
-      title="AKSHAR DHAM"
+      title="GURJAR KI THADI"
     />
     <Marker
       coordinate={locl}
-      title="CHITRAKOOT"
+      title="RIDDHI SIDDHI"
     />
     <Marker
       coordinate={locm}
-      title="CHITRAKOOT BANK CIRCLE"
+      title="TRIVENI NAGAR CHAURAHA"
     />
     <Marker
       coordinate={locn}
-      title="DABAS PULIA"
+      title="GOPAL PURA CHOKI"
     />
   
    <Marker
       coordinate={loco}
-      title=" 200 FEET BYE  PASS"
+      title=" MAHAVEER NAGAR"
     />
   
   <Marker
       coordinate={locp}
-      title=" PUNJABI DHABA"
-    />
-  
-  <Marker
-      coordinate={locq}
-      title="OM HOTEL"
-    />
-   <Marker
-      coordinate={locr}
-      title=" METRO STATION"
+      title=" DURGAPURA ROAD "
     />
   
   
@@ -318,24 +300,16 @@ export default function Map2() {
     />
    <MapViewDirections 
     origin = {locf} 
-    destination={locg}
-    apikey={GOOGLE_MAPS_APIKEY}
-    />
-  <MapViewDirections 
-    origin = {locg} 
     destination={loch}
     apikey={GOOGLE_MAPS_APIKEY}
     />
+ 
   <MapViewDirections 
     origin = {loch} 
-    destination={loci}
-    apikey={GOOGLE_MAPS_APIKEY}
-    />
-  <MapViewDirections 
-    origin = {loci} 
     destination={locj}
     apikey={GOOGLE_MAPS_APIKEY}
     />
+ 
   <MapViewDirections 
     origin = {locj} 
     destination={lockk}
@@ -371,27 +345,90 @@ export default function Map2() {
     destination={locq}
     apikey={GOOGLE_MAPS_APIKEY}
     />
-   <MapViewDirections 
-    origin = {locq} 
-    destination={locr}
-    apikey={GOOGLE_MAPS_APIKEY}
-    />
-   <MapViewDirections 
-    origin = {locr} 
-    destination={locs}
-    apikey={GOOGLE_MAPS_APIKEY}
-    />
-  
-  
-  
-  
+ 
   </MapView>
+    </View>
+
+
+  
+<View  style={tw`flex:1  h-1/2 bg-white `}>
+<Text  style={tw` text-2xl top-2 text-center font-bold bg-current ` }>
+  Route Details
+</Text>
+<View style={tw `border-t border-black mt-2`}></View>
+
+<View  style={tw`aligned-center flex:1  rounded-half  top-4 justify-evenly justify-center h-3/4 bottom-32`}>
+
+  <FlatList 
+
+    data={name}
+    keyExtractor={(inx) => inx.toString()}
+    renderItem={({ item ,inx}) => (
+    <View style={tw`text-center justify-center `}>
+
+           {inx > 0 && <Text style={tw` mx-48 `}>•</Text>} 
+           {inx > 0 && <Text style={tw` mx-48 `}>•</Text>} 
+       <Text style={tw` mx-28 text-center bg-green-400 `}>{item.text}</Text>     
+       <MIcon 
+       style={tw` mx-28 bottom-5`}
+       name="bus-stop" size={20} color="red" /> 
+
+    </View>      
+  )}
+
+
+  />
+</View>
+
+    
+
+
+
+
+
+
+
+  <View   style={tw` flex:1 rounded-full  bg-blue-300 h-1/4 bottom-11`}>
+   <Icon style={tw`  top-8 left-2 absolute  `}
+       name="user-circle" size={50} color="white" />
+  
+  <Text   style={tw` text-xl  text-center  font-bold ` }>
+  
+    Driver Details
+    
+  </Text>
+ <Text  style={tw`  left-16` }>
+  Name: Ram ji
+ </Text>
+ <Text  style={tw`  left-16` }>
+  Contact no: 48942454
+ </Text>
+ <Text  style={tw`  left-16` }>
+  Bus No: RJ14GC7643
+ </Text>
+ 
+
   </View>
+
+</View>
   </View>
   </SafeAreaView>
-  
     );
   };
+
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  });
+
+
+
+
   
   
   
