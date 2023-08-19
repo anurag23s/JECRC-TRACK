@@ -1,6 +1,3 @@
-
-
-
 const { initializeApp } = require('firebase/app');
 const { getAuth } = require('firebase/auth');
 const { getDatabase } = require('firebase/database');
