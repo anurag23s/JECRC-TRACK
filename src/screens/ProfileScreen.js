@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { User, getAuth, onAuthStateChanged } from 'firebase/auth';
@@ -7,23 +6,15 @@ import { auth1 } from '../firebase';
 import { db1 } from '../firebase';
 import { onValue } from 'firebase/database';
 
-interface UserInfo {
-  
-  Contact: number;
-  Name:string
-  Bus_No:string
-  Route_No:number
-}
-
 const ProfileScreen = () => {
-  const [userEmail, setUserEmail] = useState<string | null>(null);
-  const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
+  const [userEmail, setUserEmail] = useState(null);
+  const [userInfo, setUserInfo] = useState(null);
 
   useEffect(() => {
     const auth = getAuth();
     const db = getDatabase();
 
-    const authStateChanged = onAuthStateChanged(auth, (user: User | null) => {
+    const authStateChanged = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUserEmail(user.email);
 
@@ -32,15 +23,19 @@ const ProfileScreen = () => {
           const dbPath = `users/userDetail_${sanitizedEmail}`;
           const userRef = ref(db, dbPath);
 
-          onValue(userRef, (snapshot) => {
-            if (snapshot.exists()) {
-              const userData = snapshot.val();
-              console.log('Retrieved User Data:', userData);
-              setUserInfo(userData);
+          onValue(
+            userRef,
+            (snapshot) => {
+              if (snapshot.exists()) {
+                const userData = snapshot.val();
+                console.log('Retrieved User Data:', userData);
+                setUserInfo(userData);
+              }
+            },
+            {
+              onlyOnce: true // This ensures that the listener fetches the data only once
             }
-          }, {
-            onlyOnce: true // This ensures that the listener fetches the data only once
-          });
+          );
         }
       }
     });
@@ -58,20 +53,10 @@ const ProfileScreen = () => {
 
       {userInfo ? (
         <View>
-          
-          <Text style={styles.userInfo}>
-            Contact: {userInfo.Contact}
-          </Text>
-          <Text style={styles.userInfo}>
-           Name: {userInfo.Name}
-          </Text>
-          <Text style={styles.userInfo}>
-            Bus_No: {userInfo.Bus_No}
-          </Text>
-          <Text style={styles.userInfo}>
-            Route_No: {userInfo.Route_No}
-          </Text>
-          
+          <Text style={styles.userInfo}>Contact: {userInfo.Contact}</Text>
+          <Text style={styles.userInfo}>Name: {userInfo.Name}</Text>
+          <Text style={styles.userInfo}>Bus_No: {userInfo.Bus_No}</Text>
+          <Text style={styles.userInfo}>Route_No: {userInfo.Route_No}</Text>
         </View>
       ) : null}
     </View>
@@ -90,4 +75,3 @@ const styles = StyleSheet.create({
 });
 
 export default ProfileScreen;
-
