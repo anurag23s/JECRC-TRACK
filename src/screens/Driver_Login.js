@@ -9,7 +9,7 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity,
 } from 'react-native';
-import { auth1 } from '../../firebase';
+import { auth1 } from './firebase';
 import {
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
@@ -52,7 +52,7 @@ const Login = (props) => {
   return (
     <ImageBackground
       style={styles.container}
-      source={require('../../assets/ocean.jpg')}
+      source={require('./ocean.jpg')}
     >
       <View style={styles.innerContainer}>
         <KeyboardAvoidingView behavior='padding'>
