@@ -8,21 +8,19 @@ import Route_Map4 from './components/Route_Map4';
 import Route_Map3 from './components/Route_Map3';
 import Route_Map2 from './components/Route_Map2';
 import Route_Map1 from './components/Route_Map1';
-import Driver_route_select from './route_select/Driver_route_select';
-import Student_route from './route_select/Student_route';
 import TnC from './src/screens/Tnc';
 import Chooseuser from './src/screens/Chooseuser';
 import Driver_Login from './src/screens/Driver_Login'
+import Driver_route_select from './route_select/Driver_route_select';
+import Student_route from './route_select/Student_route';
 
 export default function App() {
   const Stack = createStackNavigator();
-  const InsideStack = createStackNavigator();
-  
   return (
     <NavigationContainer>
       <Stack.Navigator>
       <Stack.Screen 
-        name="Student"
+        name="Onboarding"
         component={OnboardingScreen}
         options={{ headerShown: false,}}
       />
@@ -32,42 +30,42 @@ export default function App() {
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
-        name="SelectScreen"
+        name="Chooseuser"
         component={Chooseuser}
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
-        name="Driver"
+        name="DriverLogin"
         component={Driver_Login}
         options={{ headerShown: false,}}
       /> 
       <Stack.Screen 
-        name="Student_route"
+        name="StudentRoute"
         component={Student_route}
         options={{ headerShown: false,}}
       /> 
       <Stack.Screen 
-        name="Driver_route_select"
+        name="DriverRouteSelect"
         component={Driver_route_select}
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
-        name="Route_Map1"
+        name="RouteMap1"
         component={Route_Map1}
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
-        name="Route_Map2"
+        name="RouteMap2"
         component={Route_Map2}
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
-        name="Route_Map3"
+        name="RouteMap3"
         component={Route_Map3}
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
-        name="Route_Map4"
+        name="RouteMap4"
         component={Route_Map4}
         options={{ headerShown: false,}}
       />

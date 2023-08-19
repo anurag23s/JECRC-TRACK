@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import Chooseuser from './src/screens/Chooseuser';
 /*https://i.pinimg.com/originals/54/57/47/545747123b8c60dba4dcadd40b36c1b8.gif
  https://dhundhoo.com/images/dhundhoo_school_bus_animation.gif*/
  
@@ -51,7 +52,7 @@ const OnboardingScreen = ({ navigation }) => {
           </TouchableOpacity>
         )}
         <View style={{ flex: 1 }} />
-        <TouchableOpacity style={styles.button} onPress={handleNext}>
+        <TouchableOpacity style={styles.button} onPress={navigation.navigate(Chooseuser)}>
           <Text style={styles.buttonText}>{currentPage === pages.length - 1 ? 'Get Started' : 'Next'}</Text>
         </TouchableOpacity>
       </View>
