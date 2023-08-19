@@ -35,12 +35,12 @@ export default function App() {
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
-        name="DriverLogin"
+        name="Driver_Login"
         component={Driver_Login}
         options={{ headerShown: false,}}
       /> 
       <Stack.Screen 
-        name="StudentRoute"
+        name="Student_route"
         component={Student_route}
         options={{ headerShown: false,}}
       /> 
@@ -50,22 +50,22 @@ export default function App() {
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
-        name="RouteMap1"
+        name="Map1"
         component={Route_Map1}
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
-        name="RouteMap2"
+        name="Map2"
         component={Route_Map2}
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
-        name="RouteMap3"
+        name="Map3"
         component={Route_Map3}
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
-        name="RouteMap4"
+        name="Map4"
         component={Route_Map4}
         options={{ headerShown: false,}}
       />
