@@ -1,18 +1,13 @@
-
 import React from 'react';
 import { View, Text, Modal, Button, StyleSheet, TouchableOpacity } from 'react-native';
-import ProfileScreen from './ProfileScreen' 
+import ProfileScreen from './route_select/ProfileScreen'; 
 // Import the UserProfile component
 import { User, getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getDatabase, ref, get } from 'firebase/database';
-import { auth1} from '../../firebase';
+import { auth1 } from './firebase';
 import { color } from 'react-native-tailwindcss';
 
-interface UserAvatarProps{
-  onClose: () => void;
-}
-
-const UserAvatar = ({ onClose }:UserAvatarProps) => {
+const UserAvatar = ({ onClose }) => {
   return (
     <Modal animationType="slide" transparent={true} visible={true}>
       <View style={styles.modalContainer}>
@@ -20,11 +15,11 @@ const UserAvatar = ({ onClose }:UserAvatarProps) => {
           <ProfileScreen />
 
           <View style={styles.spacer} />
-           {/* Close Button */}
-           <Button title="Close" onPress={onClose}  />
+          {/* Close Button */}
+          <Button title="Close" onPress={onClose}  />
          
-             {/* Spacer */}
-             <View style={styles.spacer} />
+          {/* Spacer */}
+          <View style={styles.spacer} />
 
           {/* Logout Button */}
           <TouchableOpacity onPress={() => auth1.signOut()} style={styles.logoutButton}>
@@ -57,7 +52,7 @@ const styles = StyleSheet.create({
     height: 10 // Add a vertical space between Close and Logout buttons
   },
   logoutButton: {
-     // Add top margin to push Logout button below Close button
+    // Add top margin to push Logout button below Close button
     backgroundColor: 'red',
     paddingVertical: 7,
     paddingHorizontal: 10,
@@ -72,9 +67,3 @@ const styles = StyleSheet.create({
 });
 
 export default UserAvatar;
-
-
-
-
-
-
