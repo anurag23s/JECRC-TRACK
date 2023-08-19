@@ -15,7 +15,7 @@ const Student_route = () => {
     <View  style={tw` p-1   top-7`} >
          <View style={tw`   top-1 m-2 bg-blue-300 `}>
         <TouchableOpacity
-               onPress={() => navigation.navigate('MapTest')}
+               onPress={() => navigation.navigate('Chooseuser')}
 
                         style={{ 
                             marginRight: 329,

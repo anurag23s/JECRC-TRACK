@@ -14,6 +14,8 @@ import {
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
 } from 'firebase/auth';
+import Driver_route_select from '../../route_select/Driver_route_select';
+import { useNavigation } from '@react-navigation/native';
 
 const Login = (props) => {
   const [email, setEmail] = useState('');
@@ -26,6 +28,7 @@ const Login = (props) => {
     try {
       const response = await signInWithEmailAndPassword(auth, email, password);
       console.log(response);
+      
     } catch (error) {
       console.log(error);
       alert('Sign in failed: ' + error.message);
