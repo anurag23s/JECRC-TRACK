@@ -6,7 +6,7 @@ import { ChevronLeftIcon} from 'react-native-heroicons/solid';
 import { useNavigation } from '@react-navigation/native';
 import LottieView from 'lottie-react-native';
 
-const DRS = () => {
+const Driver_route_select = () => {
   const navigation = useNavigation();
   const handleOptionPress = (optionId) => {
     const [lat, setLat] = useState([])
@@ -70,7 +70,6 @@ const DRS = () => {
         console.warn(err);
       }
     };
-
 
 
   
@@ -206,7 +205,7 @@ onPress={() => handleOptionPress('Map2')}
   )
 }
 
-export default DRS;
+export default Driver_route_select ;
 
 const styles = StyleSheet.create({
   container: {
