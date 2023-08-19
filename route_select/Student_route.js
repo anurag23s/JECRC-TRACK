@@ -6,7 +6,7 @@ import { ChevronLeftIcon} from 'react-native-heroicons/solid';
 import { useNavigation } from '@react-navigation/native';
 import LottieView from 'lottie-react-native';
 
-const HomeScreen = () => {
+const Student_route = () => {
   const navigation = useNavigation();
   
 
@@ -141,7 +141,7 @@ onPress={() => navigation.navigate('Map2')}
   )
 }
 
-export default HomeScreen;
+export default Student_route;
 
 const styles = StyleSheet.create({
   container: {
