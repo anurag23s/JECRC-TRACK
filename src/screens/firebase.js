@@ -1,15 +1,6 @@
-<<<<<<< HEAD:src/screens/firebase.js
-//const { initializeApp } = require('firebase/app');
-//const { getAuth } = require('firebase/auth');
-//const { getDatabase } = require('firebase/database');
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getDatabase } from "firebase/database";
-=======
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getDatabase } from 'firebase/database';
->>>>>>> 3e85d9b9cef383893facf9b57170d0623f0be3de:firebase.js
 
 const firebase = {
     apiKey: "AIzaSyAnTW3WFfq9JSAm9cTsbFkHOwEUj5RD694",
