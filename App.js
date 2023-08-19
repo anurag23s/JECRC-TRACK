@@ -8,6 +8,9 @@ import Route_Map4 from './components/Route_Map4';
 import Route_Map3 from './components/Route_Map3';
 import Route_Map2 from './components/Route_Map2';
 import Route_Map1 from './components/Route_Map1';
+import TnC from './src/screens/Tnc';
+import Chooseuser from './src/screens/Chooseuser';
+import Driver_Login from './Driver_Login'
 import Driver_route_select from './route_select/Driver_route_select';
 import Student_route from './route_select/Student_route';
 
