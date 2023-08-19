@@ -1,5 +1,4 @@
-
-import React ,{useState} from 'react-native'
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -10,12 +9,11 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity,
 } from 'react-native';
-import { auth1 } from '../../firebase';
+import { auth1 } from './firebase';
 import {
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
 } from 'firebase/auth';
-import Field from './Field.js'
 
 const Login = (props) => {
   const [email, setEmail] = useState('');
@@ -63,7 +61,7 @@ const Login = (props) => {
             <Text style={styles.subHeading}>Welcome Back</Text>
             <Text style={styles.infoText}>Login to your account</Text>
 
-            <Field
+            {/* <Field
               value={email}
               style={styles.input}
               placeholder='Email/Password'
@@ -71,14 +69,34 @@ const Login = (props) => {
               onChangeText={(text) => setEmail(text)}
             />
 
-          <Field
+            <Field
               secureTextEntry={true}
               value={password}
               style={styles.input}
               placeholder='Password'
               autoCapitalize='none'
               onChangeText={(text) => setPassword(text)}
-            />
+            /> */}
+
+<TextInput
+  value={email}
+  style={styles.input}
+  placeholder='Email/Password'
+  autoCapitalize='none'
+  onChangeText={(text) => setEmail(text)}
+/>
+
+<TextInput
+  secureTextEntry={true}
+  value={password}
+  style={styles.input}
+  placeholder='Password'
+  autoCapitalize='none'
+  onChangeText={(text) => setPassword(text)}
+/>
+
+
+
 
             <TouchableOpacity onPress={resetPassword}>
               <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
@@ -141,7 +159,6 @@ const styles = StyleSheet.create({
   input: {
     marginVertical: 4,
     height: 50,
-
     borderWidth: 1,
     borderRadius: 4,
     padding: 10,
@@ -151,14 +168,13 @@ const styles = StyleSheet.create({
     marginLeft: -50,
     alignItems: 'center',
     marginTop: 20,
-    
   },
   forgotPasswordText: {
     color: 'black',
     fontWeight: 'bold',
     fontSize: 16,
     marginBottom: 40,
-    marginLeft:130
+    marginLeft: 130,
   },
   buttonText: {
     color: 'white',
@@ -177,5 +193,3 @@ const styles = StyleSheet.create({
 });
 
 export default Login;
-
-

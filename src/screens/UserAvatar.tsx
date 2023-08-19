@@ -1,11 +1,11 @@
 
 import React from 'react';
 import { View, Text, Modal, Button, StyleSheet, TouchableOpacity } from 'react-native';
-import ProfileScreen from './route_select/ProfileScreen' 
+import ProfileScreen from './ProfileScreen' 
 // Import the UserProfile component
 import { User, getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getDatabase, ref, get } from 'firebase/database';
-import { auth1} from './firebase';
+import { auth1} from '../../firebase';
 import { color } from 'react-native-tailwindcss';
 
 interface UserAvatarProps{

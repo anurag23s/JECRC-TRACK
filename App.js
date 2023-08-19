@@ -15,7 +15,7 @@ export default function App() {
       />
       <Stack.Screen 
         name="Driver"
-        component={DriverLogin}
+        component={Driver_Login}
         options={{ headerShown: false,}}
       /> 
       <Stack.Screen 
