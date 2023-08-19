@@ -52,7 +52,7 @@ const OnboardingScreen = ({ navigation }) => {
           </TouchableOpacity>
         )}
         <View style={{ flex: 1 }} />
-        <TouchableOpacity style={styles.button} onPress={navigation.navigate(handleNext)}>
+        <TouchableOpacity style={styles.button} onPress={handleNext}>
           <Text style={styles.buttonText}>{currentPage === pages.length - 1 ? 'Get Started' : 'Next'}</Text>
         </TouchableOpacity>
       </View>
