@@ -10,29 +10,29 @@
 
 # Native
 # *.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
+# *.jks
+# *.p8
+# *.p12
+# *.key
+# *.mobileprovision
 
 # Metro
-.metro-health-check*
+# .metro-health-check*
 
 # debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
+# npm-debug.*
+# yarn-debug.*
+# yarn-error.*
 
 # macOS
-.DS_Store
-*.pem
+#.DS_Store
+# *.pem
 
 # local env files
-.env*.local
+#.env*.local
 
 # typescript
-*.tsbuildinfo
+# *.tsbuildinfo
 
 
 .env
