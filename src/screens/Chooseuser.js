@@ -6,6 +6,8 @@ import {LinearGradient} from 'expo-linear-gradient';
 import LottieView from 'lottie-react-native';
 import { useNavigation } from '@react-navigation/native';
 import 'react-native-gesture-handler';
+import Student_route from '../../route_select/Student_route';
+import Driver_Login from '../../route_select/Driver_route_select';
 
 const data =[
 {
