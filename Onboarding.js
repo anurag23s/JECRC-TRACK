@@ -29,7 +29,7 @@ const OnboardingScreen = ({ navigation }) => {
       setCurrentPage(currentPage + 1);
     } else {
       // Navigate to the main app screen after onboarding completion
-      navigation.navigate('MainApp');
+      navigation.navigate('SelectScreen');
     }
   };
 

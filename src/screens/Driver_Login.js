@@ -52,8 +52,8 @@ const Login = (props) => {
   return (
     <ImageBackground
       style={styles.container}
-      source={require('./assets/ocean.jpg')}
-    >
+      //source={require('src\screens\ocean.jpg')}
+  > 
       <View style={styles.innerContainer}>
         <KeyboardAvoidingView behavior='padding'>
           <Text style={styles.heading}>Driver's Login Page</Text>

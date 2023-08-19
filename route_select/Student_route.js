@@ -1,6 +1,6 @@
 import {Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 import React from 'react';
-import tw from 'tailwind-react-native-classnames';
+import tw from 'twrnc';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ChevronLeftIcon} from 'react-native-heroicons/solid';
 import { useNavigation } from '@react-navigation/native';

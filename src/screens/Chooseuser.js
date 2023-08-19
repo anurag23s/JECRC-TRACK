@@ -6,6 +6,7 @@ import {LinearGradient} from 'expo-linear-gradient';
 import LottieView from 'lottie-react-native';
 import { useNavigation } from '@react-navigation/native';
 import 'react-native-gesture-handler';
+import Driver_Login from './Driver_Login';
 
 const data =[
 {
@@ -18,7 +19,7 @@ const data =[
 id:"456",
 title: "DRIVER",
 image: require("../../assets/drivericon.png"),
-screen:"Driver_Login",
+screen: 'Driver_Login',
 
 },
 ];
