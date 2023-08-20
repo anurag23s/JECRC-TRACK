@@ -125,7 +125,7 @@ onPress={() => navigation.navigate('Map2')}
     </View>
 
 <TouchableOpacity
- onPress={() => navigation.navigate('Map_route1')}>
+ onPress={() => navigation.navigate('Map4')}>
 <View>
 
 <Icon  style={tw `bg-gray-100  absolute z-50 mr-7 right-4 `}

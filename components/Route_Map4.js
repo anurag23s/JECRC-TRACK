@@ -3,7 +3,7 @@ import { StyleSheet, Text, View ,TouchableOpacity, FlatList, SafeAreaView, Image
 import MapView, { Marker } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
 import { GOOGLE_MAPS_APIKEY } from "@env";
-import { FIREBASE_DB } from '../src/screens/firebase';
+import { db1 } from '../src/screens/firebase';;
 import { onValue, off, ref } from 'firebase/database';
 import MIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -20,7 +20,7 @@ export default function Route_Map4() {
   const [longitude, setLongitude] = useState(0);
 
   useEffect(() => {
-    const db = FIREBASE_DB;
+    const db = db1;
     const dbPath = 'Map4'; // Change this path to match your Firebase data structure
 
     const fetchData = () => {

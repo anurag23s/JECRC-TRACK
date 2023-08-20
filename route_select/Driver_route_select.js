@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { ChevronLeftIcon} from 'react-native-heroicons/solid';
 import { useNavigation } from '@react-navigation/native';
 import * as Location from 'expo-location';
-import { FIREBASE_DB } from '../src/screens/firebase';
+import { db1 } from '../src/screens/firebase';
 import LottieView from 'lottie-react-native';
 import { onValue, off, ref, set } from 'firebase/database';
 const Driver_route_select = () => {
@@ -56,12 +56,12 @@ const Driver_route_select = () => {
         setText(JSON.stringify(location));
 
         try{
-            const db1 = FIREBASE_DB;
+            const db = db1;
             const timeStampString = new Date().toISOString();
             const validPathString = timeStampString.replace(/[\.\-:#\[\]]/g, '_');
             const dbPath = `${optionId}/${validPathString}`;
 
-            await set(ref(db1, dbPath), {
+            await set(ref(db, dbPath), {
                 longitude: location.coords.longitude,
                 latitude: location.coords.latitude,
                 speed: location.coords.speed,
