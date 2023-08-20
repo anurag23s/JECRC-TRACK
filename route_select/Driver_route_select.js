@@ -26,8 +26,8 @@ const Driver_route_select = () => {
 };
     
     useEffect(() => {
-        requestLocation();
-        navigation.navigate(`${optionId}`);
+        //requestLocation();
+        //navigation.navigate(`${optionId}`);
 
         const intervalId = setInterval(() => {
             requestLocation();
@@ -134,7 +134,10 @@ const Driver_route_select = () => {
                         
 
       <TouchableOpacity    
-        onPress={() => handleOptionPress(setOptionId('Map1'))}
+        onPress={() => {
+          setOptionId('Map1');
+          handleOptionPress('Map1');
+        }}
 
        >
         <View>
@@ -160,7 +163,10 @@ const Driver_route_select = () => {
    
     <TouchableOpacity
 
-onPress={() => handleOptionPress(setOptionId(Map2))}
+onPress={() => {
+  setOptionId('Map2');
+  handleOptionPress('Map2');
+}}
 >
       <View>
       <Icon  style={tw `bg-gray-100  absolute  flex-1  mr-7  right-4`}
@@ -181,7 +187,10 @@ onPress={() => handleOptionPress(setOptionId(Map2))}
     </View>
 
     <TouchableOpacity 
-    onPress={() => handleOptionPress(setOptionId(Map3))}
+    onPress={() => {
+      setOptionId('Map3');
+      handleOptionPress('Map3');
+    }}
     >
 <Icon  style={tw `bg-gray-100  absolute z-30 mr-7 right-4 `}
  name="location-arrow" size={28} color="black" />
@@ -200,7 +209,10 @@ onPress={() => handleOptionPress(setOptionId(Map2))}
     </View>
 
 <TouchableOpacity
- onPress={() => handleOptionPress(setOptionId('Map4'))}>
+ onPress={() => {
+  setOptionId('Map4');
+  handleOptionPress('Map4');
+}}>
 <View>
 
 <Icon  style={tw `bg-gray-100  absolute z-50 mr-7 right-4 `}
