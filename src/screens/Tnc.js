@@ -1,8 +1,11 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import Chooseuser from './Chooseuser';
 //import LottieView from 'lottie-react-native';
 
 const TnC = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>JECRC Track Terms and Conditions</Text>
@@ -44,6 +47,11 @@ Students are granted access to view the live location of the college bus they ar
         The App collects and processes location data solely for the purpose of providing bus tracking services.
 Location data is securely transmitted and stored.
         </Text>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.button} onPress={navigation.navigate(Chooseuser)}>
+            <Text style={styles.buttonText}>I AGREE</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );
@@ -79,6 +87,18 @@ const styles = StyleSheet.create({
   paragraph: {
     fontSize: 16,
     lineHeight: 24,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    marginTop: 30,
+  },
+  button: {
+    backgroundColor: 'black',
+    borderRadius: 8,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
   },
 });
 
