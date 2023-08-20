@@ -52,7 +52,7 @@ const Driver_route_select = () => {
         let location = await Location.getCurrentPositionAsync({});
         setLat(location.coords.latitude);
         setLon(location.coords.longitude);
-    
+        console.log(location);
         setText(JSON.stringify(location));
 
         try{
