@@ -398,13 +398,11 @@ export default function Route_Map1() {
     origin = {locr} 
     destination={locs}
     apikey={GOOGLE_MAPS_APIKEY}
-    />
-  
-  
-  
-  
+    /> 
   </MapView>
   </View>
+
+
 
   <View  style={tw`  h-1/2 bg-white `}>
 <Text  style={tw` text-2xl top-2 text-center font-bold  ` }>
