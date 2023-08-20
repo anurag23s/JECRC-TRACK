@@ -1,17 +1,29 @@
 import {Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 import React from 'react';
+import { useState, useEffect } from 'react';
 import tw from 'tailwind-react-native-classnames';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ChevronLeftIcon} from 'react-native-heroicons/solid';
 import { useNavigation } from '@react-navigation/native';
+import * as Location from 'expo-location';
+import { FIREBASE_DB } from '../src/screens/firebase';
 import LottieView from 'lottie-react-native';
-
+import { onValue, off, ref, set } from 'firebase/database';
 const Driver_route_select = () => {
   const navigation = useNavigation();
-  const handleOptionPress = (optionId) => {
-    const [lat, setLat] = useState([])
-    const [lon, setLon] = useState([])
-    const [text, setText] = useState([])
+  const [lat, setLat] = useState([])
+  const [lon, setLon] = useState([])
+  const [text, setText] = useState([])
+  const [optionId, setOptionId] = useState([])
+    
+  const handleOptionPress = async (optionId) => {
+    try {
+      await requestLocation();
+      navigation.navigate(optionId); // Navigate to the desired map screen
+    } catch (error) {
+      console.error('Error sharing location:', error);
+    }
+};
     
     useEffect(() => {
         requestLocation();
@@ -44,12 +56,12 @@ const Driver_route_select = () => {
         setText(JSON.stringify(location));
 
         try{
-            const db = FIREBASE_DB;
+            const db1 = FIREBASE_DB;
             const timeStampString = new Date().toISOString();
             const validPathString = timeStampString.replace(/[\.\-:#\[\]]/g, '_');
             const dbPath = `${optionId}/${validPathString}`;
 
-            await set(ref(db, dbPath), {
+            await set(ref(db1, dbPath), {
                 longitude: location.coords.longitude,
                 latitude: location.coords.latitude,
                 speed: location.coords.speed,
@@ -73,7 +85,7 @@ const Driver_route_select = () => {
 
 
   
-  };
+  
   return (
     
     <View  style={tw` p-1   top-7`} >
@@ -122,7 +134,7 @@ const Driver_route_select = () => {
                         
 
       <TouchableOpacity    
-        onPress={() => handleOptionPress('Map1')}
+        onPress={() => handleOptionPress(setOptionId('Map1'))}
 
        >
         <View>
@@ -148,7 +160,7 @@ const Driver_route_select = () => {
    
     <TouchableOpacity
 
-onPress={() => handleOptionPress('Map2')}
+onPress={() => handleOptionPress(setOptionId(Map2))}
 >
       <View>
       <Icon  style={tw `bg-gray-100  absolute  flex-1  mr-7  right-4`}
@@ -169,7 +181,7 @@ onPress={() => handleOptionPress('Map2')}
     </View>
 
     <TouchableOpacity 
-    onPress={() => handleOptionPress('Map3')}
+    onPress={() => handleOptionPress(setOptionId(Map3))}
     >
 <Icon  style={tw `bg-gray-100  absolute z-30 mr-7 right-4 `}
  name="location-arrow" size={28} color="black" />
@@ -188,7 +200,7 @@ onPress={() => handleOptionPress('Map2')}
     </View>
 
 <TouchableOpacity
- onPress={() => handleOptionPress('Map4')}>
+ onPress={() => handleOptionPress(setOptionId('Map4'))}>
 <View>
 
 <Icon  style={tw `bg-gray-100  absolute z-50 mr-7 right-4 `}

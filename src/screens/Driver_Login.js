@@ -22,12 +22,13 @@ const Login = (props) => {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const auth = auth1;
-
+  const navigation = useNavigation();
   const signIn = async () => {
     setLoading(true);
     try {
       const response = await signInWithEmailAndPassword(auth, email, password);
       console.log(response);
+      navigation.navigate(Driver_route_select);
       
     } catch (error) {
       console.log(error);

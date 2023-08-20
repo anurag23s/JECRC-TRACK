@@ -138,7 +138,7 @@ export default function App() {
         options={{ headerShown: false,}}
       /> 
       <Stack.Screen 
-        name="DriverRouteSelect"
+        name="Driver_route_select"
         component={Driver_route_select}
         options={{ headerShown: false,}}
       />

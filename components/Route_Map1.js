@@ -8,6 +8,7 @@ import { onValue, off, ref } from 'firebase/database';
 import MIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import tw from 'tailwind-react-native-classnames';
+//import * as Location from 'expo-location';
 
 
 
