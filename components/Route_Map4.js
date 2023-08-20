@@ -449,86 +449,73 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
   origin = {locu} 
   destination={locv}
   apikey={GOOGLE_MAPS_APIKEY}
-  />
-  
-
-
-
+  />  
 </MapView>
 </View>
 
 
 
-<View  style={tw`flex:1  h-1/2 bg-white `}>
-<Text  style={tw` text-2xl top-2 text-center font-bold bg-current ` }>
-Route Details
+<View  style={tw`  h-1/2 bg-white `}>
+<Text  style={tw` text-2xl top-2 text-center font-bold  ` }>
+  Route Details
 </Text>
-<View style={tw `border-t border-black mt-2`}></View>
+<View style={tw `border-t border-black mt-3`}></View>
+<View  style={tw`aligned-center  rounded-half  top-2 justify-evenly justify-center h-3/4 bottom-32`}>
+<View   style={{height: '100%', width: '100%'}}>
+    <LinearGradient 
+     colors={['#f9f8dd', '#302a75']} 
+      style={{height: '100%'}}> 
+  <View>
+  <FlatList 
 
-<View  style={tw`aligned-center flex:1  rounded-half  top-4 justify-evenly justify-center h-3/4 bottom-32`}>
+    data={name}
+    keyExtractor={(inx) => inx.toString()}
+    renderItem={({ item ,inx}) => (
+    <View style={tw`text-center justify-center `}>
 
-<FlatList 
+           {inx > 0 && <Text style={tw` mx-48 `}>•</Text>} 
+           {inx > 0 && <Text style={tw` mx-48 `}>•</Text>} 
+       <Text style={tw` mx-28 text-center  `}>{item.text}</Text>     
+       <MIcon 
+       style={tw` mx-28 bottom-5`}
+       name="bus-stop" size={20} color="red" /> 
 
-  data={name}
-  keyExtractor={(inx) => inx.toString()}
-  renderItem={({ item ,inx}) => (
-  <View style={tw`text-center justify-center `}>
-
-         {inx > 0 && <Text style={tw` mx-48 `}>•</Text>} 
-         {inx > 0 && <Text style={tw` mx-48 `}>•</Text>} 
-     <Text style={tw` mx-28 text-center bg-green-400 `}>{item.text}</Text>     
-     <MIcon 
-     style={tw` mx-28 bottom-5`}
-     name="bus-stop" size={20} color="red" /> 
-
-  </View>      
-)}
-
-
-/>
-</View>
- 
-<View   style={tw` flex:1 rounded-full  bg-blue-300 h-1/4 bottom-11`}>
- <Icon style={tw`  top-8 left-2 absolute  `}
-     name="user-circle" size={50} color="white" />
-
-<Text   style={tw` text-xl  text-center  font-bold ` }>
-
-  Driver Details
+    </View> 
+         
+  )}
   
-</Text>
-<Text  style={tw`  left-16` }>
-Name: Ram ji
-</Text>
-<Text  style={tw`  left-16` }>
-Contact no: 48942454
-</Text>
-<Text  style={tw`  left-16` }>
-Bus No: RJ14GC7643
-</Text>
-
-
-</View>
-
+  />
+  </View>
+   </LinearGradient>
 </View>
 </View>
-</SafeAreaView>
-  );
-};
+    
+  <View 
+    
+    style={tw` flex:1  bg-gray-300 h-1/4 bottom-11`}>
+   <Icon style={tw`  top-8 left-2 absolute  `}
+       name="user-circle" size={50} color="white" />
+ 
+  <Text   style={tw` text-xl  text-center  font-bold ` }>
+  
+    Driver Details
+    
+  </Text>
+ <Text  style={tw`  left-16` }>
+  Name: Ram ji
+ </Text>
+ <Text  style={tw`  left-16` }>
+  Contact no: 48942454
+ </Text>
+ <Text  style={tw`  left-16` }>
+  Bus No: RJ14GC7643
+ </Text>
+ 
+ 
+  </View>
 
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
-
-
-
-
-
-
-
+</View>
+  </View>
+  </SafeAreaView>
+    );
+  };
