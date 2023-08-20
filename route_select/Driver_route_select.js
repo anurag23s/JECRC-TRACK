@@ -89,7 +89,7 @@ const Driver_route_select = () => {
   return (
     
     <View  style={tw` p-1   top-7`} >
-         <View style={tw`   top-1 m-2 bg-blue-300 `}>
+         <View style={tw`   top-1 m-2 bg-yellow-300 `}>
         <TouchableOpacity
                onPress={() => navigation.navigate('MapTest')}
 
@@ -127,8 +127,8 @@ const Driver_route_select = () => {
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 7 }}>
       <Icon style={tw` p-4  left-4 z-50 p-5 absolute  `}
        name="bus" size={20} color="black" />
-      <Text style={tw` p-1 bg-blue-300 `}>1</Text>  
-       <Text style={tw`top-9 `} >NIRWARU - JECRC </Text> 
+      <Text style={tw` p-1 bg-yellow-300 `}>1</Text>  
+       <Text style={tw`top-9 font-bold`} >NIRWARU - JECRC </Text> 
            
     </View>
                         
@@ -155,8 +155,8 @@ const Driver_route_select = () => {
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 77 }}>
       <Icon style={tw` p-4  left-4 z-50 p-5 absolute   `}
        name="bus" size={20} color="black" />
-      <Text style={tw` p-1 bg-blue-300 `}>2</Text>  
-       <Text style={tw`top-9 `} >MEENA PETROL PUMP - JECRC</Text>      
+      <Text style={tw` p-1 bg-yellow-300 `}>2</Text>  
+       <Text style={tw`top-9 font-bold`} >MEENA PETROL PUMP - JECRC</Text>      
     </View>
    
 
@@ -182,8 +182,8 @@ onPress={() => {
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 77 }}>
       <Icon style={tw` p-4  left-4 z-50 p-5 absolute   `}
        name="bus" size={20} color="black" />
-      <Text style={tw` p-1 bg-blue-300 `}>3</Text>  
-       <Text style={tw`top-9 `} >NIRWARU - JECRC </Text>      
+      <Text style={tw` p-1 bg-yellow-300 `}>3</Text>  
+       <Text style={tw`top-9 font-bold`} >NIRWARU - JECRC </Text>      
     </View>
 
     <TouchableOpacity 
@@ -204,8 +204,8 @@ onPress={() => {
 <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 77 }}>
       <Icon style={tw` p-4  left-4 z-50 p-5 absolute   `}
        name="bus" size={20} color="black" />
-      <Text style={tw` p-1 bg-blue-300 `}>3</Text>  
-       <Text style={tw`top-9 `} >NIRWARU - JECRC </Text>      
+      <Text style={tw` p-1 bg-yellow-300 `}>4</Text>  
+       <Text style={tw`top-9 font-bold`} >NIRWARU - JECRC </Text>      
     </View>
 
 <TouchableOpacity
