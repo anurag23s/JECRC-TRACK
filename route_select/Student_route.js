@@ -102,7 +102,7 @@ onPress={() => navigation.navigate('Map2')}
       <Icon style={tw` p-4  left-4 z-50 p-5 absolute   `}
        name="bus" size={20} color="black" />
       <Text style={tw` p-1 bg-blue-300 `}>3</Text>  
-       <Text style={tw`top-9 `} >NIRWARU - JECRC </Text>      
+       <Text style={tw`top-9 `} > GANDHI PATH PULIYA- JECRC </Text>      
     </View>
 
     <TouchableOpacity 
@@ -120,8 +120,8 @@ onPress={() => navigation.navigate('Map2')}
 <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 77 }}>
       <Icon style={tw` p-4  left-4 z-50 p-5 absolute   `}
        name="bus" size={20} color="black" />
-      <Text style={tw` p-1 bg-blue-300 `}>3</Text>  
-       <Text style={tw`top-9 `} >NIRWARU - JECRC </Text>      
+      <Text style={tw` p-1 bg-blue-300 `}>4</Text>  
+       <Text style={tw`top-9 `} > KHORA BEESAL- JECRC </Text>      
     </View>
 
 <TouchableOpacity

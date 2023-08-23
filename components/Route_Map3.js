@@ -54,7 +54,7 @@ export default function Route_Map3() {
   }, []);
 
   const name = [     
-    {text:'GANDHI NAGAR PULIYA'},
+    {text:'GANDHI PATH PULIYA'},
     {text:'CHITRAKOOT CHAURAHA'},
     {text:'AKSHAR DHAM'},
     {text:'SBI BANK'},
@@ -203,7 +203,7 @@ export default function Route_Map3() {
       
       <Marker
       coordinate={loca}
-      title="GANDHI NAGAR PULIYA"
+      title="GANDHI PATH PULIYA"
     />
     <Marker
       coordinate={locb}

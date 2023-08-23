@@ -55,7 +55,6 @@ export default function Route_Map4() {
   const name = [
         
     {text:'KHORA BEESAL'},
-
     {text:'SITAWALI PHATAK'},
     {text:'NADI KA PHATAK'},
     {text:' DADI KAPHATAK'},
