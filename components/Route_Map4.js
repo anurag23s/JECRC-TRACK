@@ -42,7 +42,7 @@ export default function Route_Map4() {
     fetchData();
 
     // Set up interval to fetch data every 15 seconds
-    const intervalId = setInterval(fetchData, 30000);
+    const intervalId = setInterval(fetchData, 5000);
 
     // Clean up interval and data listener when component unmounts
     return () => {
@@ -245,8 +245,9 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
 
 <Marker
           coordinate={{ latitude, longitude }}
-          title="Driver Location"
-          description="Latest driver location"
+          title="Bus Location"
+          description="Bus Number 4"
+          pinColor='#f6be00'
     />
     
 
@@ -344,7 +345,8 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
 
  <Marker
     coordinate={{ latitude:26.781937, longitude:75.822563 }}
-    title="JECRC COLLEGE"
+    title="JECRC FOUNDATION"
+    pinColor='midnightblue'
   />
 
 

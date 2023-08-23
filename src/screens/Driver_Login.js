@@ -85,8 +85,9 @@ const Login = (props) => {
 <TextInput
   value={email}
   style={styles.input}
-  placeholder='Email/Password'
+  placeholder='Email'
   autoCapitalize='none'
+  keyboardType='email-address'
   onChangeText={(text) => setEmail(text)}
 />
 
@@ -161,17 +162,13 @@ const styles = StyleSheet.create({
     marginRight: 75,
   },
   input: {
-    marginVertical: 4,
-    height: 50,
-    borderWidth: 1,
-    borderRadius: 4,
-    padding: 10,
-    backgroundColor: '#fff',
-    paddingVertical: 15,
-    paddingHorizontal: 120,
-    marginLeft: -50,
-    alignItems: 'center',
-    marginTop: 20,
+    height: 40,
+    width: '70%',
+      margin: 12,
+      backgroundColor: '#fff',
+      borderRadius: 30,
+      padding: 10,
+      marginRight: 30
   },
   forgotPasswordText: {
     color: 'black',

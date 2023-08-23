@@ -198,8 +198,9 @@ export default function Route_Map2() {
  
       <Marker
             coordinate={{ latitude, longitude }}
-            title="Driver Location"
-            description="Latest driver location"
+            title="Bus Location"
+            description="Bus Number 2"
+            pinColor="yellow"
       />
      
     <Marker
@@ -265,7 +266,8 @@ export default function Route_Map2() {
   />
  <Marker
     coordinate={{ latitude:26.781937, longitude:75.822563 }}
-    title="JECRC COLLEGE"
+    title="JECRC FOUNDATION"
+    pinColor='midnightblue'
   />
 
   
