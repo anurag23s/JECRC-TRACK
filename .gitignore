@@ -35,4 +35,4 @@
 # *.tsbuildinfo
 
 
-.env
+# .env
