@@ -54,7 +54,7 @@ export default function Route_Map3() {
   }, []);
 
   const name = [     
-    {text:'GANDHI NAGAR PULIYA'},
+    {text:'GANDHI PATH PULIYA'},
     {text:'CHITRAKOOT CHAURAHA'},
     {text:'AKSHAR DHAM'},
     {text:'SBI BANK'},
@@ -204,7 +204,7 @@ export default function Route_Map3() {
       
       <Marker
       coordinate={loca}
-      title="GANDHI NAGAR PULIYA"
+      title="GANDHI PATH PULIYA"
     />
     <Marker
       coordinate={locb}
@@ -352,15 +352,17 @@ export default function Route_Map3() {
     </View>
 
 
-  
-<View  style={tw`flex:1  h-1/2 bg-white `}>
-<Text  style={tw` text-2xl top-2 text-center font-bold bg-current ` }>
+    <View  style={tw`  h-1/2 bg-white `}>
+<Text  style={tw` text-2xl top-2 text-center font-bold  ` }>
   Route Details
 </Text>
-<View style={tw `border-t border-black mt-2`}></View>
-
-<View  style={tw`aligned-center flex:1  rounded-half  top-4 justify-evenly justify-center h-3/4 bottom-32`}>
-
+<View style={tw `border-t border-black mt-3`}></View>
+<View  style={tw`aligned-center  rounded-half  top-2 justify-evenly justify-center h-3/4 bottom-32`}>
+<View   style={{height: '100%', width: '100%'}}>
+    <LinearGradient 
+     colors={['#f9f8dd', '#302a75']} 
+      style={{height: '100%'}}> 
+  <View>
   <FlatList 
 
     data={name}
@@ -370,30 +372,27 @@ export default function Route_Map3() {
 
            {inx > 0 && <Text style={tw` mx-48 `}>•</Text>} 
            {inx > 0 && <Text style={tw` mx-48 `}>•</Text>} 
-       <Text style={tw` mx-28 text-center bg-green-400 `}>{item.text}</Text>     
+       <Text style={tw` mx-28 text-center  `}>{item.text}</Text>     
        <MIcon 
        style={tw` mx-28 bottom-5`}
        name="bus-stop" size={20} color="red" /> 
 
-    </View>      
+    </View> 
+         
   )}
-
-
+  
   />
+  </View>
+   </LinearGradient>
 </View>
-
+</View>
     
-
-
-
-
-
-
-
-  <View   style={tw` flex:1 rounded-full  bg-blue-300 h-1/4 bottom-11`}>
+  <View 
+    
+    style={tw` flex:1  bg-gray-300 h-1/4 bottom-11`}>
    <Icon style={tw`  top-8 left-2 absolute  `}
        name="user-circle" size={50} color="white" />
-  
+ 
   <Text   style={tw` text-xl  text-center  font-bold ` }>
   
     Driver Details
@@ -409,7 +408,7 @@ export default function Route_Map3() {
   Bus No: RJ14GC7643
  </Text>
  
-
+ 
   </View>
 
 </View>
@@ -417,20 +416,3 @@ export default function Route_Map3() {
   </SafeAreaView>
     );
   };
-
-
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-  });
-
-
-
-
-  
-  
-  
