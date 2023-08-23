@@ -183,7 +183,7 @@ onPress={() => {
       <Icon style={tw` p-4  left-4 z-50 p-5 absolute   `}
        name="bus" size={20} color="black" />
       <Text style={tw` p-1 bg-yellow-300 `}>3</Text>  
-       <Text style={tw`top-9 font-bold`} >NIRWARU - JECRC </Text>      
+       <Text style={tw`top-9 font-bold`} >GANDHI PATH PULIYA - JECRC </Text>      
     </View>
 
     <TouchableOpacity 
@@ -205,7 +205,7 @@ onPress={() => {
       <Icon style={tw` p-4  left-4 z-50 p-5 absolute   `}
        name="bus" size={20} color="black" />
       <Text style={tw` p-1 bg-yellow-300 `}>4</Text>  
-       <Text style={tw`top-9 font-bold`} >NIRWARU - JECRC </Text>      
+       <Text style={tw`top-9 font-bold`} >KHORA BEESAL- JECRC </Text>      
     </View>
 
 <TouchableOpacity

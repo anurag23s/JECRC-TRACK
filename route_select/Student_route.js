@@ -45,8 +45,6 @@ const Student_route = () => {
                              <LottieView source={require('../assets/animation_llerbn4r.json')} autoPlay loop />
                      </View>
 
-
-
     <View style={{ marginTop: 35}} >
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 7 }}>
       <Icon style={tw` p-4  left-4 z-50 p-5 absolute  `}
@@ -71,7 +69,6 @@ const Student_route = () => {
        <View style={tw `border-t border-black mt-10`}></View>
 
     </View>
-  
     <View>
     
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 77 }}>
