@@ -1,6 +1,6 @@
 import { View, Text, KeyboardAvoidingView, ActivityIndicator, StyleSheet, TextInput, Button } from 'react-native'
 import React, {useEffect, useState} from 'react'
-import { FIREBASE_DB } from '../../FirebaseConfig';
+import { FIREBASE_DB } from 'FirebaseConfig';
 import { onValue, ref, set } from 'firebase/database';
 import {LinearGradient} from 'expo-linear-gradient';
 import LottieView from 'lottie-react-native';
