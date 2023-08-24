@@ -96,7 +96,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer} from '@react-navigation/native' ;
 import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
-import OnboardingScreen from './Onboarding';
+import OnboardingScreen from './Onboarding1';
 import Route_Map4 from './components/Route_Map4';
 import Route_Map3 from './components/Route_Map3';
 import Route_Map2 from './components/Route_Map2';
@@ -112,6 +112,8 @@ import ReportIssue from './src/screens/ReportIssue';
 import AboutUsScreen from './AboutUs';
 import EmergencyContactsList from './EmergencyContactsList';
 import DriverProfileScreen from './src/screens/DriverDetailScreen';
+import Onboarding from './Onboarding';
+//import AppNavigation from './Navigation/Appnavigation';
 
 
 
@@ -122,7 +124,7 @@ export default function App() {
       <Stack.Navigator>
       <Stack.Screen 
         name="Onboarding"
-        component={OnboardingScreen}
+        component={Onboarding}
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
