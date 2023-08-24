@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { View, Text, Modal, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import ProfileScreen from './route_select/ProfileScreen'; 
 // Import the UserProfile component
@@ -15,13 +15,13 @@ const UserAvatar = ({ onClose }) => {
           <ProfileScreen />
 
           <View style={styles.spacer} />
-          {/* Close Button */}
+          { Close Button }
           <Button title="Close" onPress={onClose}  />
          
-          {/* Spacer */}
+          { Spacer }
           <View style={styles.spacer} />
 
-          {/* Logout Button */}
+          {/* Logout Button }
           <TouchableOpacity onPress={() => auth1.signOut()} style={styles.logoutButton}>
             <Text style={styles.logoutButtonText}>Logout</Text>
           </TouchableOpacity>
@@ -67,3 +67,5 @@ const styles = StyleSheet.create({
 });
 
 export default UserAvatar;
+
+*/

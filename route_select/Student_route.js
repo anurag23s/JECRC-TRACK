@@ -48,7 +48,7 @@ const Student_route = () => {
   return (
     
     <View  style={tw` p-1   top-7`} >
-         <View style={tw`   top-1 m-2 bg-blue-300 `}>
+         <View style={tw`   top-1 m-2 bg-blue-800 rounded-full`}>
         
          <TouchableOpacity  style={tw` top-4  mr-0.5`} 
                      
@@ -73,7 +73,7 @@ const Student_route = () => {
 
    
        
-        <Text style={tw` bottom-4 text-center justify-evenly text-3xl  font-bold`}> Select Route </Text>
+        <Text style={tw` bottom-4 text-center justify-evenly text-3xl font-bold`} > Select Route </Text>
         {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
           style={{

@@ -1,102 +1,9 @@
-// import { StatusBar } from 'expo-status-bar';
-// import { StyleSheet, Text, View } from 'react-native';
-// import { NavigationContainer} from '@react-navigation/native' ;
-// import { createStackNavigator } from '@react-navigation/stack';
-// import 'react-native-gesture-handler';
-// import OnboardingScreen from './Onboarding';
-// import Route_Map4 from './components/Route_Map4';
-// import Route_Map3 from './components/Route_Map3';
-// import Route_Map2 from './components/Route_Map2';
-// import Route_Map1 from './components/Route_Map1';
-// import TnC from './src/screens/Tnc';
-// import Chooseuser from './src/screens/Chooseuser';
-// import Driver_Login from './src/screens/Driver_Login'
-// import Driver_route_select from './route_select/Driver_route_select';
-// import Student_route from './route_select/Student_route';
-// export default function App() {
-//   const InsideStack=createStackNavigator();
-//   const Stack = createStackNavigator();
-//   function Insidelayout(){
-//     return(
-//       <InsideStack.Navigator>
-//       <InsideStack.Screen 
-//         name="Onboarding"
-//         component={OnboardingScreen}
-//         options={{ headerShown: false,}}
-//       />
-//       <InsideStack.Screen 
-//         name="TnC"
-//         component={TnC}
-//         options={{ headerShown: false,}}
-//       />
-//       <InsideStack.Screen 
-//         name="Chooseuser"
-//         component={Chooseuser}
-//         options={{ headerShown: false,}}
-//       />
-//       <InsideStack.Screen 
-//         name="DriverLogin"
-//         component={Driver_Login}
-//         options={{ headerShown: false,}}
-//       /> 
-//       <InsideStack.Screen 
-//         name="StudentRoute"
-//         component={Student_route}
-//         options={{ headerShown: false,}}
-//       /> 
-//       <InsideStack.Screen 
-//         name="DriverRouteSelect"
-//         component={Driver_route_select}
-//         options={{ headerShown: false,}}
-//       />
-//       <InsideStack.Screen 
-//         name="RouteMap1"
-//         component={Route_Map1}
-//         options={{ headerShown: false,}}
-//       />
-//       <InsideStack.Screen 
-//         name="RouteMap2"
-//         component={Route_Map2}
-//         options={{ headerShown: false,}}
-//       />
-//       <InsideStack.Screen 
-//         name="RouteMap3"
-//         component={Route_Map3}
-//         options={{ headerShown: false,}}
-//       />
-//       <InsideStack.Screen 
-//         name="RouteMap4"
-//         component={Route_Map4}
-//         options={{ headerShown: false,}}
-//       />
-      
-
-//       </InsideStack.Navigator>
- 
-//     )
-//   }
-  
-   
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
-
-
-
 
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer} from '@react-navigation/native' ;
 import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
-import OnboardingScreen from './Onboarding';
 import Route_Map4 from './components/Route_Map4';
 import Route_Map3 from './components/Route_Map3';
 import Route_Map2 from './components/Route_Map2';
@@ -107,24 +14,53 @@ import Driver_Login from './src/screens/Driver_Login'
 import Driver_route_select from './route_select/Driver_route_select';
 import Student_route from './route_select/Student_route';
 import DriverList from './DriverList';
+import {useState,useEffect} from 'react'
 import BusStop from './BusStop';
 import ReportIssue from './src/screens/ReportIssue';
 import AboutUsScreen from './AboutUs';
 import EmergencyContactsList from './EmergencyContactsList';
 import DriverProfileScreen from './src/screens/DriverDetailScreen';
+import OnboardingScreen from './src/screens/OnboardingScreen';
+import {getItem} from './src/screens/utils/asyncStorage'
+//import AppNavigation from './Navigation/Appnavigation';
 
+const Stack = createStackNavigator();
 
+export default function App(){
+  const [showOnboarding,setShowOnboarding]=useState(null);
+useEffect(()=>{
+  checkIfAlreadyOnboarded();
+},[])
+const checkIfAlreadyOnboarded=async()=>{
+  let onboarded=await getItem('onboarded');
+  if(onboarded==1)
+  {
+      setShowOnboarding(false);
+  }
+  else{
+      setShowOnboarding(true)
+  }
+}
+if(showOnboarding==null)
+{
+  return null
+}
+if(showOnboarding){
+  
 
-export default function App() {
-  const Stack = createStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-      <Stack.Screen 
-        name="Onboarding"
-        component={OnboardingScreen}
-        options={{ headerShown: false,}}
-      />
+      <Stack.Navigator initialRouteName='Jecrc-Track'>
+       <Stack.Screen
+          name="Home"
+          options={{headerShown:false}} 
+          component={Chooseuser} />
+
+       <Stack.Screen 
+           name="Jecrc-Track" 
+           options={{headerShown:false}}
+           component={OnboardingScreen} />
+
       <Stack.Screen 
         name="Tnc"
         component={Tnc}
@@ -222,7 +158,7 @@ const styles = StyleSheet.create({
 
 
 
-
+}
 
 
 
