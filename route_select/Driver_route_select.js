@@ -146,7 +146,7 @@ const Driver_route_select = () => {
       const toValue = menuVisible ? 0 : 1;
       Animated.timing(menuAnimation, {
         toValue,
-        duration: 300,
+        duration: 0,
         useNativeDriver: false,
       }).start();
       setMenuVisible(!menuVisible);
@@ -155,7 +155,7 @@ const Driver_route_select = () => {
     const closeMenu = () => {
       Animated.timing(menuAnimation, {
         toValue: 0,
-        duration: 300,
+        duration: 800,
         useNativeDriver: false,
       }).start();
       setMenuVisible(false);

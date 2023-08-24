@@ -33,7 +33,7 @@ const Student_route = () => {
   const closeMenu = () => {
     Animated.timing(menuAnimation, {
       toValue: 0,
-      duration: 300,
+      duration: 800,
       useNativeDriver: false,
     }).start();
     setMenuVisible(false);
