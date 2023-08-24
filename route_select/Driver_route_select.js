@@ -335,7 +335,7 @@ const Driver_route_select = () => {
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
-      <Icon style={tw` p-4  left-4 z-50 p-5 absolute  `}
+      <Icon style={tw` p-4  left-4 p-5 absolute  `}
        name="bus" size={30} color="black" />
       <Text style={tw` p-1 bg-yellow-300 font-bold`}>1</Text>  
        <Text style={tw`top-9 font-bold p-2 bg-yellow-300 rounded-full`} >NIRWARU - JECRC </Text> 
@@ -393,7 +393,7 @@ const Driver_route_select = () => {
         />
       )}
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 40 }}>
-      <Icon style={tw` p-4  left-4 z-50 p-5 absolute   `}
+      <Icon style={tw` p-4  left-4 p-5 absolute   `}
        name="bus" size={30} color="black" />
       <Text style={tw` p-1 bg-yellow-300 font-bold `}>2</Text>  
        <Text style={tw`top-9 font-bold p-2 bg-yellow-300 rounded-full`} >MEENA PETROL PUMP-JECRC</Text>      
@@ -450,7 +450,7 @@ const Driver_route_select = () => {
         />
       )}
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 40 }}>
-      <Icon style={tw` p-4  left-4 z-50 p-5 absolute   `}
+      <Icon style={tw` p-4  left-4  p-5 absolute   `}
        name="bus" size={30} color="black" />
       <Text style={tw` p-1 bg-yellow-300 font-bold `}>3</Text>  
        <Text style={tw`top-9 font-bold p-2 bg-yellow-300 rounded-full`} >GANDHI NAGAR PULIYA-JECRC</Text>      
@@ -504,7 +504,7 @@ const Driver_route_select = () => {
         />
       )}
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 40 }}>
-      <Icon style={tw` p-4  left-4 z-50 p-5 absolute   `}
+      <Icon style={tw` p-4  left-4  p-5 absolute   `}
        name="bus" size={30} color="black" />
       <Text style={tw` p-1 bg-yellow-300 font-bold`}>4</Text>  
        <Text style={tw`top-9 font-bold p-2 bg-yellow-300 rounded-full`} >KHORA BEESAL - JECRC</Text>      
