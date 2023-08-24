@@ -52,7 +52,7 @@ const Chooseuser = () => {
                 
         <TouchableOpacity 
         onPress={() => navigation.navigate(item.screen)}
-        style={tw`p-3 pl-7 pb-8 pt-5 bg-white m-6 w-35 rounded-80 my-25`}
+        style={tw`p-3 pl-7 pb-8 pt-5 bg-white m-6 w-35 rounded-80 my-20`}
         >
             <View>
             <Image 
