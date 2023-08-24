@@ -266,9 +266,34 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
   return (
     <SafeAreaView>
     <View style={tw`flex:1 bg-white `}>
-  
+    {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
   
       <View  style={tw`   h-4/5`}>
+      {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
         <Text style={tw`left-20  font-bold top-10 text-xl`}>KHORA BEESAL- JECRC         </Text>
       <TouchableOpacity   
                     style={tw` p-2  `}
@@ -575,10 +600,20 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
 
 
 
-  <View 
-    
-    style={tw` flex:1 bg-gray-200  h-1/5 `}>
-
+  <View         style={tw` flex:1 bg-gray-200  h-1/5 `}>
+  {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
    <Icon style={tw` top-16 left-3 absolute  `}
        name="user-circle" size={60} color="white" />
  
@@ -589,8 +624,33 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
   </Text>
   
   <View style={tw `border-t border-black mt-2`}></View>
-  
+  {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
   <View style={tw`top-3 left-4`}>
+  {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
  <Text  style={tw`   left-16  text-lg` }>
   Name: Ram ji
  </Text>

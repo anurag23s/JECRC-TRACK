@@ -1,8 +1,14 @@
-import {Text, TouchableOpacity, View, StyleSheet, Alert } from 'react-native';
+import {Text, TouchableOpacity, View, StyleSheet, Alert,Animated,Dimensions } from 'react-native';
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect ,useRef} from 'react';
 import tw from 'tailwind-react-native-classnames';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import MIco from 'react-native-vector-icons/Foundation';
+import MIcon from 'react-native-vector-icons/FontAwesome5';
+import MIcons from 'react-native-vector-icons/MaterialIcons';
+const { width: screenWidth } = Dimensions.get('window');
+import AntDesign from "react-native-vector-icons/Feather";
 import { ChevronLeftIcon} from 'react-native-heroicons/solid';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 import { User, getAuth, onAuthStateChanged } from 'firebase/auth';
@@ -10,6 +16,9 @@ import * as Location from 'expo-location';
 import { db1, auth1 } from '../src/screens/firebase';
 import LottieView from 'lottie-react-native';
 import { onValue, off, ref, set } from 'firebase/database';
+import { Avatar } from 'react-native-paper';
+
+
 const Driver_route_select = () => {
   const navigation = useNavigation();
   const isFocused = useIsFocused();
@@ -130,49 +139,203 @@ const Driver_route_select = () => {
       }
     };
 
-
+    const [menuVisible, setMenuVisible ] = useState(false);
+    const menuAnimation = useRef(new Animated.Value(0)).current;
+  
+    const toggleMenu = () => {
+      const toValue = menuVisible ? 0 : 1;
+      Animated.timing(menuAnimation, {
+        toValue,
+        duration: 300,
+        useNativeDriver: false,
+      }).start();
+      setMenuVisible(!menuVisible);
+    };
+  
+    const closeMenu = () => {
+      Animated.timing(menuAnimation, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: false,
+      }).start();
+      setMenuVisible(false);
+    };
+    const translateX = menuAnimation.interpolate({
+      inputRange: [0, 1],
+      outputRange: [-screenWidth, 0], 
+      
+    });
+  
   
   
   return (
-    
     <View  style={tw` p-1   top-7`} >
-         <View style={tw`   top-1 m-2 bg-yellow-300 rounded-full`}>
-        <TouchableOpacity
-               onPress={() => navigation.navigate('MapTest')}
-
-                        style={{ 
-                            marginRight: 329,
-                            justifyContent:'flex-start', 
-                           
-                            backgroundColor: 'rgba(255,255,255, 0.2)',
-                            
-                            borderColor: 'white',
-                            marginLeft: 7 ,
-                            marginTop:8
-                            
-
-                        }}
-                       
-                    >
-                            <ChevronLeftIcon style={{color: 'white', marginLeft: 3 }} />
-                    </TouchableOpacity>
-          
+    <View style={tw`   top-1 m-2 bg-blue-300 `}>
+   
+    <TouchableOpacity  style={tw` top-4  mr-0.5`} 
+                
+                onPress={toggleMenu}   >
+     <AntDesign name={"menu"} size={40} color={"white"} />
+   </TouchableOpacity>
+   
+    {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
         
 
    
         <Text style={tw` bottom-4  text-center justify-evenly text-3xl  font-bold`} color="white"> Select Route </Text>
     </View>
 
+
+    <Animated.View
+        style={{
+          position: 'absolute',
+          left: -10,
+          top: 10,
+          width: '70%',
+          height: "1200%",
+          backgroundColor: 'white',
+          transform: [{translateX}],
+          zIndex: 1,
+          
+          borderBottomRightRadius: 40,
+        }}
+      >
+        <TouchableOpacity style={{backgroundColor: '#0E3386'}} >
+
+        <Avatar.Image  
+        style={tw`  left-4 top-4`}
+        size={48}  source={require('../assets/Driver_Avatar.png')} /> 
+        <Text style={tw`text-2xl  left-16 bottom-6 text-white` }> Profile  </Text>
+      
+        </TouchableOpacity> 
+
+        <View style={tw `border-t  border-black  `}></View>
+
+         <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-300 p-2`} onPress={ () => navigation.navigate("BusStop")}>
+         <MIcon style={tw` p-3 absolute  `}
+          name="route" size={15} color="black" />
+           <Text style={tw`  text-left  text-lg  left-4 text-white`}>   Bus Route</Text>
+         </TouchableOpacity>
+
+
+         <TouchableOpacity style={tw` m-3 top-2 p-2 rounded-full bg-blue-300   `} onPress={ () => navigation.navigate("DriverProfileScreen")}>
+          <Ionicons style={tw` p-3   absolute `}
+          
+          name="person-outline" size={22} color="black" />
+           <Text style={tw` text-lg text-left  left-4 text-white`}>    Driver Details </Text>
+         </TouchableOpacity>
+
+         <TouchableOpacity style={tw` m-3 x-2  top-1 rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
+          
+         
+         <Ionicons style={tw` p-3   absolute `}
+         name="chatbox-ellipses-outline" size={22} color="black" />
+
+           <Text style={tw` text-lg text-left  left-4 text-white`}>    Emergency Contact</Text>
+         </TouchableOpacity>
+
+
+
+         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("AboutUsScreen")}>
+        
+         <Ionicons style={tw` p-3  absolute `}
+         name="information-circle-outline" size={25} color="black" />
+
+           <Text style={tw` text-lg text-left  left-4 text-white`}>    About us</Text>
+         </TouchableOpacity>
+         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("ReportIssue")}>
+        
+         <MIcons style={tw` p-3  absolute `}
+          name="report" size={22}  color="black" />
+
+          <Text style={tw` text-lg text-left  left-4 text-white`}>    ReportIssue</Text>
+        </TouchableOpacity>
+
+         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("Tnc")}>
+        
+        < MIco style={tw` p-3  absolute `}
+        name="clipboard-pencil" size={25} color="black" />
+
+          <Text style={tw` text-lg text-left  left-4  text-white`}>   Terms and conditions </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={tw` m-3 x-2 top-56   rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Chooseuser")}>
+        
+        < AntDesign style={tw` p-2  absolute `}
+        name="stop-circle" size={35} color="black" />
+
+          <Text style={tw` text-xl  text-left  left-8  text-white`}>     Stop Sharing </Text>
+        </TouchableOpacity>
+
+         
+         
+         </Animated.View>  
+
+
+
+
+
+
     <View style={tw`h-1/4 w-full `}>
-                             
+    {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
                              <LottieView source={require('../assets/animation_llbw0rds.json')} autoPlay loop />
                      </View>
 
 
 
     <View style={{ marginTop: 35}} >
+    {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 5 }}>
-      <Icon style={tw` p-4  left-4 z-50 p-5 absolute  `}
+    {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
+      <Icon style={tw` p-4  left-4 p-5 absolute  `}
        name="bus" size={30} color="black" />
       <Text style={tw` p-1 bg-yellow-300 font-bold`}>1</Text>  
        <Text style={tw`top-9 font-bold p-2 bg-yellow-300 rounded-full`} >NIRWARU - JECRC </Text> 
@@ -182,6 +345,19 @@ const Driver_route_select = () => {
                      onPress={()=> navigation.navigate('Map1')}
        >       
         <View>  
+        {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
         <Icon  style={tw `bg-gray-100 absolute top-2  right-8`}
        name="map-marker" size={28} color="red" />
         <Text style={tw `bg-gray-100  absolute mr-6 left-64 m-4 font-bold`}>VIEW MAP</Text>
@@ -203,9 +379,21 @@ const Driver_route_select = () => {
     </View>
   
     <View>
-    
+    {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 40 }}>
-      <Icon style={tw` p-4  left-4 z-50 p-5 absolute   `}
+      <Icon style={tw` p-4  left-4 p-5 absolute   `}
        name="bus" size={30} color="black" />
       <Text style={tw` p-1 bg-yellow-300 font-bold `}>2</Text>  
        <Text style={tw`top-9 font-bold p-2 bg-yellow-300 rounded-full`} >MEENA PETROL PUMP-JECRC</Text>      
@@ -217,6 +405,19 @@ const Driver_route_select = () => {
                      onPress={()=> navigation.navigate('Map2')}
        >       
         <View>  
+        {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
         <Icon  style={tw `bg-gray-100 absolute top-2  right-8`}
        name="map-marker" size={28} color="red" />
         <Text style={tw `bg-gray-100  absolute mr-6 left-64 m-4 font-bold`}>VIEW MAP</Text>
@@ -235,8 +436,21 @@ const Driver_route_select = () => {
     </View>
 
     <View>
+    {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 40 }}>
-      <Icon style={tw` p-4  left-4 z-50 p-5 absolute   `}
+      <Icon style={tw` p-4  left-4  p-5 absolute   `}
        name="bus" size={30} color="black" />
       <Text style={tw` p-1 bg-yellow-300 font-bold `}>3</Text>  
        <Text style={tw`top-9 font-bold p-2 bg-yellow-300 rounded-full`} >GANDHI NAGAR PULIYA-JECRC</Text>      
@@ -246,6 +460,19 @@ const Driver_route_select = () => {
                      onPress={()=> navigation.navigate('Map3')}
        >       
         <View>  
+        {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
         <Icon  style={tw `bg-gray-100 absolute top-2  right-8`}
        name="map-marker" size={28} color="red" />
         <Text style={tw `bg-gray-100  absolute mr-6 left-64 m-4 font-bold`}>VIEW MAP</Text>
@@ -263,8 +490,21 @@ const Driver_route_select = () => {
 </View>
 
 <View>
+{menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 40 }}>
-      <Icon style={tw` p-4  left-4 z-50 p-5 absolute   `}
+      <Icon style={tw` p-4  left-4  p-5 absolute   `}
        name="bus" size={30} color="black" />
       <Text style={tw` p-1 bg-yellow-300 font-bold`}>4</Text>  
        <Text style={tw`top-9 font-bold p-2 bg-yellow-300 rounded-full`} >KHORA BEESAL - JECRC</Text>      
