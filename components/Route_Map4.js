@@ -273,7 +273,7 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
       <TouchableOpacity   
                     style={tw` p-2  `}
                      onPress={toggleMenu}   >
-        <AntDesign style={tw`x-2 y-6`}
+        <AntDesign 
           name={"menu"} size={35} /> 
        </TouchableOpacity>
    

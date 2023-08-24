@@ -249,7 +249,7 @@ export default function Route_Map1() {
       <TouchableOpacity   
                     style={tw` p-2  `}
                      onPress={toggleMenu}   >
-        <AntDesign style={tw`x-2 y-6`}
+        <AntDesign 
           name={"menu"} size={35} /> 
        </TouchableOpacity>
        
