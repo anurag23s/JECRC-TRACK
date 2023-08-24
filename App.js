@@ -108,6 +108,10 @@ import Driver_route_select from './route_select/Driver_route_select';
 import Student_route from './route_select/Student_route';
 import DriverList from './DriverList';
 import BusStop from './BusStop';
+import ReportIssue from './src/screens/ReportIssue';
+import AboutUsScreen from './AboutUs';
+import EmergencyContactsList from './EmergencyContactsList';
+import DriverProfileScreen from './src/screens/DriverDetailScreen';
 
 
 
@@ -178,8 +182,29 @@ export default function App() {
         options={{ headerShown: false,}}
       />
       
+      <Stack.Screen 
+        name="ReportIssue"
+        component={ReportIssue}
+        options={{ headerShown: false,}}
+      />
+          
+          <Stack.Screen 
+        name="AboutUsScreen"
+        component={AboutUsScreen}
+        options={{ headerShown: false,}}
+      />
 
+      <Stack.Screen 
+        name="EmergencyContactsList"
+        component={EmergencyContactsList}
+        options={{ headerShown: false,}}
+      />
 
+<Stack.Screen 
+        name="DriverProfileScreen"
+        component={DriverProfileScreen}
+        options={{ headerShown: false,}}
+      />
 
       </Stack.Navigator>
       </NavigationContainer>

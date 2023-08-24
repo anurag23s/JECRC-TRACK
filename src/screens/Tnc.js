@@ -47,11 +47,7 @@ Students are granted access to view the live location of the college bus they ar
         The App collects and processes location data solely for the purpose of providing bus tracking services.
 Location data is securely transmitted and stored.
         </Text>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={navigation.navigate(Chooseuser)}>
-            <Text style={styles.buttonText}>I AGREE</Text>
-          </TouchableOpacity>
-        </View>
+         
       </View>
     </ScrollView>
   );
