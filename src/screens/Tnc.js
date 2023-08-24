@@ -2,16 +2,16 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView ,TouchableOpacity} from 'react-native';
 import Chooseuser from './Chooseuser';
-//import LottieView from 'lottie-react-native';
+import LottieView from 'lottie-react-native';
 
 const Tnc = () => {
   const navigation = useNavigation();
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>JECRC Track Terms and Conditions</Text>
-      {/*<View style={styles.lottie}>
+      <View style={styles.lottie}>
             <LottieView source={require('../../assets/animation_lldyzgmo.json')} autoPlay loop />
-  </View>*/}
+  </View>
       <View style={styles.section}>
         <Text style={styles.heading}>1. App Usage</Text>
         <Text style={styles.paragraph}>
@@ -47,11 +47,7 @@ Students are granted access to view the live location of the college bus they ar
         The App collects and processes location data solely for the purpose of providing bus tracking services.
 Location data is securely transmitted and stored.
         </Text>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={navigation.navigate(Chooseuser)}>
-            <Text style={styles.buttonText}>I AGREE</Text>
-          </TouchableOpacity>
-        </View>
+        
       </View>
     </ScrollView>
   );
@@ -103,3 +99,9 @@ const styles = StyleSheet.create({
 });
 
 export default Tnc;
+
+/* <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.button} onPress={navigation.navigate(Chooseuser)}>
+            <Text style={styles.buttonText}>I AGREE</Text>
+          </TouchableOpacity>
+        </View>*/

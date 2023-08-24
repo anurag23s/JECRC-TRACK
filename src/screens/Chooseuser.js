@@ -34,19 +34,12 @@ const Chooseuser = () => {
     <LinearGradient 
         colors={['#f9f8dd', '#302a75']} 
         style={{height: '100%'}}> 
-        <View 
-            style={{
-                flexDirection: "row", 
-                marginTop: 45, 
-                alignItems: "center", 
-                paddingHorizontal: 15}}>
-                <TouchableOpacity>
-                <Icon name="menu" size={30} color = '#302a75' style={{width:20}}/>
-                </TouchableOpacity>
-        </View>
+        
         <View style={{justifyContent: 'flex-start', alignItems: 'center', flex: 1}}>
-           <Text style={{fontSize: 25 ,color:'#302a75', marginTop: 40, fontWeight: "bold"}}>
-         Welcome to JECRC TRACK </Text>
+           <Text style={{fontSize: 24 ,color:'#302a75', marginTop: 80, fontWeight: "bold"}}>
+         Welcome to</Text>
+         <Text style={{fontSize: 52 ,color:'#302a75', fontWeight: "bold"}}>
+         JECRC TRACK </Text>
            <View style={styles.lottie}>
     <LottieView source={require('../../assets/animation_llbv6dqe.json')} autoPlay loop />
             </View>
@@ -59,7 +52,7 @@ const Chooseuser = () => {
                 
         <TouchableOpacity 
         onPress={() => navigation.navigate(item.screen)}
-        style={tw`p-3 pl-7 pb-8 pt-5 bg-white m-6 w-35 rounded-80 my-30`}
+        style={tw`p-3 pl-7 pb-8 pt-5 bg-white m-6 w-35 rounded-80 my-25`}
         >
             <View>
             <Image 
@@ -68,7 +61,7 @@ const Chooseuser = () => {
             />
             <Text style={tw`mt-2 text-lg font-bold`}>{item.title}</Text>
             <Icon  
-                 style= {tw`p-2 bg-black rounded-full w-10 mt-4`}               
+                 style= {tw`p-2 bg-black rounded-full w-10 ml-5`}               
                  name="arrowright"  color="white" type="antdesign"
             />
 
@@ -77,7 +70,7 @@ const Chooseuser = () => {
         
      )}
     />
-        
+      <View><Text style={{color: '#FFF'}}>Let's Navigate with Ease!</Text></View>  
            
 
         
@@ -93,10 +86,24 @@ export default Chooseuser;
 const styles= StyleSheet.create({
     lottie: {
         //backgroundColor: '#FFFFFF',
-        marginTop: 1,
+        marginTop: 30,
         alignItems: 'center',
         height: 200,
-        width: 200
+        //backgroundColor: "white",
+        width: "50%",
+        borderRadius: 50
     },
 });
 
+
+/*<View 
+            style={{
+                flexDirection: "row", 
+                marginTop: 45, 
+                alignItems: "center", 
+                paddingHorizontal: 15}}>
+                <TouchableOpacity>
+                <Icon name="menu" size={30} color = '#302a75' style={{width:20}}/>
+                </TouchableOpacity>
+        </View>
+        */
