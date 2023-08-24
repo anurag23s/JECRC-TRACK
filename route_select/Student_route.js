@@ -107,21 +107,21 @@ const Student_route = () => {
       
         <View style={tw `border-t  border-2 border-black mt-8 `}></View>
 
-         <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("BusStop")}>
+         <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("About")}>
          <MIcon style={tw` p-3 absolute  `}
           name="route" size={15} color="black" />
            <Text style={tw`  text-left  text-lg  left-4`}>   Bus Route</Text>
          </TouchableOpacity>
 
 
-         <TouchableOpacity style={tw` m-3 top-2 p-2 rounded-full bg-blue-400   `} onPress={ () => navigation.navigate("DriverList")}>
+         <TouchableOpacity style={tw` m-3 top-2 p-2 rounded-full bg-blue-400   `} onPress={ () => navigation.navigate("About")}>
           <Ionicons style={tw` p-3   absolute `}
           
           name="person-outline" size={22} color="black" />
            <Text style={tw` text-lg text-left  left-4`}>    Driver Details </Text>
          </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3 x-2  top-1 rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
+         <TouchableOpacity style={tw` m-3 x-2  top-1 rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("About")}>
           
          
          <Ionicons style={tw` p-3   absolute `}
@@ -132,7 +132,7 @@ const Student_route = () => {
 
 
 
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("AboutUs")}>
+         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("About")}>
         
          <Ionicons style={tw` p-3  absolute `}
          name="information-circle-outline" size={25} color="black" />
@@ -147,7 +147,7 @@ const Student_route = () => {
           <Text style={tw` text-lg text-left  left-4`}>    ReportIssue</Text>
         </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate('Tnc')}>
+         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("About")}>
         
         < MIco style={tw` p-3  absolute `}
         name="clipboard-pencil" size={25} color="black" />
