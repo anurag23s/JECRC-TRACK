@@ -1,6 +1,6 @@
 import { View, Text, KeyboardAvoidingView, ActivityIndicator, StyleSheet, TextInput, Button } from 'react-native'
 import React, {useEffect, useState} from 'react'
-import { FIREBASE_DB } from 'FirebaseConfig';
+import { db1 } from './firebase';
 import { onValue, ref, set } from 'firebase/database';
 import {LinearGradient} from 'expo-linear-gradient';
 import LottieView from 'lottie-react-native';
@@ -15,7 +15,7 @@ const ReportIssue = () => {
 
     const SubmitIssue = async () => {
     try{
-        const db = FIREBASE_DB;
+        const db = db1;
         const timeStampString = new Date().toISOString();
         const validPathString = timeStampString.replace(/[\.\-:#\[\]]/g, '_');
         const dbPath = `issues/${validPathString}`;
