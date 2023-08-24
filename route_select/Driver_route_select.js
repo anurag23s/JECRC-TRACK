@@ -155,7 +155,7 @@ const Driver_route_select = () => {
     const closeMenu = () => {
       Animated.timing(menuAnimation, {
         toValue: 0,
-        duration: 800,
+        duration: 0,
         useNativeDriver: false,
       }).start();
       setMenuVisible(false);
@@ -170,12 +170,37 @@ const Driver_route_select = () => {
   
   return (
     <View  style={tw` p-1   top-7`} >
+      {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
     <View style={tw`   top-1 m-2 bg-yellow-300 rounded-full `}>
-   
-    <TouchableOpacity  style={tw` top-4  mr-0.5`} 
+    {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
+    <TouchableOpacity  style={tw` top-4  left-3  rounded-full mr-0.5`} 
                 
                 onPress={toggleMenu}   >
-     <AntDesign name={"menu"} size={40} color={"white"} />
+     <AntDesign name={"menu"} size={50} color={"white"} />
    </TouchableOpacity>
    
     {menuVisible && ( // Only render the overlay when the menu is open
@@ -194,9 +219,21 @@ const Driver_route_select = () => {
         
 
    
-        <Text style={tw` bottom-4  text-center justify-evenly text-3xl  font-bold`} color="white"> Select Route </Text>
+        <Text style={tw` bottom-5  text-center justify-evenly text-3xl  font-bold`} color="white"> Select Route </Text>
     </View>
-
+    {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
 
     <Animated.View
         style={{
@@ -222,7 +259,19 @@ const Driver_route_select = () => {
         </TouchableOpacity> 
 
         <View style={tw `border-t  border-black  `}></View>
-
+        {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
          <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-300 p-2`} onPress={ () => navigation.navigate("BusStop")}>
          <MIcon style={tw` p-3 absolute  `}
           name="route" size={15} color="black" />
@@ -230,7 +279,7 @@ const Driver_route_select = () => {
          </TouchableOpacity>
 
 
-         <TouchableOpacity style={tw` m-3 top-2 p-2 rounded-full bg-blue-300   `} onPress={ () => navigation.navigate("DriverProfileScreen")}>
+         <TouchableOpacity style={tw` m-3 top-2 p-2 rounded-full bg-blue-300   `} onPress={ () => navigation.navigate("BusStop")}>
           <Ionicons style={tw` p-3   absolute `}
           
           name="person-outline" size={22} color="black" />
@@ -305,7 +354,19 @@ const Driver_route_select = () => {
                              <LottieView source={require('../assets/animation_llbw0rds.json')} autoPlay loop />
                      </View>
 
-
+                     {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
 
     <View style={{ marginTop: 35}} >
     {menuVisible && ( // Only render the overlay when the menu is open
@@ -358,15 +419,41 @@ const Driver_route_select = () => {
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
-        <Icon  style={tw `bg-gray-100 absolute top-2  right-8`}
+        <Icon  style={tw `bg-gray-100 absolute top-2  right-7`}
        name="map-marker" size={28} color="red" />
         <Text style={tw `bg-gray-100  absolute mr-6 left-64 m-4 font-bold`}>VIEW MAP</Text>
+        {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
        </View>
        </TouchableOpacity>
        <TouchableOpacity onPress={() => {setOptionId('Map1');
                      handleOptionPress('Map1')}}>
         <View>
-        <Icon  style={tw `bg-gray-100 absolute bottom-4  right-8`}
+        {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
+        <Icon  style={tw `bg-gray-100 absolute bottom-4  right-7`}
        name="location-arrow" size={28} color="green" />
         <Text style={tw `bg-gray-100  absolute z-30 mr-12 right-1 bottom-4 font-bold `}>SHARE LOCATION </Text>
         </View>
@@ -393,6 +480,19 @@ const Driver_route_select = () => {
         />
       )}
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 40 }}>
+    {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
       <Icon style={tw` p-4  left-4 p-5 absolute   `}
        name="bus" size={30} color="black" />
       <Text style={tw` p-1 bg-yellow-300 font-bold `}>2</Text>  
@@ -418,7 +518,7 @@ const Driver_route_select = () => {
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
-        <Icon  style={tw `bg-gray-100 absolute top-2  right-8`}
+        <Icon  style={tw `bg-gray-100 absolute top-2  right-7`}
        name="map-marker" size={28} color="red" />
         <Text style={tw `bg-gray-100  absolute mr-6 left-64 m-4 font-bold`}>VIEW MAP</Text>
        </View>
@@ -426,7 +526,20 @@ const Driver_route_select = () => {
        <TouchableOpacity onPress={() => {setOptionId('Map2');
                      handleOptionPress('Map2')}}>
         <View>
-        <Icon  style={tw `bg-gray-100 absolute bottom-6  right-8`}
+        {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
+        <Icon  style={tw `bg-gray-100 absolute bottom-6  right-7`}
        name="location-arrow" size={28} color="green" />
         <Text style={tw `bg-gray-100  absolute z-30 mr-12 right-1 bottom-6 font-bold `}>SHARE LOCATION </Text>
         </View>
@@ -473,7 +586,7 @@ const Driver_route_select = () => {
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
-        <Icon  style={tw `bg-gray-100 absolute top-2  right-8`}
+        <Icon  style={tw `bg-gray-100 absolute top-2  right-7`}
        name="map-marker" size={28} color="red" />
         <Text style={tw `bg-gray-100  absolute mr-6 left-64 m-4 font-bold`}>VIEW MAP</Text>
        </View>
@@ -481,7 +594,20 @@ const Driver_route_select = () => {
        <TouchableOpacity onPress={() => {setOptionId('Map3');
                      handleOptionPress('Map3')}}>
         <View>
-        <Icon  style={tw `bg-gray-100 absolute bottom-6  right-8`}
+          {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
+        <Icon  style={tw `bg-gray-100 absolute bottom-6  right-7`}
        name="location-arrow" size={28} color="green" />
         <Text style={tw `bg-gray-100  absolute z-30 mr-12 right-1 bottom-6 font-bold `}>SHARE LOCATION </Text>
         </View>
@@ -504,6 +630,19 @@ const Driver_route_select = () => {
         />
       )}
     <View style={{ flexDirection: 'row' , alignItems: 'center',marginTop: 40 }}>
+    {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
       <Icon style={tw` p-4  left-4  p-5 absolute   `}
        name="bus" size={30} color="black" />
       <Text style={tw` p-1 bg-yellow-300 font-bold`}>4</Text>  
@@ -513,7 +652,20 @@ const Driver_route_select = () => {
                      onPress={()=> navigation.navigate('Map4')}
        >       
         <View>  
-        <Icon  style={tw `bg-gray-100 absolute top-2  right-8`}
+        {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
+        <Icon  style={tw `bg-gray-100 absolute top-2  right-7`}
        name="map-marker" size={28} color="red" />
         <Text style={tw `bg-gray-100  absolute mr-6 left-56 m-4 font-bold left-64`}>VIEW MAP</Text>
        </View>
@@ -521,7 +673,20 @@ const Driver_route_select = () => {
        <TouchableOpacity onPress={() => {setOptionId('Map4');
                      handleOptionPress('Map4')}}>
         <View>
-        <Icon  style={tw `bg-gray-100 absolute bottom-6  right-8`}
+        {menuVisible && ( // Only render the overlay when the menu is open
+   <TouchableOpacity
+     style={{
+       position: 'absolute',
+       top: 0,
+       left: 0,
+       width: '100%',
+       height: '100%',
+       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+     }}
+     onPress={closeMenu} // Close the menu when overlay is pressed
+   />
+ )}
+        <Icon  style={tw `bg-gray-100 absolute bottom-6  right-7`}
        name="location-arrow" size={28} color="green" />
         <Text style={tw `bg-gray-100  absolute z-30 mr-12 right-1 bottom-6 font-bold `}>SHARE LOCATION </Text>
         </View>

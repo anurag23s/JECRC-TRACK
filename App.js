@@ -136,11 +136,6 @@ if(showOnboarding){
         options={{ headerShown: false,}}
       />
 
-<Stack.Screen 
-        name="DriverProfileScreen"
-        component={DriverProfileScreen}
-        options={{ headerShown: false,}}
-      />
 
       </Stack.Navigator>
       </NavigationContainer>
