@@ -1,10 +1,10 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView ,TouchableOpacity} from 'react-native';
 import Chooseuser from './Chooseuser';
 //import LottieView from 'lottie-react-native';
 
-const TnC = () => {
+const Tnc = () => {
   const navigation = useNavigation();
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -102,4 +102,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TnC;
+export default Tnc;

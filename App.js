@@ -101,11 +101,15 @@ import Route_Map4 from './components/Route_Map4';
 import Route_Map3 from './components/Route_Map3';
 import Route_Map2 from './components/Route_Map2';
 import Route_Map1 from './components/Route_Map1';
-import TnC from './src/screens/Tnc';
+import Tnc from './src/screens/Tnc';
 import Chooseuser from './src/screens/Chooseuser';
 import Driver_Login from './src/screens/Driver_Login'
 import Driver_route_select from './route_select/Driver_route_select';
 import Student_route from './route_select/Student_route';
+import DriverList from './DriverList';
+import BusStop from './BusStop';
+
+
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -118,8 +122,8 @@ export default function App() {
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
-        name="TnC"
-        component={TnC}
+        name="Tnc"
+        component={Tnc}
         options={{ headerShown: false,}}
       />
       <Stack.Screen 
@@ -162,7 +166,21 @@ export default function App() {
         component={Route_Map4}
         options={{ headerShown: false,}}
       />
+         <Stack.Screen 
+        name="BusStop"
+        component={BusStop}
+        options={{ headerShown: false,}}
+      />
       
+      <Stack.Screen 
+        name="DriverList"
+        component={DriverList}
+        options={{ headerShown: false,}}
+      />
+      
+
+
+
       </Stack.Navigator>
       </NavigationContainer>
   );
