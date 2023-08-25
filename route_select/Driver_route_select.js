@@ -169,7 +169,7 @@ const Driver_route_select = () => {
   
   
   return (
-    <View  style={tw` p-1   top-7`} >
+    <View  style={tw` p-1   top-1`} >
       {menuVisible && ( // Only render the overlay when the menu is open
    <TouchableOpacity
      style={{
