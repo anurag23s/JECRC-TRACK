@@ -24,7 +24,7 @@ const Student_route = () => {
     const toValue = menuVisible ? 0 : 1;
     Animated.timing(menuAnimation, {
       toValue,
-      duration: 300,
+      duration: 0,
       useNativeDriver: false,
     }).start();
     setMenuVisible(!menuVisible);
@@ -33,7 +33,7 @@ const Student_route = () => {
   const closeMenu = () => {
     Animated.timing(menuAnimation, {
       toValue: 0,
-      duration: 300,
+      duration: 0,
       useNativeDriver: false,
     }).start();
     setMenuVisible(false);
@@ -50,10 +50,10 @@ const Student_route = () => {
     <View  style={tw` p-1   top-7`} >
          <View style={tw`   top-1 m-2 bg-blue-800 rounded-full`}>
         
-         <TouchableOpacity  style={tw` top-4  mr-0.5`} 
+         <TouchableOpacity  style={tw` top-4  rounded-full  left-2 mr-0.5`} 
                      
                      onPress={toggleMenu}   >
-          <AntDesign name={"menu"} size={40} color={"white"} />
+          <AntDesign name={"menu"} size={50} color={"white"} />
         </TouchableOpacity>
         
          {menuVisible && ( // Only render the overlay when the menu is open

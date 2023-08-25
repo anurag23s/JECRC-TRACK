@@ -68,11 +68,12 @@ const DriverProfileScreen = ({ navigation }) => {
       </View>
 
       <Text style={styles.Head}>Driver Detail</Text>
-
+{/*
       <Image
-        source={require('../../assets/profile.jpeg')}
+        source={require('../../assets/jpeg')}
         style={styles.profileImage}
       />
+  */}
 
       {userInfo ? (
         <View style={styles.text}>
