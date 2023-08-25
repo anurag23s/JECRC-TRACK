@@ -279,7 +279,7 @@ const Driver_route_select = () => {
          </TouchableOpacity>
 
 
-         <TouchableOpacity style={tw` m-3 top-2 p-2 rounded-full bg-blue-300   `} onPress={ () => navigation.navigate("BusStop")}>
+         <TouchableOpacity style={tw` m-3 top-2 p-2 rounded-full bg-blue-300   `} onPress={ () => navigation.navigate("DriverList")}>
           <Ionicons style={tw` p-3   absolute `}
           
           name="person-outline" size={22} color="black" />
