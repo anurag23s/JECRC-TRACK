@@ -39,7 +39,6 @@ const doneButton = ({...props}) => {
                     backgroundColor: 'skyblue',
                     image: (
                         <View style={styles.lottie}>
-                            {/* <Image source={require('../assets/2.jpg')} /> */}
                           
                                  <LottieView source={require('../../assets/Bus.json')} autoPlay loop />
                         </View>
