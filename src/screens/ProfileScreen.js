@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { User, getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getDatabase, ref, get } from 'firebase/database';
-import { auth1 } from '../firebase';
-import { db1 } from '../firebase';
+// import { auth1 } from './firebase';
+// import { db1 } from './firebase';
 import { onValue } from 'firebase/database';
 
 const ProfileScreen = () => {

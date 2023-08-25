@@ -14,6 +14,7 @@ import Driver_Login from './src/screens/Driver_Login'
 import Driver_route_select from './route_select/Driver_route_select';
 import Student_route from './route_select/Student_route';
 import DriverList from './DriverList';
+import DriverDetailScreen from './src/screens/DriverDetailScreen'
 import {useState,useEffect} from 'react'
 import BusStop from './BusStop';
 import ReportIssue from './src/screens/ReportIssue';
@@ -117,7 +118,11 @@ if(showOnboarding){
         component={DriverList}
         options={{ headerShown: false,}}
       />
-      
+      <Stack.Screen 
+        name="DriverDetailScreen"
+        component={DriverDetailScreen}
+        options={{ headerShown: false,}}
+      />
       <Stack.Screen 
         name="ReportIssue"
         component={ReportIssue}
