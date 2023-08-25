@@ -587,42 +587,42 @@ export default function Route_Map1() {
         </Animated.View>  
       
    
+        <View style={tw`flex:1 bg-gray-200 h-1/5`}>
+  {menuVisible && (
+    <TouchableOpacity
+      style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'transparent',
+      }}
+      onPress={closeMenu}
+    />
+  )}
+  <ScrollView>
+    <Icon style={tw`top-16 left-3 absolute`} name="user-circle" size={60} color="blue" />
 
-<View style={tw`flex:1 bg-gray-200 h-1/5`}>
-          {menuVisible && (
-            <TouchableOpacity
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                backgroundColor: 'transparent',
-              }}
-              onPress={closeMenu}
-            />
-          )}
-          <ScrollView>     <Icon style={tw`top-16 left-3 absolute`} name="user-circle" size={60} color="blue" />
+    <Text style={tw`text-2xl text-center font-bold`}>Driver Details</Text>
 
-          <Text style={tw`text-2xl text-center font-bold`}>Driver Details</Text>
+    <View style={tw`border-t border-black mt-2`}></View>
 
-          <View style={tw`border-t border-black mt-2`}></View>
+    <View style={tw`top-3 left-4`}>
+      {userEmail && <Text style={styles.userInfo}>Driver's Email: {userEmail}</Text>}
 
-          <View style={tw`top-3 left-4`}>
-            {userEmail && <Text style={styles.userInfo}>Driver's Email: {userEmail}</Text>}
+      {userInfo ? (
+        <View>
+          <Text style={styles.userInfo}>Contact: {userInfo.Contact}</Text>
+          <Text style={styles.userInfo}>Name: {userInfo.Name}</Text>
+          <Text style={styles.userInfo}>Bus_No: {userInfo.Bus_No}</Text>
+          <Text style={styles.userInfo}>Route_No: {userInfo.Route_No}</Text>
+        </View>
+      ) : null}
+    </View>
+  </ScrollView>
+</View>
 
-            {userInfo ? (
-              <View>
-                <Text style={styles.userInfo}>Contact: {userInfo.Contact}</Text>
-                <Text style={styles.userInfo}>Name: {userInfo.Name}</Text>
-                <Text style={styles.userInfo}>Bus_No: {userInfo.Bus_No}</Text>
-                <Text style={styles.userInfo}>Route_No: {userInfo.Route_No}</Text>
-              </View>
-            ) : null}
-          </View>
-          </ScrollView>
-     
-        </View> 
       </View>
 
       
