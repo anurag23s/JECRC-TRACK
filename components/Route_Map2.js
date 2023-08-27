@@ -27,6 +27,9 @@ export default function Route_Map2() {
   const navigation = useNavigation();
   const [latitude, setLatitude] = useState(0);
   const [longitude, setLongitude] = useState(0);
+  
+  const [aname, setAname] = useState('');
+  const [contact, setContact] = useState();
 
   useEffect(() => {
     const db = db1;
@@ -43,6 +46,8 @@ export default function Route_Map2() {
           const latestData = data[lastKey];
           setLatitude(latestData.latitude);
           setLongitude(latestData.longitude);
+          setAname(latestData.name);
+          setContact(latestData.contact);
         }
       });
     };
@@ -493,7 +498,7 @@ export default function Route_Map2() {
 
 
 
-  <View  style={tw` flex:1 bg-gray-200  h-1/5 `}>
+         <View   style={tw` flex:1 bg-gray-100  h-1/5 `}>
   {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
           style={{
@@ -507,17 +512,30 @@ export default function Route_Map2() {
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
-   <Icon style={tw` top-16 left-3 absolute  `}
+   <Icon style={tw` top-20 left-3 absolute  `}
        name="user-circle" size={60} color="white" />
  
-  <Text   style={tw` text-2xl  text-center  font-bold ` }>
-  
-    Driver Details
-    
+  <Text   style={tw` text-xl  text-center  font-bold ` }>
+    DRIVER DETAILS 
+  </Text>
+  <Text   style={tw` text-xl  text-center  font-bold ` }>
+  RJ38GC7643
   </Text>
   
   <View style={tw `border-t border-black mt-2`}></View>
-  
+  {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
   <View style={tw`top-3 left-4`}>
   {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
@@ -532,14 +550,11 @@ export default function Route_Map2() {
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
- <Text  style={tw`   left-16  text-lg` }>
-  Name: Ram ji
+ <Text  style={tw`   left-16  text-lg font-bold` }>
+  Name: {aname}
  </Text>
- <Text  style={tw`  left-16 text-lg ` }>
-  Contact no: 48942454
- </Text>
- <Text  style={tw`  left-16 text-lg` }>
-  Bus No: RJ14GC7643
+ <Text  style={tw`  left-16 text-lg font-bold` }>
+  Contact: {contact}
  </Text>
 
 
