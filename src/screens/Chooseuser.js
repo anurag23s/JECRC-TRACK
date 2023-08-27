@@ -2,7 +2,6 @@ import{ FlatList,StyleSheet, Image, Text, TouchableOpacity, View, SafeAreaView }
 import React from 'react'
 import tw from 'twrnc';
 import { Icon } from 'react-native-elements';
-import {LinearGradient} from 'expo-linear-gradient';
 import LottieView from 'lottie-react-native';
 import { useNavigation } from '@react-navigation/native';
 import 'react-native-gesture-handler';
