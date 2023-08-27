@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, ImageBackground } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import UserAvatar from './UserAvatar'; // Import the UserProfileModal component
 import { NavigationProp } from '@react-navigation/native';
@@ -9,7 +9,11 @@ import { onValue, getDatabase, ref } from 'firebase/database';
 import { auth1 } from './firebase';
 import { db1 } from './firebase';
 import { BottomSheet } from 'react-native-elements';
+import babelConfig from '../../babel.config';
 
+import AnimatedLottieView from 'lottie-react-native';
+import LottieView from 'lottie-react-native';
+import { fonts } from 'react-native-elements/dist/config';
 const DriverProfileScreen = ({ navigation }) => {
   const [isProfileVisible, setIsProfileVisible] = useState(false);
 
@@ -56,8 +60,14 @@ const DriverProfileScreen = ({ navigation }) => {
   }, []);
 
   return (
+    
+   
     <View style={styles.container}>
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+       <LinearGradient 
+    colors={['#f9f8dd', '#302a75']} 
+    style={{height: '100%'}}> 
+    
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         {/* Replace the UserProfile button with an avatar icon */}
         <TouchableOpacity onPress={toggleProfileModal} style={styles.avatar}>
           <MaterialCommunityIcons name="account" size={30} color="blue" />
@@ -66,14 +76,15 @@ const DriverProfileScreen = ({ navigation }) => {
         {/* Render the UserProfileModal component in a modal when the avatar is clicked */}
         {isProfileVisible && <UserAvatar onClose={toggleProfileModal} />}
       </View>
-
-      <Text style={styles.Head}>Driver Detail</Text>
-
-      <Image
+     
+      <View  style={styles.Head}>
+        <LottieView source={require('../../assets/animation_llrutvad.json')} autoPlay loop />
+            
+             </View>
+            <Image
         source={require('../../assets/profile.jpeg')}
         style={styles.profileImage}
       />
- 
 
       {userInfo ? (
         <View style={styles.text}>
@@ -86,39 +97,49 @@ const DriverProfileScreen = ({ navigation }) => {
           <Text style={styles.detail}>Bus_No: {userInfo.Bus_No}</Text>
         </View>
       ) : null}
+    
+  </LinearGradient>
     </View>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 240,
+  
+
   },
   Head: {
-    fontSize: 24,
-    fontWeight: 'bold',
+    backgroundColor:'white',
+    width:400,
+    height:320,
+
+
   },
+
   text: {
     marginBottom: 380,
+    paddingLeft:20 
   },
   profileImage: {
     width: 150,
     height: 150,
-    borderRadius: 75,
-    marginTop: 190,
+ 
+    marginTop:-40,
+    paddingTop:110,
+
+    
   },
   detail: {
-    fontSize: 18,
+    fontSize: 28,
     marginTop: 20,
+    paddingLeft:90
   },
-  avatar: {
-    position: 'absolute',
-    top: 10,
-    left: 140,
-  },
+ 
+
 });
 
 export default DriverProfileScreen;
