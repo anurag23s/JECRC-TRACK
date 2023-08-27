@@ -1,4 +1,4 @@
-import {Text, TouchableOpacity, View, StyleSheet, Alert,Animated,Dimensions,Button,Modal } from 'react-native';
+import {Text, TouchableOpacity, View, StyleSheet, Alert,Animated,Dimensions } from 'react-native';
 import React from 'react';
 import { useState, useEffect ,useRef} from 'react';
 import tw from 'tailwind-react-native-classnames';
@@ -13,14 +13,13 @@ import { ChevronLeftIcon} from 'react-native-heroicons/solid';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 import { User, getAuth, onAuthStateChanged } from 'firebase/auth';
 import * as Location from 'expo-location';
-import { getDatabase,ref,get } from 'firebase/database';
 import { db1, auth1 } from '../src/screens/firebase';
 import LottieView from 'lottie-react-native';
-import { onValue, off, set } from 'firebase/database';
+import { onValue, off, ref, set } from 'firebase/database';
 import { Avatar } from 'react-native-paper';
-import ProfileScreen from '../src/screens/ProfileScreen';
 
-const Driver_route_select =({ onClose }) => {
+
+const Driver_route_select = () => {
   const navigation = useNavigation();
   const isFocused = useIsFocused();
   const [lat, setLat] = useState([])
@@ -170,7 +169,6 @@ const Driver_route_select =({ onClose }) => {
   
   
   return (
-
     <View  style={tw` p-1   top-1`} >
       {menuVisible && ( // Only render the overlay when the menu is open
    <TouchableOpacity
@@ -251,13 +249,12 @@ const Driver_route_select =({ onClose }) => {
           borderBottomRightRadius: 40,
         }}
       >
-        <TouchableOpacity style={{backgroundColor: '#0E3386'}} 
-        onPress={()=>navigation.navigate("DriverDetailScreen")}>
+        <TouchableOpacity style={{backgroundColor: '#0E3386'}} >
 
         <Avatar.Image  
         style={tw`  left-4 top-4`}
         size={48}  source={require('../assets/Driver_Avatar.png')} /> 
-        <Text style={tw` left-16 bottom-6 text-white` }> Profile  </Text>
+        <Text style={tw`text-2xl  left-16 bottom-6 text-white` }> Profile  </Text>
       
         </TouchableOpacity> 
 
@@ -274,19 +271,7 @@ const Driver_route_select =({ onClose }) => {
      }}
      onPress={closeMenu} // Close the menu when overlay is pressed
    />
-         )}
-
-
-
-        <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-300 p-2`} onPress={ () => navigation.navigate("DriverDetailScreen")}>
-         <MIcon style={tw` p-3 absolute  `}
-          name="route" size={15} color="black" />
-           <Text style={tw`  text-left  text-lg  left-4 text-white`}>My Profile</Text>
-         </TouchableOpacity>
-
-
-
-
+ )}
          <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-300 p-2`} onPress={ () => navigation.navigate("BusStop")}>
          <MIcon style={tw` p-3 absolute  `}
           name="route" size={15} color="black" />
