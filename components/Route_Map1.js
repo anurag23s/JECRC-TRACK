@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect, useRef} from "react";
-import { StyleSheet, Text, View ,TouchableOpacity, FlatList, SafeAreaView, ImageBackground, Button ,Animated,Dimensions} from "react-native";
+import { StyleSheet, Text, View ,TouchableOpacity, FlatList, SafeAreaView, ImageBackground, Button ,Animated,Dimensions, Linking} from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
 import { GOOGLE_MAPS_APIKEY } from "@env";
@@ -19,6 +19,8 @@ import { LogBox } from 'react-native';
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs();//Ignore all log notifications
 import { useNavigation } from '@react-navigation/native';
+import MCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 
 
@@ -605,18 +607,20 @@ export default function Route_Map1() {
  <Text  style={tw`   left-16  text-lg font-bold` }>
   Name: {aname}
  </Text>
- <Text  style={tw`  left-16 text-lg font-bold` }>
-  Contact: {contact}
- </Text>
+ <Text style={tw`  left-16 text-lg font-bold` }>
+    Contact: {contact} {' '}
+    
+  </Text>
 
 
  <Text  style={tw`  left-16` }>
-  
+ <TouchableOpacity onPress={() => Linking.openURL(`tel:${contact}`)}>
+    <MCommunityIcon name="phone" size={20} color="blue" />
+  </TouchableOpacity>
  </Text>
  <Text  style={tw`  left-16` }>
-  
- </Text>
  
+ </Text>
  
   </View>
   </View>
