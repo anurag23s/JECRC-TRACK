@@ -565,7 +565,7 @@ export default function Route_Map1() {
         />
       )}
    <Icon style={tw` top-20 left-3 absolute  `}
-       name="user-circle" size={60} color="white" />
+       name="user-circle" size={60} color="midnightblue" />
  
   <Text   style={tw` text-xl  text-center  font-bold ` }>
     DRIVER DETAILS 
