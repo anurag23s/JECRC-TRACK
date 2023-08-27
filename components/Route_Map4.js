@@ -26,6 +26,9 @@ export default function Route_Map4() {
 
   const [latitude, setLatitude] = useState(0);
   const [longitude, setLongitude] = useState(0);
+  const [aname, setAname] = useState('');
+  const [contact, setContact] = useState();
+
 
   useEffect(() => {
     const db = db1;
@@ -42,6 +45,8 @@ export default function Route_Map4() {
           const latestData = data[lastKey];
           setLatitude(latestData.latitude);
           setLongitude(latestData.longitude);
+          setAname(latestData.name);
+          setContact(latestData.contact);
         }
       });
     };
@@ -599,8 +604,7 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
          </Animated.View>  
 
 
-
-  <View         style={tw` flex:1 bg-gray-200  h-1/5 `}>
+         <View   style={tw` flex:1 bg-gray-100  h-1/5 `}>
   {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
           style={{
@@ -614,13 +618,14 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
-   <Icon style={tw` top-16 left-3 absolute  `}
+   <Icon style={tw` top-20 left-3 absolute  `}
        name="user-circle" size={60} color="white" />
  
-  <Text   style={tw` text-2xl  text-center  font-bold ` }>
-  
-    Driver Details
-    
+  <Text   style={tw` text-xl  text-center  font-bold ` }>
+    DRIVER DETAILS 
+  </Text>
+  <Text   style={tw` text-xl  text-center  font-bold ` }>
+  BR06GC7643
   </Text>
   
   <View style={tw `border-t border-black mt-2`}></View>
@@ -651,14 +656,11 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
- <Text  style={tw`   left-16  text-lg` }>
-  Name: Ram ji
+ <Text  style={tw`   left-16  text-lg font-bold` }>
+  Name: {aname}
  </Text>
- <Text  style={tw`  left-16 text-lg ` }>
-  Contact no: 48942454
- </Text>
- <Text  style={tw`  left-16 text-lg` }>
-  Bus No: RJ14GC7643
+ <Text  style={tw`  left-16 text-lg font-bold` }>
+  Contact: {contact}
  </Text>
 
 

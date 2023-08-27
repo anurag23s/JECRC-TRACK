@@ -17,6 +17,7 @@ import { db1, auth1 } from '../src/screens/firebase';
 import LottieView from 'lottie-react-native';
 import { onValue, off, ref, set } from 'firebase/database';
 import { Avatar } from 'react-native-paper';
+import { useRoute } from '@react-navigation/native';
 
 
 const Driver_route_select = () => {
@@ -26,12 +27,17 @@ const Driver_route_select = () => {
   const [lon, setLon] = useState([])
   const [text, setText] = useState([])
   const [optionId, setOptionId] = useState([])
+  const route = useRoute();
+  const { driverDetails } = route.params;
   
     
   const handleOptionPress = async (optionId) => {
     try {
       await requestLocation();
       //navigation.navigate(optionId); // Navigate to the desired map screen
+    
+      
+
     } catch (error) {
       console.error('Error sharing location:', error);
     }
@@ -109,6 +115,7 @@ const Driver_route_select = () => {
         setLat(location.coords.latitude);
         setLon(location.coords.longitude);
         console.log(location);
+        console.log({driverDetails});
         setText(JSON.stringify(location));
 
         try{
@@ -122,7 +129,9 @@ const Driver_route_select = () => {
                 latitude: location.coords.latitude,
                 speed: location.coords.speed,
                 altitude: location.coords.altitude,
-                heading: location.coords.heading
+                heading: location.coords.heading,
+                name: driverDetails.Aname,
+                contact: driverDetails.Contact,
 
             });
 
