@@ -649,7 +649,7 @@ export default function Route_Map1() {
   </Text>
 
 
- <Text  style={tw`  left-16` }>
+ <Text  style={tw`  left-52 bottom-5` }>
  <TouchableOpacity onPress={() => Linking.openURL(`tel:${contact}`)}>
     <MCommunityIcon name="phone" size={20} color="blue" />
   </TouchableOpacity>
