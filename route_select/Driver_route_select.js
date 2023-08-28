@@ -130,7 +130,7 @@ const Driver_route_select = () => {
                 speed: location.coords.speed,
                 altitude: location.coords.altitude,
                 heading: location.coords.heading,
-                name: driverDetails.Aname,
+                name: driverDetails.Name,
                 contact: driverDetails.Contact,
 
             });
