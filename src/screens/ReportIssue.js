@@ -39,7 +39,7 @@ const ReportIssue = () => {
         style={{height: '100%', width: '100%', backgroundColor: '#008080'}}>
 
     <View style={{flex: 1, alignItems: 'center'}}>
-      <Text style={{fontWeight: 'bold', fontSize: 25, color: 'white' ,marginTop: 80 }}>Please let us know if you are facing any problem</Text>
+      <Text style={{fontWeight: 'bold', fontSize: 18, color: 'white' ,marginTop: 50 }}>Please let us know if you are facing any problem</Text>
     <View style={styles.lottie}>
     <LottieView source={require('../../assets/animation_lldqx5jn.json')} autoPlay loop />
     </View>
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
       
     },
     input2: {
-        height: 180,
+        height: 250,
         margin: 12,
         padding: 10,
         backgroundColor: '#fff',
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
         //backgroundColor: '#FFFFFF',
         marginTop: 1,
         alignItems: 'center',
-        height: 200,
+        height: 150,
         width: 200
     },
   });
