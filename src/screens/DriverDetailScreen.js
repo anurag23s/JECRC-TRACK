@@ -7,15 +7,32 @@ import { NavigationProp } from '@react-navigation/native';
 import { User, getAuth, onAuthStateChanged } from 'firebase/auth';
 import { onValue, getDatabase, ref } from 'firebase/database';
 import { auth1 } from './firebase';
+import { signOut } from 'firebase/auth';
 import { db1 } from './firebase';
 import { BottomSheet } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import babelConfig from '../../babel.config';
-
+import { useNavigation } from '@react-navigation/native';
 import AnimatedLottieView from 'lottie-react-native';
 import LottieView from 'lottie-react-native';
 import { fonts } from 'react-native-elements/dist/config';
 const DriverDetailScreen = ({ navigation }) => {
+
+
+
+
+  const logout = async () => {
+    try {
+      await signOut(auth1); // Assuming `auth1` is your Firebase authentication instance
+      navigation.navigate('Chooseuser'); // Navigate to the ChooseUser screen
+    } catch (error) {
+      console.error('Error during logout:', error);
+    }
+  };
+
+
+
+
   const [isProfileVisible, setIsProfileVisible] = useState(false);
 
   const toggleProfileModal = () => {
@@ -28,6 +45,9 @@ const DriverDetailScreen = ({ navigation }) => {
   useEffect(() => {
     const auth = getAuth();
     const db = getDatabase();
+
+
+  
 
     const authStateChanged = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -60,6 +80,9 @@ const DriverDetailScreen = ({ navigation }) => {
     };
   }, []);
 
+
+ 
+
   return (
     
    
@@ -67,6 +90,13 @@ const DriverDetailScreen = ({ navigation }) => {
        <LinearGradient 
     colors={['#f9f8dd', '#302a75']} 
     style={{height: '100%'}}> 
+
+
+
+
+
+
+
     
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         {/* Replace the UserProfile button with an avatar icon */}
@@ -78,10 +108,15 @@ const DriverDetailScreen = ({ navigation }) => {
         {isProfileVisible && <UserAvatar onClose={toggleProfileModal} />}
       </View>
      
-      <View  style={styles.Head}>
+       <View  style={styles.Head}>
         <LottieView source={require('../../assets/animation_llrutvad.json')} autoPlay loop />
             
-             </View>
+<View style={styles.logoutButtonContainer}>
+          <TouchableOpacity onPress={logout} style={styles.logoutButton}>
+            <Text style={styles.logoutButtonText}>Logout</Text>
+          </TouchableOpacity>
+        </View>
+             </View> 
             <Image
         source={require('../../assets/profile.jpeg')}
         style={styles.profileImage}
@@ -126,11 +161,15 @@ const styles = StyleSheet.create({
     paddingLeft:20 
   },
   profileImage: {
-    width: 150,
-    height: 150,
- 
+    width: 130,
+    height: 120,
+  
     marginTop:-40,
-    paddingTop:110,
+    borderTopLeftRadius:30,
+    borderBottomRightRadius:90,
+    borderBottomLeftRadius:90,
+    
+     
 
     
   },
@@ -139,7 +178,22 @@ const styles = StyleSheet.create({
     marginTop: 20,
     paddingLeft:90
   },
- 
+  logoutButtonContainer: {
+    position: 'absolute',
+    top:660,
+    right: 170,
+  },
+  logoutButton: {
+    backgroundColor: 'red',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 5,
+  },
+  logoutButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize:20
+  },
 
 });
 
