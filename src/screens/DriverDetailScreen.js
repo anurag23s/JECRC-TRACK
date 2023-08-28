@@ -15,7 +15,7 @@ import babelConfig from '../../babel.config';
 import AnimatedLottieView from 'lottie-react-native';
 import LottieView from 'lottie-react-native';
 import { fonts } from 'react-native-elements/dist/config';
-const DriverProfileScreen = ({ navigation }) => {
+const DriverDetailScreen = ({ navigation }) => {
   const [isProfileVisible, setIsProfileVisible] = useState(false);
 
   const toggleProfileModal = () => {
@@ -143,4 +143,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default DriverProfileScreen;
+export default DriverDetailScreen;
