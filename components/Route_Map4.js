@@ -1,11 +1,10 @@
 import React, { Component, useState, useEffect, useRef} from "react";
-import { StyleSheet, Text, View ,TouchableOpacity, FlatList, SafeAreaView, ImageBackground, Button ,Animated,Dimensions} from "react-native";
+import { StyleSheet, Text, View ,TouchableOpacity, FlatList, SafeAreaView, ImageBackground, Button ,Animated,Dimensions, Linking} from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
 import { GOOGLE_MAPS_APIKEY } from "@env";
-import { db1,auth1 } from '../src/screens/firebase';;
-import { onValue, off, ref, getDatabase } from 'firebase/database';
-import { User, getAuth, onAuthStateChanged } from 'firebase/auth';
+import { db1 } from '../src/screens/firebase';;
+import { onValue, off, ref } from 'firebase/database';
 import MIco from 'react-native-vector-icons/Foundation';
 import MIconss from 'react-native-vector-icons/FontAwesome5';
 import MIcons from 'react-native-vector-icons/MaterialIcons';
@@ -19,10 +18,8 @@ import { LogBox } from 'react-native';
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs();//Ignore all log notifications
 import { useNavigation } from '@react-navigation/native';
-import { ScrollView } from "react-native-gesture-handler";
-const db =db1
-const dbPath = 'Map2'; // Change this path to match your Firebase data structure
-const databaseRef = ref(db, dbPath);
+import MCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 const { width: screenWidth } = Dimensions.get('window');
 export default function Route_Map4() {
@@ -30,6 +27,9 @@ export default function Route_Map4() {
 
   const [latitude, setLatitude] = useState(0);
   const [longitude, setLongitude] = useState(0);
+  const [aname, setAname] = useState('');
+  const [contact, setContact] = useState();
+
 
   useEffect(() => {
     const db = db1;
@@ -46,6 +46,8 @@ export default function Route_Map4() {
           const latestData = data[lastKey];
           setLatitude(latestData.latitude);
           setLongitude(latestData.longitude);
+          setAname(latestData.name);
+          setContact(latestData.contact);
         }
       });
     };
@@ -260,46 +262,10 @@ export default function Route_Map4() {
      longitudeDelta: 0.005,
     },
     
-  })
-  const [userEmail, setUserEmail] = useState(null);
-  const [userInfo, setUserInfo] = useState(null);
 
-  useEffect(() => {
-    const auth = getAuth();
-    const db = getDatabase();
-  
-    const authStateChanged = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUserEmail(user.email);
-  
-        if (user.email) {
-          const sanitizedEmail = user.email.replace(/[^a-zA-Z0-9]/g, '_');
-          const dbPath = `users/userDetail_${sanitizedEmail}`;
-          const userRef = ref(db, dbPath);
-  
-          onValue(
-            userRef,
-            (snapshot) => {
-              if (snapshot.exists()) {
-                const userData = snapshot.val();
-                console.log('Retrieved User Data:', userData);
-                setUserInfo(userData);
-              }
-            },
-            {
-              onlyOnce: true // This ensures that the listener fetches the data only once
-            }
-          );
-        }
-      }
-    });
-  
-    return () => {
-      authStateChanged();
-    };
-  }, []);
-  
-  {userEmail && <Text style={styles.userInfo}>Driver's Email: {userEmail}</Text>}
+
+
+  })
   
 const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,loco,locp,locq,locr,locs,loct,locu,locv} = state
 
@@ -334,7 +300,7 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
-        <Text style={tw`left-20  font-bold top-10 text-xl`}>KHORA BEESAL- JECRC         </Text>
+        <Text style={tw`left-20  font-bold top-10 text-xl`}>KHORA BEESAL- JECRC      </Text>
       <TouchableOpacity   
                     style={tw` p-2  `}
                      onPress={toggleMenu}   >
@@ -639,46 +605,79 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
          </Animated.View>  
 
 
+         <View   style={tw` flex:1 bg-gray-100  h-1/5 `}>
+  {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
+   <Icon style={tw` top-20 left-3 absolute  `}
+       name="user-circle" size={60} color="midnightblue" />
+ 
+  <Text   style={tw` text-xl  text-center  font-bold ` }>
+    DRIVER DETAILS 
+  </Text>
+  <Text   style={tw` text-xl  text-center  font-bold ` }>
+  BR06GC7643
+  </Text>
+  
+  <View style={tw `border-t border-black mt-2`}></View>
+  {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
+  <View style={tw`top-3 left-4`}>
+  {menuVisible && ( // Only render the overlay when the menu is open
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
+          }}
+          onPress={closeMenu} // Close the menu when overlay is pressed
+        />
+      )}
+ <Text  style={tw`   left-16  text-lg font-bold` }>
+  Name: {aname}
+ </Text>
+ <Text  style={tw`  left-16 text-lg font-bold` }>
+  Contact: {contact}
+ </Text>
 
-         <View style={tw`flex:1 bg-gray-200 h-1/5`}>
-          {menuVisible && (
-            <TouchableOpacity
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                backgroundColor: 'transparent',
-              }}
-              onPress={closeMenu}
-            />
-          )}
-          
-          <ScrollView>
-          <Icon style={tw`top-16 left-3 absolute`} name="user-circle" size={60} color="blue" />
 
-          <Text style={tw`text-2xl text-center font-bold`}>Driver Details</Text>
-
-          <View style={tw`border-t border-black mt-2`}></View>
-
-          <View style={tw`top-3 left-4`}>
-            {userEmail && <Text style={styles.userInfo}>Driver's Email: {userEmail}</Text>}
-
-            {userInfo ? (
-              <View>
-                <Text style={styles.userInfo}>Contact: {userInfo.Contact}</Text>
-                <Text style={styles.userInfo}>Name: {userInfo.Name}</Text>
-                <Text style={styles.userInfo}>Bus_No: {userInfo.Bus_No}</Text>
-                <Text style={styles.userInfo}>Route_No: {userInfo.Route_No}</Text>
-              </View>
-            ) : null}
-          </View>
-          </ScrollView>
-        </View> 
-        
-      </View>
-
+ <Text  style={tw`  left-16` }>
+ <TouchableOpacity onPress={() => Linking.openURL(`tel:${contact}`)}>
+    <MCommunityIcon name="phone" size={20} color="blue" />
+  </TouchableOpacity>
+ </Text>
+ <Text  style={tw`  left-16` }>
+  
+ </Text>
+ 
+ 
+  </View>
+  </View>
+</View>
   
   </SafeAreaView>
     );
@@ -689,14 +688,4 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
-  container: {
-    marginTop: 20,
-    alignItems: 'center',
-  },
-  userInfo: {
-    fontSize: 18,
-    textAlign: 'center',
-  },
-  
 });
-
