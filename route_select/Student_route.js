@@ -23,8 +23,8 @@ const Student_route = () => {
   const toggleMenu = () => {
     const toValue = menuVisible ? 0 : 1;
     Animated.timing(menuAnimation, {
-      toValue,
-      duration: 0,
+      toValue: 1,
+      duration: 100,
       useNativeDriver: false,
     }).start();
     setMenuVisible(!menuVisible);
@@ -32,7 +32,7 @@ const Student_route = () => {
 
   const closeMenu = () => {
     Animated.timing(menuAnimation, {
-      toValue: 0,
+      toValue:0,
       duration: 0,
       useNativeDriver: false,
     }).start();
@@ -153,22 +153,8 @@ const Student_route = () => {
 
           <Text style={tw` text-lg text-left  left-4`}>   Terms and conditions </Text>
         </TouchableOpacity>
-
-
-
-         
-         
+        
          </Animated.View>  
-
-
-
-
-
-
-
-
-
-
 
     
     <View style={tw`h-1/4 w-full `}>
