@@ -705,7 +705,7 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
  </Text>
 
 
- <Text  style={tw`  left-16` }>
+ <Text  style={tw` left-80  bottom-12` }>
  <TouchableOpacity onPress={() => Linking.openURL(`tel:${contact}`)}>
     <MCommunityIcon name="phone" size={20} color="blue" />
   </TouchableOpacity>
