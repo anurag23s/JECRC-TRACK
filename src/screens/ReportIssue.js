@@ -27,6 +27,7 @@ const ReportIssue = () => {
             problem: problem
 
         });
+        alert('SENT');
     }
     catch (error){
         console.error('Error submitting issue:', error);
@@ -35,12 +36,10 @@ const ReportIssue = () => {
 };
   return (
     <View 
-        style={{height: '100%', width: '100%'}}>
-    <LinearGradient 
-        colors={['#f9f8dd', '#302a75']} 
-        style={{height: '100%'}}> 
+        style={{height: '100%', width: '100%', backgroundColor: '#008080'}}>
+
     <View style={{flex: 1, alignItems: 'center'}}>
-      <Text style={{fontWeight: 'bold', fontSize: 25, color: '#302a75' ,marginTop: 80 }}>Please let us know if you are facing any problem</Text>
+      <Text style={{fontWeight: 'bold', fontSize: 25, color: 'white' ,marginTop: 80 }}>Please let us know if you are facing any problem</Text>
     <View style={styles.lottie}>
     <LottieView source={require('../../assets/animation_lldqx5jn.json')} autoPlay loop />
     </View>
@@ -53,7 +52,7 @@ const ReportIssue = () => {
         
         { loading ? (<ActivityIndicator size ="large" color = "#0000ff" />
         ):( <>
-      <Button title="Submit" onPress={SubmitIssue} color='green' />
+      <Button title="Submit" onPress={SubmitIssue} color='midnightblue' />
       </>
       )}
     </KeyboardAvoidingView>
@@ -61,7 +60,6 @@ const ReportIssue = () => {
 
     </View>
     </View>
-    </LinearGradient>
     </View>
   )
 };
