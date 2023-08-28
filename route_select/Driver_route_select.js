@@ -295,7 +295,7 @@ const Driver_route_select = () => {
            <Text style={tw` text-lg text-left  left-4 text-white`}>    Driver Details </Text>
          </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3 x-2  top-1 rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
+         <TouchableOpacity style={tw` m-3   top-1 rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
           
          
          <Ionicons style={tw` p-3   absolute `}
@@ -306,14 +306,14 @@ const Driver_route_select = () => {
 
 
 
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("AboutUsScreen")}>
+         <TouchableOpacity style={tw` m-3    rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("AboutUsScreen")}>
         
          <Ionicons style={tw` p-3  absolute `}
          name="information-circle-outline" size={25} color="black" />
 
            <Text style={tw` text-lg text-left  left-4 text-white`}>    About us</Text>
          </TouchableOpacity>
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("ReportIssue")}>
+         <TouchableOpacity style={tw` m-3    rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("ReportIssue")}>
         
          <MIcons style={tw` p-3  absolute `}
           name="report" size={22}  color="black" />
@@ -321,7 +321,7 @@ const Driver_route_select = () => {
           <Text style={tw` text-lg text-left  left-4 text-white`}>    ReportIssue</Text>
         </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("Tnc")}>
+         <TouchableOpacity style={tw` m-3    rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("Tnc")}>
         
         < MIco style={tw` p-3  absolute `}
         name="clipboard-pencil" size={25} color="black" />
@@ -329,7 +329,7 @@ const Driver_route_select = () => {
           <Text style={tw` text-lg text-left  left-4  text-white`}>   Terms and conditions </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={tw` m-3 x-2 top-56   rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Chooseuser")}>
+        <TouchableOpacity style={tw` m-3  top-56   rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Chooseuser")}>
         
         < AntDesign style={tw` p-2  absolute `}
         name="stop-circle" size={35} color="black" />
