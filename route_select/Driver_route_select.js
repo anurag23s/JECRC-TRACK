@@ -258,7 +258,7 @@ const Driver_route_select = () => {
           borderBottomRightRadius: 40,
         }}
       >
-        <TouchableOpacity style={{backgroundColor: '#0E3386'}} >
+        <TouchableOpacity style={{backgroundColor: '#0E3386'}}  onPress={ () => navigation.navigate("DriverDetailScreen")} >
 
         <Avatar.Image  
         style={tw`  left-4 top-4`}
