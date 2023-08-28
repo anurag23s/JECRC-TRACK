@@ -387,6 +387,8 @@ export default function Route_Map1() {
     origin = {loca} 
     destination={locb}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
   
   
@@ -394,86 +396,120 @@ export default function Route_Map1() {
    origin = {locb} 
    destination={locc}
    apikey={GOOGLE_MAPS_APIKEY}
+   strokeWidth={3}
+
   />
   <MapViewDirections 
     origin = {locc} 
     destination={locd}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
     <MapViewDirections 
     origin = {locd} 
     destination={loce}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
     <MapViewDirections 
     origin = {loce} 
     destination={locf}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
    <MapViewDirections 
     origin = {locf} 
     destination={locg}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
   <MapViewDirections 
     origin = {locg} 
     destination={loch}
-    apikey={GOOGLE_MAPS_APIKEY}
+    apikey={GOOGLE_MAPS_APIKEY} 
+         strokeWidth={3}
+
     />
   <MapViewDirections 
     origin = {loch} 
     destination={loci}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
   <MapViewDirections 
     origin = {loci} 
     destination={locj}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
   <MapViewDirections 
     origin = {locj} 
     destination={lockk}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
   <MapViewDirections 
     origin = {lockk} 
     destination={locl}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
   <MapViewDirections 
     origin = {locl} 
     destination={locm}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
   <MapViewDirections 
     origin = {locm} 
     destination={locn}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
     <MapViewDirections 
     origin = {locn} 
     destination={loco}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
     <MapViewDirections 
     origin = {loco} 
     destination={locp}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
    <MapViewDirections 
     origin = {locp} 
     destination={locq}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
    <MapViewDirections 
     origin = {locq} 
     destination={locr}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     />
    <MapViewDirections 
     origin = {locr} 
     destination={locs}
     apikey={GOOGLE_MAPS_APIKEY}
+    strokeWidth={3}
+
     /> 
   </MapView>
   </View>

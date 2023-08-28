@@ -50,10 +50,9 @@ const Student_route = () => {
     <View  style={tw` p-1   top-7`} >
          <View style={tw`   top-1 m-2  rounded-full`}backgroundColor="#191970">
         
-         <TouchableOpacity  style={tw` top-4  rounded-full  left-2 mr-0.5`} 
-                     
-                     onPress={toggleMenu}   >
-          <AntDesign name={"menu"} size={35} color={"white"} />
+         <TouchableOpacity  style={tw` top-4  rounded-full  left-4 mr-0.5`} 
+               onPress={toggleMenu}   >
+          <AntDesign name={"menu"} size={50} color={"white"} />
         </TouchableOpacity>
         
          {menuVisible && ( // Only render the overlay when the menu is open
@@ -92,9 +91,9 @@ const Student_route = () => {
         style={{
           position: 'absolute',
           left: -10,
-          top: 10,
+          top: 0,
           width: '70%',
-          height: "1200%",
+          height: "1400%",
           backgroundColor: 'white',
           transform: [{translateX}],
           zIndex: 1,
@@ -107,21 +106,21 @@ const Student_route = () => {
       
         <View style={tw `border-t  border-2 border-black mt-8 `}></View>
 
-         <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("About")}>
+         <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("BusStop")}>
          <MIcon style={tw` p-3 absolute  `}
           name="route" size={15} color="black" />
            <Text style={tw`  text-left  text-lg  left-4`}>   Bus Route</Text>
          </TouchableOpacity>
 
 
-         <TouchableOpacity style={tw` m-3 top-2 p-2 rounded-full bg-blue-400   `} onPress={ () => navigation.navigate("About")}>
+         <TouchableOpacity style={tw` m-3 top-2 p-2 rounded-full bg-blue-400   `} onPress={ () => navigation.navigate("DriverList")}>
           <Ionicons style={tw` p-3   absolute `}
           
           name="person-outline" size={22} color="black" />
            <Text style={tw` text-lg text-left  left-4`}>    Driver Details </Text>
          </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3 x-2  top-1 rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("About")}>
+         <TouchableOpacity style={tw` m-3 x-2  top-1 rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
           
          
          <Ionicons style={tw` p-3   absolute `}
@@ -147,7 +146,7 @@ const Student_route = () => {
           <Text style={tw` text-lg text-left  left-4`}>    ReportIssue</Text>
         </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("About")}>
+         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("Tnc")}>
         
         < MIco style={tw` p-3  absolute `}
         name="clipboard-pencil" size={25} color="black" />
