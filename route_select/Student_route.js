@@ -172,7 +172,7 @@ const Student_route = () => {
 
 
     
-    <View style={tw`h-1/6 w-full `}>
+    <View style={tw`h-1/4 w-full `}>
                              
                              <LottieView source={require('../assets/animation_llbvztm8.json')} autoPlay loop />
                              {menuVisible && ( // Only render the overlay when the menu is open
