@@ -1,4 +1,3 @@
-
 import { View,Text, StyleSheet, Dimensions, Image, TouchableOpacity} from 'react-native'
 import React from 'react'
 import Onboarding from 'react-native-onboarding-swiper'
@@ -15,6 +14,7 @@ export default function OnboardingScreen() {
 
       navigation.navigate('Home');
       setItem('onboarded','1');
+    
   }
 const doneButton = ({...props}) => {
   return (
@@ -94,6 +94,3 @@ const styles =StyleSheet.create({
       
   }
 })
-
-
-

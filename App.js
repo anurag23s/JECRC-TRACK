@@ -1,4 +1,3 @@
-
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer} from '@react-navigation/native' ;
@@ -9,7 +8,6 @@ import Route_Map3 from './components/Route_Map3';
 import Route_Map2 from './components/Route_Map2';
 import Route_Map1 from './components/Route_Map1';
 import Tnc from './src/screens/Tnc';
-import TncOB from './src/screens/TncOB';
 import Chooseuser from './src/screens/Chooseuser';
 import Driver_Login from './src/screens/Driver_Login'
 import Driver_route_select from './route_select/Driver_route_select';
@@ -35,8 +33,9 @@ useEffect(()=>{
 },[])
 const checkIfAlreadyOnboarded=async()=>{
   let onboarded=await getItem('onboarded');
-  if(onboarded==1)
-  {
+
+  if(onboarded===1)
+  {console.log('kfjj');
       setShowOnboarding(false);
   }
   else{
@@ -45,34 +44,36 @@ const checkIfAlreadyOnboarded=async()=>{
 }
 if(showOnboarding==null)
 {
-  return null
+  return null;
 }
+
+
+
 if(showOnboarding){
   
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Jecrc-Track'>
-       <Stack.Screen
+   <Stack.Navigator initialRouteName={showOnboarding ? 'Home' : 'Jecrc-Track'}>
+        {showOnboarding ? (
+          <Stack.Screen
+            name="Jecrc-Track"
+            options={{ headerShown: false }}
+            component={OnboardingScreen}
+          />
+        ) : null}
+        <Stack.Screen
           name="Home"
-          options={{headerShown:false}} 
-          component={Chooseuser} />
-
-       <Stack.Screen 
-           name="Jecrc-Track" 
-           options={{headerShown:false}}
-           component={OnboardingScreen} />
-
+          options={{ headerShown: false }}
+          component={Chooseuser}
+        />
+          
       <Stack.Screen 
-        name="TncOB"
-        component={TncOB}
+        name="Tnc"
+        component={Tnc}
         options={{ headerShown: false,}}
       />
-      <Stack.Screen 
-        name="Chooseuser"
-        component={Chooseuser}
-        options={{ headerShown: false,}}
-      />
+     
       <Stack.Screen 
         name="Driver_Login"
         component={Driver_Login}
@@ -129,11 +130,7 @@ if(showOnboarding){
         component={ReportIssue}
         options={{ headerShown: false,}}
       />
-      <Stack.Screen 
-        name="Tnc"
-        component={Tnc}
-        options={{ headerShown: false,}}
-      />    
+          
           <Stack.Screen 
         name="AboutUsScreen"
         component={AboutUsScreen}
@@ -147,10 +144,13 @@ if(showOnboarding){
       />
 
 
-      </Stack.Navigator>
-      </NavigationContainer>
-  );
+
+</Stack.Navigator>
+</NavigationContainer>
+)
 }
+  }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -160,11 +160,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-
-
-}
-
 
 
 
