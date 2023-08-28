@@ -9,14 +9,13 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity,
 } from 'react-native';
-import { db1, auth1 } from './firebase';
+import { auth1 } from './firebase';
 import {
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
 } from 'firebase/auth';
 import Driver_route_select from '../../route_select/Driver_route_select';
 import { useNavigation } from '@react-navigation/native';
-import { onValue, off, ref } from 'firebase/database';
 
 const Login = (props) => {
   const [email, setEmail] = useState('');
@@ -29,28 +28,8 @@ const Login = (props) => {
     try {
       const response = await signInWithEmailAndPassword(auth, email, password);
       console.log(response);
-      //navigation.navigate(Driver_route_select);
-      const sanitizedEmail = email.replace(/[^a-zA-Z0-9]/g, '_');
-      const dbPath = `users/userDetail_${sanitizedEmail}`;
-      const userRef = ref(db1, dbPath);
-
-      onValue(
-        userRef,
-        (snapshot) => {
-          if (snapshot.exists()) {
-            const driverDetails = snapshot.val();
-            console.log('Retrieved Driver Details:', driverDetails);
-
-            // Pass driverDetails as parameter and navigate to Driver_route_select
-            navigation.navigate('Driver_route_select', { driverDetails });
-          }
-        },
-        {
-          onlyOnce: true, // Fetch the data only once
-        }
-      );
-
-
+      navigation.navigate(Driver_route_select);
+      
     } catch (error) {
       console.log(error);
       alert('Sign in failed: ' + error.message);

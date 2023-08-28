@@ -9,6 +9,7 @@ import { onValue, getDatabase, ref } from 'firebase/database';
 import { auth1 } from './firebase';
 import { db1 } from './firebase';
 import { BottomSheet } from 'react-native-elements';
+import { LinearGradient } from 'expo-linear-gradient';
 import babelConfig from '../../babel.config';
 
 import AnimatedLottieView from 'lottie-react-native';
