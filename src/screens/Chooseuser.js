@@ -4,6 +4,7 @@ import tw from 'twrnc';
 import { Icon } from 'react-native-elements';
 import LottieView from 'lottie-react-native';
 import { useNavigation } from '@react-navigation/native';
+import { LinearGradient } from 'expo-linear-gradient';
 import 'react-native-gesture-handler';
 import Student_route from '../../route_select/Student_route';
 import Driver_Login from '../../route_select/Driver_route_select';

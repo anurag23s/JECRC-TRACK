@@ -280,8 +280,8 @@ const Driver_route_select =({ onClose }) => {
 
         <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-300 p-2`} onPress={ () => navigation.navigate("DriverDetailScreen")}>
          <MIcon style={tw` p-3 absolute  `}
-          name="route" size={15} color="black" />
-           <Text style={tw`  text-left  text-lg  left-4 text-white`}>My Profile</Text>
+          name="home" size={15} color="black" />
+           <Text style={tw`  text-left  text-lg  left-4 text-white`}>   My Profile</Text>
          </TouchableOpacity>
 
 
