@@ -271,7 +271,7 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
 
   return (
     <SafeAreaView>
-    <View style={tw`flex: 1 bg-white `}>
+    <View style={tw` bg-white `}>
     {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
           style={{
@@ -645,7 +645,7 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
          </Animated.View>  
 
 
-         <View   style={tw` flex: 1 bg-gray-100  h-1/5 `}>
+         <View   style={tw` bg-gray-100  h-1/5 `}>
   {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
           style={{
