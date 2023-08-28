@@ -258,7 +258,8 @@ const Driver_route_select = () => {
           borderBottomRightRadius: 40,
         }}
       >
-        <TouchableOpacity style={{backgroundColor: '#0E3386'}}  onPress={ () => navigation.navigate("DriverDetailScreen")} >
+        <TouchableOpacity style={{backgroundColor: '#0E3386' }} 
+         onPress={ () => navigation.navigate("DriverDetailScreen")} >
 
         <Avatar.Image  
         style={tw`  left-4 top-4`}
@@ -268,19 +269,7 @@ const Driver_route_select = () => {
         </TouchableOpacity> 
 
         <View style={tw `border-t  border-black  `}></View>
-        {menuVisible && ( // Only render the overlay when the menu is open
-   <TouchableOpacity
-     style={{
-       position: 'absolute',
-       top: 0,
-       left: 0,
-       width: '100%',
-       height: '100%',
-       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
-     }}
-     onPress={closeMenu} // Close the menu when overlay is pressed
-   />
- )}
+
          <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-300 p-2`} onPress={ () => navigation.navigate("BusStop")}>
          <MIcon style={tw` p-3 absolute  `}
           name="route" size={15} color="black" />
