@@ -471,21 +471,21 @@ export default function Route_Map2() {
       
         <View style={tw `border-t  border-2 border-black mt-8 `}></View>
 
-         <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("About")}>
+        <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("BusStop")}>
          <MIconss style={tw` p-3 absolute  `}
           name="route" size={15} color="black" />
            <Text style={tw`  text-left  text-lg  left-4`}>   Bus Route</Text>
          </TouchableOpacity>
 
 
-         <TouchableOpacity style={tw` m-3 top-2 p-2 rounded-full bg-blue-400   `} onPress={ () => navigation.navigate("About")}>
+         <TouchableOpacity style={tw` m-3 top-2 p-2 rounded-full bg-blue-400   `} onPress={ () => navigation.navigate("DriverList")}>
           <Ionicons style={tw` p-3   absolute `}
           
           name="person-outline" size={22} color="black" />
            <Text style={tw` text-lg text-left  left-4`}>    Driver Details </Text>
          </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3 x-2  top-1 rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("About")}>
+         <TouchableOpacity style={tw` m-3 x-2  top-1 rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
           
          
          <Ionicons style={tw` p-3   absolute `}
@@ -496,14 +496,14 @@ export default function Route_Map2() {
 
 
 
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("About")}>
+         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("AboutUsScreen")}>
         
          <Ionicons style={tw` p-3  absolute `}
          name="information-circle-outline" size={25} color="black" />
 
            <Text style={tw` text-lg text-left  left-4`}>    About us</Text>
          </TouchableOpacity>
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("About")}>
+         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("ReportIssue")}>
         
          <MIcons style={tw` p-3  absolute `}
           name="report" size={22}  color="black" />
@@ -511,7 +511,7 @@ export default function Route_Map2() {
           <Text style={tw` text-lg text-left  left-4`}>    ReportIssue</Text>
         </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("About")}>
+         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("Tnc")}>
         
         < MIco style={tw` p-3  absolute `}
         name="clipboard-pencil" size={25} color="black" />
