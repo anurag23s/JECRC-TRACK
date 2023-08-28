@@ -48,17 +48,20 @@ const Student_route = () => {
   return (
     
     <View  style={tw` p-1   top-7`} >
-         <View style={tw`   top-1 m-2  rounded-full`}backgroundColor="#191970">
+      <TouchableOpacity  style={tw` top-10 z-10   left-4 mr-60   	 	 `} 
+         
+         onPress={toggleMenu}   >
+    <AntDesign name={"menu"} size={50} color={"white"} />
+            </TouchableOpacity>
+         <View style={tw`  bottom-8   m-2  rounded-full`}backgroundColor="#191970">
         
-         <TouchableOpacity  style={tw` top-4   rounded-full  left-4 mr-0.5`} 
-               onPress={toggleMenu}   >
-          <AntDesign name={"menu"} size={50} color={"white"} />
-        </TouchableOpacity>
-        
-    
-      
-       
-        <Text style={tw`bottom-4 text-center justify-evenly text-3xl font-bold text-blue-50`} > Select Route </Text>
+        <Text style={tw` text-center justify-evenly text-3xl  top-5 font-bold text-blue-50`} > Select Route </Text>
+      <Text>
+
+      </Text>
+      <Text>
+
+      </Text>
       
       </View>
 

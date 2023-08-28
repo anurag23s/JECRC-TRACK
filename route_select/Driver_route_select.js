@@ -179,17 +179,22 @@ const Driver_route_select = () => {
   
   return (
     <View  style={tw` p-1   top-1`} >
-    <View style={tw`   top-1 m-2 bg-yellow-300 rounded-full `}>
-    
-    <TouchableOpacity  style={tw` top-4  left-3  rounded-full mr-0.5`} 
+<TouchableOpacity  style={tw` top-12 z-10  left-4 mr-60  `} 
                 
                 onPress={toggleMenu}   >
-     <AntDesign name={"menu"} size={50} color={"white"} />
+     <AntDesign name={"menu"} size={50} color={"#0E3386"} />
    </TouchableOpacity>
-       
 
-   
-        <Text style={tw` bottom-5  text-center justify-evenly text-3xl  font-bold`} color="white"> Select Route </Text>
+    <View style={tw`   bottom-4 m-2 bg-yellow-300 rounded-full `}>
+       
+        <Text style={tw`  top-4  text-center justify-evenly text-3xl  font-bold`} color="white"> Select Route </Text>
+    <Text>
+
+    </Text>
+
+<Text>
+
+</Text>
     </View>
   
 
@@ -197,12 +202,12 @@ const Driver_route_select = () => {
         style={{
           position: 'absolute',
           left: -10,
-          top: 10,
+          top: 30,
           width: '70%',
           height: "1200%",
           backgroundColor: 'white',
           transform: [{translateX}],
-          zIndex: 1,
+          zIndex: 2,
           
           borderBottomRightRadius: 40,
         }}
@@ -211,10 +216,11 @@ const Driver_route_select = () => {
          onPress={ () => navigation.navigate("DriverDetailScreen")} >
 
         <Avatar.Image  
-        style={tw`  left-4 top-4`}
+        style={tw`  left-4 top-16 `}
         size={48}  source={require('../assets/Driver_Avatar.png')} /> 
-        <Text style={tw`text-2xl  left-16 bottom-6 text-white` }> Profile  </Text>
-      
+        <Text style={tw`text-3xl  left-20 top-6  text-white ` }> Profile  </Text>
+      <Text></Text>
+      <Text></Text>
         </TouchableOpacity> 
 
         <View style={tw `border-t  border-black  `}></View>
