@@ -271,7 +271,7 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
 
   return (
     <SafeAreaView>
-    <View style={tw`flex:1 bg-white `}>
+    <View style={tw`flex: 1 bg-white `}>
     {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
           style={{
@@ -604,7 +604,7 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
            <Text style={tw` text-lg text-left  left-4`}>    Driver Details </Text>
          </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3 x-2  top-1 rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
+         <TouchableOpacity style={tw` m-3   top-1 rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
           
          
          <Ionicons style={tw` p-3   absolute `}
@@ -615,14 +615,14 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
 
 
 
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("AboutUsScreen")}>
+         <TouchableOpacity style={tw` m-3   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("AboutUsScreen")}>
         
          <Ionicons style={tw` p-3  absolute `}
          name="information-circle-outline" size={25} color="black" />
 
            <Text style={tw` text-lg text-left  left-4`}>    About us</Text>
          </TouchableOpacity>
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("ReportIssue")}>
+         <TouchableOpacity style={tw` m-3    rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("ReportIssue")}>
         
          <MIcons style={tw` p-3  absolute `}
           name="report" size={22}  color="black" />
@@ -630,7 +630,7 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
           <Text style={tw` text-lg text-left  left-4`}>    ReportIssue</Text>
         </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("Tnc")}>
+         <TouchableOpacity style={tw` m-3   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("Tnc")}>
         
         < MIco style={tw` p-3  absolute `}
         name="clipboard-pencil" size={25} color="black" />
@@ -645,7 +645,7 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
          </Animated.View>  
 
 
-         <View   style={tw` flex:1 bg-gray-100  h-1/5 `}>
+         <View   style={tw` flex: 1 bg-gray-100  h-1/5 `}>
   {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
           style={{
@@ -707,7 +707,7 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
 
  <Text  style={tw` left-80  bottom-12` }>
  <TouchableOpacity onPress={() => Linking.openURL(`tel:${contact}`)}>
-    <MCommunityIcon name="phone" size={20} color="blue" />
+    <MCommunityIcon name="phone" size={40} color="blue" />
   </TouchableOpacity>
  </Text>
  <Text  style={tw`  left-16` }>

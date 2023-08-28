@@ -120,7 +120,7 @@ const Student_route = () => {
            <Text style={tw` text-lg text-left  left-4`}>    Driver Details </Text>
          </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3 x-2  top-1 rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
+         <TouchableOpacity style={tw` m-3   top-1 rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
           
          
          <Ionicons style={tw` p-3   absolute `}
@@ -131,14 +131,14 @@ const Student_route = () => {
 
 
 
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("AboutUsScreen")}>
+         <TouchableOpacity style={tw` m-3    rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("AboutUsScreen")}>
         
          <Ionicons style={tw` p-3  absolute `}
          name="information-circle-outline" size={25} color="black" />
 
            <Text style={tw` text-lg text-left  left-4`}>    About us</Text>
          </TouchableOpacity>
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("ReportIssue")}>
+         <TouchableOpacity style={tw` m-3    rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("ReportIssue")}>
         
          <MIcons style={tw` p-3  absolute `}
           name="report" size={22}  color="black" />
@@ -146,7 +146,7 @@ const Student_route = () => {
           <Text style={tw` text-lg text-left  left-4`}>    ReportIssue</Text>
         </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3 x-2   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("Tnc")}>
+         <TouchableOpacity style={tw` m-3   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("Tnc")}>
         
         < MIco style={tw` p-3  absolute `}
         name="clipboard-pencil" size={25} color="black" />
