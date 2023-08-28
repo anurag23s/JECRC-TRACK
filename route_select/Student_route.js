@@ -50,42 +50,17 @@ const Student_route = () => {
     <View  style={tw` p-1   top-7`} >
          <View style={tw`   top-1 m-2  rounded-full`}backgroundColor="#191970">
         
-         <TouchableOpacity  style={tw` top-4  rounded-full  left-4 mr-0.5`} 
+         <TouchableOpacity  style={tw` top-4   rounded-full  left-4 mr-0.5`} 
                onPress={toggleMenu}   >
           <AntDesign name={"menu"} size={50} color={"white"} />
         </TouchableOpacity>
         
-         {menuVisible && ( // Only render the overlay when the menu is open
-        <TouchableOpacity
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
-          }}
-          onPress={closeMenu} // Close the menu when overlay is pressed
-        />
-      )}
-        
-
-   
+    
+      
        
         <Text style={tw`bottom-4 text-center justify-evenly text-3xl font-bold text-blue-50`} > Select Route </Text>
-        {menuVisible && ( // Only render the overlay when the menu is open
-        <TouchableOpacity
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
-          }}
-          onPress={closeMenu} // Close the menu when overlay is pressed
-        />
-      )}</View>
+      
+      </View>
 
     <Animated.View
         style={{
@@ -159,8 +134,10 @@ const Student_route = () => {
     
     <View style={tw`h-1/4 w-full `}>
                              
-                             <LottieView source={require('../assets/animation_llbvztm8.json')} autoPlay loop />
-                             {menuVisible && ( // Only render the overlay when the menu is open
+        <LottieView source={require('../assets/animation_llbvztm8.json')} autoPlay loop />
+    
+    
+    {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
           style={{
             position: 'absolute',

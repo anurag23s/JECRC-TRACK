@@ -179,70 +179,19 @@ const Driver_route_select = () => {
   
   return (
     <View  style={tw` p-1   top-1`} >
-      {menuVisible && ( // Only render the overlay when the menu is open
-   <TouchableOpacity
-     style={{
-       position: 'absolute',
-       top: 0,
-       left: 0,
-       width: '100%',
-       height: '100%',
-       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
-     }}
-     onPress={closeMenu} // Close the menu when overlay is pressed
-   />
- )}
     <View style={tw`   top-1 m-2 bg-yellow-300 rounded-full `}>
-    {menuVisible && ( // Only render the overlay when the menu is open
-   <TouchableOpacity
-     style={{
-       position: 'absolute',
-       top: 0,
-       left: 0,
-       width: '100%',
-       height: '100%',
-       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
-     }}
-     onPress={closeMenu} // Close the menu when overlay is pressed
-   />
- )}
+    
     <TouchableOpacity  style={tw` top-4  left-3  rounded-full mr-0.5`} 
                 
                 onPress={toggleMenu}   >
      <AntDesign name={"menu"} size={50} color={"white"} />
    </TouchableOpacity>
-   
-    {menuVisible && ( // Only render the overlay when the menu is open
-   <TouchableOpacity
-     style={{
-       position: 'absolute',
-       top: 0,
-       left: 0,
-       width: '100%',
-       height: '100%',
-       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
-     }}
-     onPress={closeMenu} // Close the menu when overlay is pressed
-   />
- )}
-        
+       
 
    
         <Text style={tw` bottom-5  text-center justify-evenly text-3xl  font-bold`} color="white"> Select Route </Text>
     </View>
-    {menuVisible && ( // Only render the overlay when the menu is open
-   <TouchableOpacity
-     style={{
-       position: 'absolute',
-       top: 0,
-       left: 0,
-       width: '100%',
-       height: '100%',
-       backgroundColor: 'transparent', // Change this to a semi-transparent color if desired
-     }}
-     onPress={closeMenu} // Close the menu when overlay is pressed
-   />
- )}
+  
 
     <Animated.View
         style={{
