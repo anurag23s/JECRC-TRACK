@@ -42,7 +42,6 @@ const Driver_route_select = () => {
       console.error('Error sharing location:', error);
     }
 };
-
 /*useEffect(() => {
   const unsubscribe = navigation.addListener('beforeRemove', (e) => {
     if (!isFocused) {
@@ -99,7 +98,7 @@ const Driver_route_select = () => {
           } catch (error) {
             console.error('Error logging out:', error);
       }
-    };*/
+    }; */
     const requestLocation = async () => {
       try {
         let { status } = await Location.requestBackgroundPermissionsAsync({
@@ -178,7 +177,7 @@ const Driver_route_select = () => {
   
   
   return (
-    <View  style={tw` p-1   top-1`} >
+    <View  style={tw` p-1   top-0`} >
 <TouchableOpacity  style={tw` top-12 z-10  left-4 mr-60  `} 
                 
                 onPress={toggleMenu}   >
@@ -290,7 +289,7 @@ const Driver_route_select = () => {
 
 
 
-    <View style={tw`h-1/4 w-full `}>
+    <View style={tw`h-1/5 w-full `}>
     {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
           style={{
