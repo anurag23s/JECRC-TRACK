@@ -18,7 +18,7 @@ import LottieView from 'lottie-react-native';
 import { onValue, off, ref, set } from 'firebase/database';
 import { Avatar } from 'react-native-paper';
 import { useRoute } from '@react-navigation/native';
-
+import { BackHandler } from 'react-native';
 
 const Driver_route_select = () => {
   const navigation = useNavigation();
@@ -28,9 +28,45 @@ const Driver_route_select = () => {
   const [text, setText] = useState([])
   const [optionId, setOptionId] = useState([])
   const route = useRoute();
+  const [menuVisible, setMenuVisible] = useState(false);
   const { driverDetails } = route.params;
   
     
+
+
+
+  const handleLogout = async () => {
+    try {
+      // Implement your logout logic here
+      // For example, sign out the user and navigate to the login screen
+      await auth1.signOut(); // Replace with your authentication sign-out method
+      navigation.navigate('Driver_Login'); // Navigate to the login screen after logout
+    } catch (error) {
+      console.error('Error logging out:', error);
+    }
+  };
+  useEffect(() => {
+    const backAction = () => {
+      if (isFocused && !menuVisible) {
+        // Prevent custom back action for Driver_route_select screen
+        alert('Please logout to go back!!')
+        return true;
+      }
+      return false; // Allow default back behavior for other screens
+    };
+  
+
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+  
+    return () => backHandler.remove(); // Remove the event listener when the component unmounts
+  }, [isFocused, menuVisible]);
+
+    
+
+
+
+
+
   const handleOptionPress = async (optionId) => {
     try {
       await requestLocation();
@@ -43,39 +79,6 @@ const Driver_route_select = () => {
     }
 };
 
-/*useEffect(() => {
-  const unsubscribe = navigation.addListener('beforeRemove', (e) => {
-    if (!isFocused) {
-      return; // Allow default back navigation
-    }
-
-    // Prevent default back navigation
-    e.preventDefault();
-
-    // Show an alert and handle user choice
-    Alert.alert(
-      'Logout',
-      'Do you want to logout?',
-      [
-        {
-          text: 'Cancel',
-          style: 'cancel',
-        },
-        {
-          text: 'Logout',
-          onPress: () => {
-            // Perform logout actions here
-            // For example, navigate to the logout screen
-            handleLogout();
-          },
-        },
-      ],
-      { cancelable: true }
-    );
-  });
-
-  return unsubscribe;
-}, [navigation, isFocused]);  */
 
     
     useEffect(() => {
@@ -92,14 +95,6 @@ const Driver_route_select = () => {
       
 
 
-        /*const handleLogout = async () => {
-          try {
-            await auth1.signOut(); // Replace with your authentication sign-out method
-            navigation.navigate('Driver_Login'); // Navigate to the login screen after logout
-          } catch (error) {
-            console.error('Error logging out:', error);
-      }
-    };*/
     const requestLocation = async () => {
       try {
         let { status } = await Location.requestBackgroundPermissionsAsync({
@@ -148,7 +143,6 @@ const Driver_route_select = () => {
       }
     };
 
-    const [menuVisible, setMenuVisible ] = useState(false);
     const menuAnimation = useRef(new Animated.Value(0)).current;
   
     const toggleMenu = () => {
@@ -161,6 +155,16 @@ const Driver_route_select = () => {
       setMenuVisible(!menuVisible);
     };
   
+
+   
+ 
+
+
+
+
+
+
+
     const closeMenu = () => {
       Animated.timing(menuAnimation, {
         toValue: 0,
@@ -168,6 +172,9 @@ const Driver_route_select = () => {
         useNativeDriver: false,
       }).start();
       setMenuVisible(false);
+
+    
+
     };
     const translateX = menuAnimation.interpolate({
       inputRange: [0, 1],
@@ -184,18 +191,27 @@ const Driver_route_select = () => {
                 onPress={toggleMenu}   >
      <AntDesign name={"menu"} size={50} color={"#0E3386"} />
    </TouchableOpacity>
-
-    <View style={tw`   bottom-4 m-2 bg-yellow-300 rounded-full `}>
+   <View style={tw`   bottom-4 m-2 bg-yellow-300 rounded-full `}>
        
-        <Text style={tw`  top-4  text-center justify-evenly text-3xl  font-bold`} color="white"> Select Route </Text>
-    <Text>
+       <Text style={tw`  top-4  text-center justify-evenly text-3xl  font-bold`} color="white"> Select Route </Text>
 
-    </Text>
+
+       <TouchableOpacity
+       style={tw`top-4 z-20 absolute right-3 p-2 bg-red-600 font-bold`}
+       onPress={handleLogout}
+     >
+       <Text>Logout</Text>
+     </TouchableOpacity>
+
+
+   <Text>
+
+   </Text>
 
 <Text>
 
 </Text>
-    </View>
+   </View>
   
 
     <Animated.View
@@ -273,7 +289,7 @@ const Driver_route_select = () => {
           <Text style={tw` text-lg text-left  left-4  text-white`}>   Terms and conditions </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={tw` m-3  top-56   rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Chooseuser")}>
+        <TouchableOpacity style={tw` m-3  top-40  rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Home")}>
         
         < AntDesign style={tw` p-2  absolute `}
         name="stop-circle" size={35} color="black" />
