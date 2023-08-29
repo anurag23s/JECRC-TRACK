@@ -24,7 +24,7 @@ const DriverDetailScreen = ({ navigation }) => {
   const logout = async () => {
     try {
       await signOut(auth1); // Assuming `auth1` is your Firebase authentication instance
-      navigation.navigate('Chooseuser'); // Navigate to the ChooseUser screen
+      navigation.navigate('Home'); // Navigate to the ChooseUser screen
     } catch (error) {
       console.error('Error during logout:', error);
     }

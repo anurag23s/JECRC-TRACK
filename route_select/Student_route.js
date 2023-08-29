@@ -135,7 +135,7 @@ const Student_route = () => {
          </Animated.View>  
 
     
-    <View style={tw`h-1/4 w-full `}>
+    <View style={tw`h-1/5 w-full `}>
                              
         <LottieView source={require('../assets/animation_llbvztm8.json')} autoPlay loop />
     
@@ -311,7 +311,7 @@ onPress={() => navigation.navigate('Map2')}
  onPress={() => navigation.navigate('Map4')}>
 <View>
 
-<Icon  style={tw `bg-gray-100  absolute z-50 mr-7 right-4 `}
+<Icon  style={tw `bg-gray-100  absolute z-50 mr-7 right-3 `}
  name="location-arrow" size={32} color="black" />
  <Text style={tw `p-2  font-bold text-blue-50 rounded-full  absolute z-30 mr-7 right-4 mr-12 `}backgroundColor="#191970">TRACK</Text>
  </View>
