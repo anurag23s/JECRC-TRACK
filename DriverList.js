@@ -3,10 +3,10 @@ import { View, Text, FlatList, Image, TouchableOpacity, Linking, StyleSheet } fr
 import { FontAwesome } from '@expo/vector-icons';
 
 const driversData = [
-  { id: '1', name: 'Driver 1', busNumber: 'BUS123', route: 'Route A', phoneNumber: '123-456-7890', avatar: require('./images/Avatar1.png') },
-  { id: '2', name: 'Driver 2', busNumber: 'BUS456', route: 'Route B', phoneNumber: '987-654-3210', avatar: require('./images/Avatar2.png') },
-  { id: '3', name: 'Driver 3', busNumber: 'BUS123', route: 'Route A', phoneNumber: '123-456-7890', avatar: require('./images/Avatar1.png') },
-  { id: '4', name: 'Driver 4', busNumber: 'BUS456', route: 'Route B', phoneNumber: '987-654-3210', avatar: require('./images/Avatar2.png') },
+  { id: '1', name: 'Driver 1', busNumber: 'BUS123', route: 'Route A', phoneNumber: '987-654-XXXX', avatar: require('./images/Avatar1.png') },
+  { id: '2', name: 'Driver 2', busNumber: 'BUS456', route: 'Route B', phoneNumber: '987-123-XXXX', avatar: require('./images/Avatar2.png') },
+  { id: '3', name: 'Driver 3', busNumber: 'BUS123', route: 'Route C', phoneNumber: '987-456-XXXX', avatar: require('./images/Avatar1.png') },
+  { id: '4', name: 'Driver 4', busNumber: 'BUS456', route: 'Route D', phoneNumber: '987-789-XXXX', avatar: require('./images/Avatar2.png') },
   // Add more drivers here
 ];
 
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   driverItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#d3d3d3',
     padding: 10,
     marginVertical: 8,
     borderRadius: 8,

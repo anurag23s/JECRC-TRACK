@@ -2,10 +2,10 @@ import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, Linking, Image, StyleSheet } from 'react-native';
 
 const emergencyContacts = [
-  { name: 'Principal', phoneNumber: '123-456-7890', avatar: require('./images/AvatarPrincipal.png') },
-  { name: 'Transport Incharge', phoneNumber: '123-456-7860', avatar: require('./images/AvatarIncharge.png') },
-  { name: 'Security Officer', phoneNumber: '987-654-3210', avatar: require('./images/AvatarSecuruty.png') },
-  { name: 'Health Center', phoneNumber: '555-123-4567', avatar: require('./images/AvatarMedical.png') },
+  { name: 'Principal', phoneNumber: '0141-2770232', avatar: require('./images/Principal.png') },
+  { name: 'Transport Incharge', phoneNumber: '9024149459', avatar: require('./images/AvatarIncharge.png') },
+  { name: 'Security Officer', phoneNumber: '987-654-XXXX', avatar: require('./images/AvatarSecuruty.png') },
+  { name: 'Health Center', phoneNumber: '555-123-XXXX', avatar: require('./images/AvatarMedical.png') },
   
   // Add more emergency contacts as needed
 ];
@@ -36,6 +36,7 @@ const EmergencyContactsList = () => {
         keyExtractor={(item) => item.phoneNumber}
         style={styles.flatList}
       />
+      
     </View>
   );
 };
