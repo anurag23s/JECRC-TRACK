@@ -94,9 +94,6 @@ const DriverDetailScreen = ({ navigation }) => {
 
 
 
-
-
-
     
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         {/* Replace the UserProfile button with an avatar icon */}
