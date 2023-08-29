@@ -48,17 +48,20 @@ const Student_route = () => {
   return (
     
     <View  style={tw` p-1   top-7`} >
-         <View style={tw`   top-1 m-2  rounded-full`}backgroundColor="#191970">
+      <TouchableOpacity  style={tw` top-10 z-10   left-4 mr-60   	 	 `} 
+         
+         onPress={toggleMenu}   >
+    <AntDesign name={"menu"} size={50} color={"white"} />
+            </TouchableOpacity>
+         <View style={tw`  bottom-8   m-2  rounded-full`}backgroundColor="#191970">
         
-         <TouchableOpacity  style={tw` top-4   rounded-full  left-4 mr-0.5`} 
-               onPress={toggleMenu}   >
-          <AntDesign name={"menu"} size={50} color={"white"} />
-        </TouchableOpacity>
-        
-    
-      
-       
-        <Text style={tw`bottom-4 text-center justify-evenly text-3xl font-bold text-blue-50`} > Select Route </Text>
+        <Text style={tw` text-center justify-evenly text-3xl  top-5 font-bold text-blue-50`} > Select Route </Text>
+      <Text>
+
+      </Text>
+      <Text>
+
+      </Text>
       
       </View>
 
@@ -132,7 +135,7 @@ const Student_route = () => {
          </Animated.View>  
 
     
-    <View style={tw`h-1/4 w-full `}>
+    <View style={tw`h-1/5 w-full `}>
                              
         <LottieView source={require('../assets/animation_llbvztm8.json')} autoPlay loop />
     
@@ -308,7 +311,7 @@ onPress={() => navigation.navigate('Map2')}
  onPress={() => navigation.navigate('Map4')}>
 <View>
 
-<Icon  style={tw `bg-gray-100  absolute z-50 mr-7 right-4 `}
+<Icon  style={tw `bg-gray-100  absolute z-50 mr-7 right-3 `}
  name="location-arrow" size={32} color="black" />
  <Text style={tw `p-2  font-bold text-blue-50 rounded-full  absolute z-30 mr-7 right-4 mr-12 `}backgroundColor="#191970">TRACK</Text>
  </View>

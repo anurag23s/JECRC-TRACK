@@ -18,6 +18,7 @@ import LottieView from 'lottie-react-native';
 import { onValue, off, ref, set } from 'firebase/database';
 import { Avatar } from 'react-native-paper';
 import { useRoute } from '@react-navigation/native';
+import { BackHandler } from 'react-native';
 
 
 const Driver_route_select = () => {
@@ -29,7 +30,41 @@ const Driver_route_select = () => {
   const [optionId, setOptionId] = useState([])
   const route = useRoute();
   const { driverDetails } = route.params;
+
+  const handleLogout = async () => {
+    try {
+      // Implement your logout logic here
+      // For example, sign out the user and navigate to the login screen
+      await auth1.signOut(); // Replace with your authentication sign-out method
+      navigation.navigate('Driver_Login'); // Navigate to the login screen after logout
+    } catch (error) {
+      console.error('Error logging out:', error);
+    }
+  };
+
   
+  useEffect(() => {
+    const backAction = () => {
+      Alert.alert('Logout', 'Do you want to logout?', [
+        {
+          text: 'Cancel',
+          style: 'cancel',
+        },
+        {
+          text: 'Logout',
+          onPress: () => {
+            handleLogout(); // Implement your logout logic here
+          },
+        },
+      ]);
+      return true; // Prevent default back behavior
+    };
+
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+
+    return () => backHandler.remove(); // Remove the event listener when the component unmounts
+  }, []);
+
     
   const handleOptionPress = async (optionId) => {
     try {
@@ -42,40 +77,6 @@ const Driver_route_select = () => {
       console.error('Error sharing location:', error);
     }
 };
-
-/*useEffect(() => {
-  const unsubscribe = navigation.addListener('beforeRemove', (e) => {
-    if (!isFocused) {
-      return; // Allow default back navigation
-    }
-
-    // Prevent default back navigation
-    e.preventDefault();
-
-    // Show an alert and handle user choice
-    Alert.alert(
-      'Logout',
-      'Do you want to logout?',
-      [
-        {
-          text: 'Cancel',
-          style: 'cancel',
-        },
-        {
-          text: 'Logout',
-          onPress: () => {
-            // Perform logout actions here
-            // For example, navigate to the logout screen
-            handleLogout();
-          },
-        },
-      ],
-      { cancelable: true }
-    );
-  });
-
-  return unsubscribe;
-}, [navigation, isFocused]);  */
 
     
     useEffect(() => {
@@ -92,14 +93,7 @@ const Driver_route_select = () => {
       
 
 
-        /*const handleLogout = async () => {
-          try {
-            await auth1.signOut(); // Replace with your authentication sign-out method
-            navigation.navigate('Driver_Login'); // Navigate to the login screen after logout
-          } catch (error) {
-            console.error('Error logging out:', error);
-      }
-    };*/
+    
     const requestLocation = async () => {
       try {
         let { status } = await Location.requestBackgroundPermissionsAsync({
@@ -267,7 +261,7 @@ const Driver_route_select = () => {
           <Text style={tw` text-lg text-left  left-4  text-white`}>   Terms and conditions </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={tw` m-3  top-56   rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Chooseuser")}>
+        <TouchableOpacity style={tw` m-3  top-44   rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Chooseuser")}>
         
         < AntDesign style={tw` p-2  absolute `}
         name="stop-circle" size={35} color="black" />
@@ -680,5 +674,5 @@ const styles = StyleSheet.create({
  name="location-arrow" size={28} color="black" />
  <Text style={tw `bg-gray-100  absolute z-30 mr-7 right-4 mr-12 `}>Share location</Text>
  </View>
- </TouchableOpacity> 
- */
+ </TouchableOpacity> 
+ */

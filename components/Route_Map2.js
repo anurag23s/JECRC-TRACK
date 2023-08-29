@@ -223,7 +223,7 @@ export default function Route_Map2() {
   
     return (
       <SafeAreaView>
-      <View style={tw`flex: 1 bg-white `}>
+      <View style={tw` bg-white `}>
       {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
           style={{
@@ -527,7 +527,7 @@ export default function Route_Map2() {
 
 
 
-         <View   style={tw` flex: 1 bg-gray-100  h-1/5 `}>
+         <View   style={tw`  bg-gray-100  h-1/5 `}>
   {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
           style={{
