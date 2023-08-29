@@ -108,7 +108,7 @@ const AboutUsScreen = () => {
             <Text style={styles.memberYear}>     CSE'25</Text>
           </View>
           <Image
-            source={require('./images/AvatarStudent.png')} // Replace with actual avatar image
+            source={require('./images/Aarushi.jpg')} // Replace with actual avatar image
             style={styles.avatar}
           />
         </View>
@@ -125,7 +125,7 @@ const AboutUsScreen = () => {
             <Text style={styles.memberYear}>     CSE'25</Text>
           </View>
           <Image
-            source={require('./images/AvatarStudent.png')} // Replace with actual avatar image
+            source={require('./images/Aayushi.jpg')} // Replace with actual avatar image
             style={styles.avatar}
           />
         </View>
@@ -142,7 +142,7 @@ const AboutUsScreen = () => {
             <Text style={styles.memberYear}>     CSE'25</Text>
           </View>
           <Image
-            source={require('./images/AvatarStudent.png')} // Replace with actual avatar image
+            source={require('./images/Ansh.jpg')} // Replace with actual avatar image
             style={styles.avatar}
           />
         </View>
@@ -159,7 +159,7 @@ const AboutUsScreen = () => {
             <Text style={styles.memberYear}>     CSE'25</Text>
           </View>
           <Image
-            source={require('./images/AvatarStudent.png')} // Replace with actual avatar image
+            source={require('./images/Anurag.jpg')} // Replace with actual avatar image
             style={styles.avatar}
           />
         </View>
@@ -169,22 +169,7 @@ const AboutUsScreen = () => {
 
 
       <Text style={styles.sectionHeading}>Under the guidance of</Text>
-      <View style={styles.teamMember}>
-      <View style={tw `border-t border-black mt-09`}></View>
-        <View style={styles.memberInfo}>
-        
-          <View>
-            <Text style={styles.memberName}>   Dr. Vinay Kumar Chandna</Text>
-            
-            <Text style={styles.memberYear}>     Principal</Text>
-          </View>
-          <Image
-            source={require('./images/Principal.png')} // Replace with actual avatar image
-            style={styles.avatar}
-          />
-        </View>
-        <View style={tw `border-t border-black mt-09`}></View>
-      </View>
+      
 
 
       <View style={styles.teamMember}>
@@ -203,6 +188,23 @@ const AboutUsScreen = () => {
         <View style={tw `border-t border-black mt-09`}></View>
       </View>
 
+
+      <View style={styles.teamMember}>
+      <View style={tw `border-t border-black mt-09`}></View>
+        <View style={styles.memberInfo}>
+        
+          <View>
+            <Text style={styles.memberName}>   Dr. Vinay Kumar Chandna</Text>
+            
+            <Text style={styles.memberYear}>     Principal</Text>
+          </View>
+          <Image
+            source={require('./images/Principal.png')} // Replace with actual avatar image
+            style={styles.avatar}
+          />
+        </View>
+        <View style={tw `border-t border-black mt-09`}></View>
+      </View>
 
       <View style={styles.teamMember}>
       <View style={tw `border-t border-black mt-09`}></View>
