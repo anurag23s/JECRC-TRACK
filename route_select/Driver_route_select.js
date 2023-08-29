@@ -20,7 +20,6 @@ import { Avatar } from 'react-native-paper';
 import { useRoute } from '@react-navigation/native';
 import { BackHandler } from 'react-native';
 
-
 const Driver_route_select = () => {
   const navigation = useNavigation();
   const isFocused = useIsFocused();
@@ -29,7 +28,12 @@ const Driver_route_select = () => {
   const [text, setText] = useState([])
   const [optionId, setOptionId] = useState([])
   const route = useRoute();
+  const [menuVisible, setMenuVisible] = useState(false);
   const { driverDetails } = route.params;
+  
+    
+
+
 
   const handleLogout = async () => {
     try {
@@ -41,31 +45,28 @@ const Driver_route_select = () => {
       console.error('Error logging out:', error);
     }
   };
-
-  
   useEffect(() => {
     const backAction = () => {
-      Alert.alert('Logout', 'Do you want to logout?', [
-        {
-          text: 'Cancel',
-          style: 'cancel',
-        },
-        {
-          text: 'Logout',
-          onPress: () => {
-            handleLogout(); // Implement your logout logic here
-          },
-        },
-      ]);
-      return true; // Prevent default back behavior
+      if (isFocused && !menuVisible) {
+        // Prevent custom back action for Driver_route_select screen
+        alert('Please logout to go back!!')
+        return true;
+      }
+      return false; // Allow default back behavior for other screens
     };
+  
 
     const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
-
+  
     return () => backHandler.remove(); // Remove the event listener when the component unmounts
-  }, []);
+  }, [isFocused, menuVisible]);
 
     
+
+
+
+
+
   const handleOptionPress = async (optionId) => {
     try {
       await requestLocation();
@@ -77,6 +78,7 @@ const Driver_route_select = () => {
       console.error('Error sharing location:', error);
     }
 };
+
 
     
     useEffect(() => {
@@ -93,7 +95,6 @@ const Driver_route_select = () => {
       
 
 
-    
     const requestLocation = async () => {
       try {
         let { status } = await Location.requestBackgroundPermissionsAsync({
@@ -142,7 +143,6 @@ const Driver_route_select = () => {
       }
     };
 
-    const [menuVisible, setMenuVisible ] = useState(false);
     const menuAnimation = useRef(new Animated.Value(0)).current;
   
     const toggleMenu = () => {
@@ -155,6 +155,16 @@ const Driver_route_select = () => {
       setMenuVisible(!menuVisible);
     };
   
+
+   
+ 
+
+
+
+
+
+
+
     const closeMenu = () => {
       Animated.timing(menuAnimation, {
         toValue: 0,
@@ -162,6 +172,9 @@ const Driver_route_select = () => {
         useNativeDriver: false,
       }).start();
       setMenuVisible(false);
+
+    
+
     };
     const translateX = menuAnimation.interpolate({
       inputRange: [0, 1],
@@ -173,30 +186,44 @@ const Driver_route_select = () => {
   
   return (
     <View  style={tw` p-1   top-1`} >
-    <View style={tw`   top-1 m-2 bg-yellow-300 rounded-full `}>
-    
-    <TouchableOpacity  style={tw` top-4  left-3  rounded-full mr-0.5`} 
+<TouchableOpacity  style={tw` top-12 z-10  left-4 mr-60  `} 
                 
                 onPress={toggleMenu}   >
-     <AntDesign name={"menu"} size={50} color={"white"} />
+     <AntDesign name={"menu"} size={50} color={"#0E3386"} />
    </TouchableOpacity>
+   <View style={tw`   bottom-4 m-2 bg-yellow-300 rounded-full `}>
        
+       <Text style={tw`  top-4  text-center justify-evenly text-3xl  font-bold`} color="white"> Select Route </Text>
 
-   
-        <Text style={tw` bottom-5  text-center justify-evenly text-3xl  font-bold`} color="white"> Select Route </Text>
-    </View>
+
+       <TouchableOpacity
+       style={tw`top-4 z-20 absolute right-3 p-2 bg-red-600 font-bold`}
+       onPress={handleLogout}
+     >
+       <Text>Logout</Text>
+     </TouchableOpacity>
+
+
+   <Text>
+
+   </Text>
+
+<Text>
+
+</Text>
+   </View>
   
 
     <Animated.View
         style={{
           position: 'absolute',
           left: -10,
-          top: 10,
+          top: 30,
           width: '70%',
           height: "1200%",
           backgroundColor: 'white',
           transform: [{translateX}],
-          zIndex: 1,
+          zIndex: 2,
           
           borderBottomRightRadius: 40,
         }}
@@ -205,10 +232,11 @@ const Driver_route_select = () => {
          onPress={ () => navigation.navigate("DriverDetailScreen")} >
 
         <Avatar.Image  
-        style={tw`  left-4 top-4`}
+        style={tw`  left-4 top-16 `}
         size={48}  source={require('../assets/Driver_Avatar.png')} /> 
-        <Text style={tw`text-2xl  left-16 bottom-6 text-white` }> Profile  </Text>
-      
+        <Text style={tw`text-3xl  left-20 top-6  text-white ` }> Profile  </Text>
+      <Text></Text>
+      <Text></Text>
         </TouchableOpacity> 
 
         <View style={tw `border-t  border-black  `}></View>
@@ -261,7 +289,7 @@ const Driver_route_select = () => {
           <Text style={tw` text-lg text-left  left-4  text-white`}>   Terms and conditions </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={tw` m-3  top-44   rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Chooseuser")}>
+        <TouchableOpacity style={tw` m-3  top-40  rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Home")}>
         
         < AntDesign style={tw` p-2  absolute `}
         name="stop-circle" size={35} color="black" />
@@ -674,5 +702,5 @@ const styles = StyleSheet.create({
  name="location-arrow" size={28} color="black" />
  <Text style={tw `bg-gray-100  absolute z-30 mr-7 right-4 mr-12 `}>Share location</Text>
  </View>
- </TouchableOpacity> 
- */
+ </TouchableOpacity> 
+ */

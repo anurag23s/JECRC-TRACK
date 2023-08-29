@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
+import tw from 'tailwind-react-native-classnames';
 
 const AboutUsScreen = () => {
   return (
@@ -12,6 +13,9 @@ const AboutUsScreen = () => {
           resizeMode="cover"
         />
       </View>
+
+      <View>
+      <View style={tw `border-t border-black mt-09`}></View>
       <View style={styles.textContainer}>
         <Text style={styles.heading}>Revolutionizing College Transportation</Text>
         <Text style={styles.description}>
@@ -90,82 +94,169 @@ const AboutUsScreen = () => {
           <Text style={styles.description}>
           The JECRC Track Team
         </Text>
+        </View>
+        <View style={tw `border-t border-black mt-09`}></View>
       </View>
 
       <Text style={styles.sectionHeading}>Meet Our Team</Text>
       <View style={styles.teamMember}>
+      <View style={tw `border-t border-black mt-09`}></View>
         <View style={styles.memberInfo}>
           <View>
-            <Text style={styles.memberName}>John Doe</Text>
-            <Text style={styles.memberRole}>CEO</Text>
-            <Text style={styles.memberYear}>CSE'25</Text>
+            <Text style={styles.memberName}>   Aarushi Goyal</Text>
+            
+            <Text style={styles.memberYear}>     CSE'25</Text>
           </View>
           <Image
-            source={require('./images/AvatarStudent.png')} // Replace with actual avatar image
+            source={require('./images/Aarushi.jpg')} // Replace with actual avatar image
             style={styles.avatar}
           />
         </View>
-        <Text style={styles.memberDescription}>
-          John is a visionary leader who founded our company with the goal of
-          transforming the college transportation experience. He brings a wealth of
-          experience in both technology and management.
-        </Text>
+        <View style={tw `border-t border-black mt-09`}></View>
       </View>
+
+
       <View style={styles.teamMember}>
+      <View style={tw `border-t border-black mt-09`}></View>
         <View style={styles.memberInfo}>
           <View>
-            <Text style={styles.memberName}>Jane Smithe</Text>
-            <Text style={styles.memberRole}>Lead Developer</Text>
-            <Text style={styles.memberYear}>CSE'25</Text>
+            <Text style={styles.memberName}>   Aayushi Jain</Text>
+            
+            <Text style={styles.memberYear}>     CSE'25</Text>
           </View>
           <Image
-            source={require('./images/AvatarStudent.png')} // Replace with actual avatar image
+            source={require('./images/Aayushi.jpg')} // Replace with actual avatar image
             style={styles.avatar}
           />
         </View>
-        <Text style={styles.memberDescription}>
-            Jane is a talented developer with a passion for crafting exceptional user
-            experiences. She leads our development team and is dedicated to pushing
-            the boundaries of what our technology can achieve.
-        </Text>
+        <View style={tw `border-t border-black mt-09`}></View>
       </View>
+
+
       <View style={styles.teamMember}>
+      <View style={tw `border-t border-black mt-09`}></View>
         <View style={styles.memberInfo}>
           <View>
-            <Text style={styles.memberName}>Jack Doe</Text>
-            <Text style={styles.memberRole}>Lead Developer</Text>
-            <Text style={styles.memberYear}>CSE'25</Text>
+            <Text style={styles.memberName}>   Ansh Goyal</Text>
+            
+            <Text style={styles.memberYear}>     CSE'25</Text>
           </View>
           <Image
-            source={require('./images/AvatarStudent.png')} // Replace with actual avatar image
+            source={require('./images/Ansh.jpg')} // Replace with actual avatar image
             style={styles.avatar}
           />
         </View>
-        <Text style={styles.memberDescription}>
-          John is a visionary leader who founded our company with the goal of
-          transforming the college transportation experience. He brings a wealth of
-          experience in both technology and management.
-        </Text>
+        <View style={tw `border-t border-black mt-09`}></View>
       </View>
+
+
       <View style={styles.teamMember}>
+      <View style={tw `border-t border-black mt-09`}></View>
         <View style={styles.memberInfo}>
           <View>
-            <Text style={styles.memberName}>Michael Johnson</Text>
-            <Text style={styles.memberRole}>Design Lead</Text>
-            <Text style={styles.memberYear}>CSE'25</Text>
+            <Text style={styles.memberName}>   Anurag Sinha</Text>
+            
+            <Text style={styles.memberYear}>     CSE'25</Text>
           </View>
           <Image
-            source={require('./images/AvatarStudent.png')} // Replace with actual avatar image
+            source={require('./images/Anurag.jpg')} // Replace with actual avatar image
             style={styles.avatar}
           />
         </View>
-        <Text style={styles.memberDescription}>
-            Michael is the creative force behind our app's sleek and user-friendly
-            design. He combines his artistic skills with a deep understanding of user
-            behavior to create stunning visuals.
-        </Text>
+        <View style={tw `border-t border-black mt-09`}></View>
       </View>
       {/* Add more team members as needed */}
+
+
+      <Text style={styles.sectionHeading}>Under the guidance of</Text>
+      
+
+
+      <View style={styles.teamMember}>
+      <View style={tw `border-t border-black mt-09`}></View>
+        <View style={styles.memberInfo}>
+          <View>
+            <Text style={styles.memberName}>   Dr. Arpit Agrawal</Text>
+            
+            <Text style={styles.memberYear}>     Director</Text>
+          </View>
+          <Image
+            source={require('./images/Director.jpg')} // Replace with actual avatar image
+            style={styles.avatar}
+          />
+        </View>
+        <View style={tw `border-t border-black mt-09`}></View>
+      </View>
+
+
+      <View style={styles.teamMember}>
+      <View style={tw `border-t border-black mt-09`}></View>
+        <View style={styles.memberInfo}>
+        
+          <View>
+            <Text style={styles.memberName}>   Dr. Vinay Kumar Chandna</Text>
+            
+            <Text style={styles.memberYear}>     Principal</Text>
+          </View>
+          <Image
+            source={require('./images/Principal.png')} // Replace with actual avatar image
+            style={styles.avatar}
+          />
+        </View>
+        <View style={tw `border-t border-black mt-09`}></View>
+      </View>
+
+      <View style={styles.teamMember}>
+      <View style={tw `border-t border-black mt-09`}></View>
+        <View style={styles.memberInfo}>
+          <View>
+            <Text style={styles.memberName}>   Dr. Sanjay Gour</Text>
+            
+            <Text style={styles.memberYear}>     HOD CSE</Text>
+          </View>
+          <Image
+            source={require('./images/hod.jpg')} // Replace with actual avatar image
+            style={styles.avatar}
+          />
+        </View>
+        <View style={tw `border-t border-black mt-09`}></View>
+      </View>
+
+
+      <View style={styles.teamMember}>
+      <View style={tw `border-t border-black mt-09`}></View>
+        <View style={styles.memberInfo}>
+          <View>
+            <Text style={styles.memberName}>   Dr. Vijeta Kumawat</Text>
+            
+            <Text style={styles.memberYear}>     Deputy HOD CSE</Text>
+          </View>
+          <Image
+            source={require('./images/Deputy_hod.jpg')} // Replace with actual avatar image
+            style={styles.avatar}
+          />
+        </View>
+        <View style={tw `border-t border-black mt-09`}></View>
+        </View>
+
+
+      <View style={styles.teamMember}>
+      <View style={tw `border-t border-black mt-09`}></View>
+        <View style={styles.memberInfo}>
+          <View>
+            <Text style={styles.memberName}>   Ms. Madhu Choudhary</Text>
+            
+            <Text style={styles.memberYear}>     Class Coordinator</Text>
+          </View>
+          <Image
+            source={require('./images/CC.jpg')} // Replace with actual avatar image
+            style={styles.avatar}
+          />
+        </View>
+        <View style={tw `border-t border-black mt-09`}></View>
+      </View>
+
+      
     </ScrollView>
   );
 };
@@ -173,10 +264,10 @@ const AboutUsScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    padding: 20,
+    //padding: 10,
   },
   pageHeading: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: 'bold',
     marginTop: 20,
     alignSelf: 'center',
@@ -185,39 +276,45 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 10,
     marginVertical: 5,
+    
   },
   image: {
     flex: 1,
   },
   textContainer: {
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
-    padding: 10,
+    backgroundColor: 'lightsteelblue',
+    padding: 18,
   },
   heading: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: 'bold',
-    color: 'white',
+    color: 'black',
     marginBottom: 10,
   },
   description: {
     fontSize: 16,
-    color: 'white',
+    color: 'black',
+    fontWeight: 'bold',
+    
   },
   sectionHeading: {
     fontSize: 24,
     fontWeight: 'bold',
     marginTop: 20,
-    marginBottom: 10,
+    marginBottom: 20,
     alignSelf: 'center',
   },
   teamMember: {
     marginBottom: 20,
+    backgroundColor: 'lightsteelblue',
   },
   memberInfo: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 10,
+    color:'white',
+    
   },
   memberName: {
     fontSize: 20,
@@ -228,9 +325,9 @@ const styles = StyleSheet.create({
   },
   memberRole: {
     fontSize: 16,
-    color: 'black',
+    //color: 'black',
     //backgroundColor: 'rgba(0, 0, 0, 0.6)',
-    //color: 'white',
+    color: 'white',
   },
   memberYear: {
     fontSize: 16,
@@ -242,6 +339,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 30,
+    marginRight:10
   },
   memberDescription: {
     fontSize: 14,
