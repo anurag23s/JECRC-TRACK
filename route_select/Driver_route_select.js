@@ -191,18 +191,27 @@ const Driver_route_select = () => {
                 onPress={toggleMenu}   >
      <AntDesign name={"menu"} size={50} color={"#0E3386"} />
    </TouchableOpacity>
-
-    <View style={tw`   bottom-4 m-2 bg-yellow-300 rounded-full `}>
+   <View style={tw`   bottom-4 m-2 bg-yellow-300 rounded-full `}>
        
-        <Text style={tw`  top-4  text-center justify-evenly text-3xl  font-bold`} color="white"> Select Route </Text>
-    <Text>
+       <Text style={tw`  top-4  text-center justify-evenly text-3xl  font-bold`} color="white"> Select Route </Text>
 
-    </Text>
+
+       <TouchableOpacity
+       style={tw`top-4 z-20 absolute right-3 p-2 bg-red-600 font-bold`}
+       onPress={handleLogout}
+     >
+       <Text>Logout</Text>
+     </TouchableOpacity>
+
+
+   <Text>
+
+   </Text>
 
 <Text>
 
 </Text>
-    </View>
+   </View>
   
 
     <Animated.View
