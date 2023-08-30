@@ -88,7 +88,7 @@ const DriverDetailScreen = ({ navigation }) => {
    
     <View style={styles.container}>
        <LinearGradient 
-    colors={['#f9f8dd', '#302a75']} 
+    colors={['midnightblue', '#302a75']} 
     style={{height: '100%'}}> 
 
 
@@ -173,7 +173,9 @@ const styles = StyleSheet.create({
   detail: {
     fontSize: 28,
     marginTop: 20,
-    paddingLeft:90
+    paddingLeft:90,
+    color: 'white'
+  
   },
   logoutButtonContainer: {
     position: 'absolute',
