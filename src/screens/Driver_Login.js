@@ -85,7 +85,7 @@ const Driver_Login = (props) => {
   return (
     <ImageBackground
       style={styles.container}
-      source={require('./login8.jpeg.jpg')}
+      source={require('./login8.jpg')}
     >
       <View style={styles.innerContainer}>
          <KeyboardAvoidingView behavior='padding'> 

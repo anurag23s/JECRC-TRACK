@@ -45,8 +45,8 @@ const doneButton = ({...props}) => {
                                  <LottieView source={require('../../assets/Bus.json')} autoPlay loop />
                         </View>
                     ),
-                    title: 'Welcome to JECRC TRACK',
-                    subtitle: 'Get started with our amazing bus tracking services.',
+                    title: 'Commute Unleashed',
+                    subtitle: 'Real-time tracking for efficient commuting',
                     },
                     {
                     backgroundColor: 'pink',
@@ -57,7 +57,7 @@ const doneButton = ({...props}) => {
                         </View>
                     ),
                       title: 'Our Vision',
-                      subtitle: 'Real-time tracking for efficient, user-friendly commuting',
+                      subtitle: 'Transforming the navigation', 
                     },
                     {
                     backgroundColor: '#a7f3d0',
@@ -66,15 +66,9 @@ const doneButton = ({...props}) => {
                                <LottieView source={require('../../assets/Map2.json')} autoPlay loop />
                         </View>
                     ),
-                      title: 'Revolutionizing College Transportation',
-                      subtitle: 'Explore exciting features and simplify your college journey.',
-
-                     
-                           
-                        
-                     
-                    }
-
+                    title: 'Stay Informed',
+                     subtitle: 'Because we value your time!',
+                    },
                     
                     ]}
                 />
