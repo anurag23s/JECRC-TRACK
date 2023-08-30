@@ -19,13 +19,14 @@ export default function OnboardingScreen() {
       setItem('onboarded','1');
     
   }
-const doneButton = ({...props}) => {
-  return (
-  <TouchableOpacity style={styles.doneButton} {...props}>
-      <Text style={styles.get}>Terms and Conditions</Text>
-  </TouchableOpacity>
-  )
-}
+  const doneButton = ({ ...props }) => {
+    return (
+      <TouchableOpacity style={styles.doneButton} {...props}>
+        <Text style={styles.get}>Terms and Conditions</Text>
+      </TouchableOpacity>
+    );
+  };
+  
     return (
         <View style={styles.container}>
 
@@ -34,7 +35,7 @@ const doneButton = ({...props}) => {
                 onSkip={handleDone}
                 bottomBarHighlight= {true}
                 DoneButtonComponent={doneButton}
-                containerStyles={{ paddingHorizontal: 15}}
+                containerStyles={{ paddingHorizontal: 35}}
 
                 pages={[
                     {
@@ -76,24 +77,29 @@ const doneButton = ({...props}) => {
     )
 }
 
-const styles =StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: 'white'
+      flex: 1,
+      backgroundColor: 'white',
     },
     lottie: {
-        height: width,
-        width: width*1.5 , 
+      height: width,
+      width: width * 1.5,
     },
     doneButton: {
-      padding: 20,
-      fontWeight:'bold',
+      paddingVertical: 10, // Adjust this value to increase the button's height
+      paddingBottom: 20,
+      //backgroundColor: '#a7f3d0', // Add a background color to the button
+      borderRadius: 25,
+      alignSelf: 'center',
+      marginTop: 5,
       
+      
+    },
+    get: {
+      fontWeight: 'bold',
+      fontSize: 15,
+      color: 'black', // Add a color to the text
+    },
+  });
   
-  },
-  get:{
-      fontWeight:'bold',
-      fontSize:15,
-      
-  }
-})
