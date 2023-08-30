@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef,useEffect } from 'react';
 import {
   View,
   Text,
@@ -18,12 +18,20 @@ import Driver_route_select from '../../route_select/Driver_route_select';
 import { useNavigation } from '@react-navigation/native';
 import { onValue, off, ref } from 'firebase/database';
 
-const Login = (props) => {
+const Driver_Login = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const auth = auth1;
   const navigation = useNavigation();
+  const emailInputRef = useRef(null); 
+  
+  useEffect(() => {
+    // Focus on the email input field when the screen loads
+    emailInputRef.current.focus();
+  }, []);
+
+  
   const signIn = async () => {
     setLoading(true);
     try {
@@ -77,10 +85,10 @@ const Login = (props) => {
   return (
     <ImageBackground
       style={styles.container}
-      source={require('./ocean.jpg')}
+      source={require('./login8.jpeg')}
     >
       <View style={styles.innerContainer}>
-        <KeyboardAvoidingView behavior='padding'>
+         <KeyboardAvoidingView behavior='padding'> 
           <Text style={styles.heading}>Driver's Login Page</Text>
           <View style={styles.loginBox}>
             <Text style={styles.subHeading}>Welcome Back</Text>
@@ -104,6 +112,7 @@ const Login = (props) => {
             /> */}
 
 <TextInput
+ ref={emailInputRef}
   value={email}
   style={styles.input}
   placeholder='Email'
@@ -120,7 +129,7 @@ const Login = (props) => {
   autoCapitalize='none'
   onChangeText={(text) => setPassword(text)}
 />
-
+ 
 
 
 
@@ -136,7 +145,7 @@ const Login = (props) => {
               </TouchableOpacity>
             )}
           </View>
-        </KeyboardAvoidingView>
+         </KeyboardAvoidingView> 
       </View>
     </ImageBackground>
   );
@@ -214,4 +223,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default Driver_Login;
