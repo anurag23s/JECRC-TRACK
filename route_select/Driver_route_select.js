@@ -271,14 +271,14 @@ const Driver_route_select = () => {
          <Ionicons style={tw` p-3  absolute `}
          name="information-circle-outline" size={25} color="black" />
 
-           <Text style={tw` text-lg text-left  left-4 text-white`}>    About us</Text>
+           <Text style={tw` text-lg text-left  left-4 text-white`}>    About Us</Text>
          </TouchableOpacity>
          <TouchableOpacity style={tw` m-3    rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("ReportIssue")}>
         
          <MIcons style={tw` p-3  absolute `}
           name="report" size={22}  color="black" />
 
-          <Text style={tw` text-lg text-left  left-4 text-white`}>    ReportIssue</Text>
+          <Text style={tw` text-lg text-left  left-4 text-white`}>    Report Issue</Text>
         </TouchableOpacity>
 
          <TouchableOpacity style={tw` m-3    rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("Tnc")}>
