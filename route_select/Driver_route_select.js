@@ -197,7 +197,7 @@ const Driver_route_select = () => {
 
 
        <TouchableOpacity
-       style={tw`top-4 z-20 absolute right-3 p-2 bg-red-600 font-bold`}
+       style={tw`top-4 z-20 absolute right-3 p-2 bg-red-600 font-bold, rounded-full`}
        onPress={handleLogout}
      >
        <Text>Logout</Text>
@@ -306,7 +306,7 @@ const Driver_route_select = () => {
 
 
 
-    <View style={tw`h-1/4 w-full `}>
+    <View style={tw`h-1/5 w-full `}>
     {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
           style={{
