@@ -4,6 +4,9 @@ import Onboarding from 'react-native-onboarding-swiper'
 import LottieView from 'lottie-react-native';
 import { useNavigation } from '@react-navigation/native';
 import { setItem } from './utils/asyncStorage';
+import MIco from 'react-native-vector-icons/Foundation';
+import tw from 'tailwind-react-native-classnames';
+import TncOB from './TncOB';
 
 const { width, height} = Dimensions.get('window');
 
@@ -12,14 +15,14 @@ export default function OnboardingScreen() {
     const navigation = useNavigation();
     const handleDone = () => {
 
-      navigation.navigate('Home');
+      navigation.navigate('TncOB');
       setItem('onboarded','1');
     
   }
 const doneButton = ({...props}) => {
   return (
   <TouchableOpacity style={styles.doneButton} {...props}>
-      <Text style={styles.get}>Get Started</Text>
+      <Text style={styles.get}>Terms and Conditions</Text>
   </TouchableOpacity>
   )
 }
@@ -42,8 +45,8 @@ const doneButton = ({...props}) => {
                                  <LottieView source={require('../../assets/Bus.json')} autoPlay loop />
                         </View>
                     ),
-                    title: 'Commute Unleashed',
-                    subtitle: 'Real-time tracking for efficient,eco-friendly commuting',
+                    title: 'Welcome to JECRC TRACK',
+                    subtitle: 'Get started with our amazing bus tracking services.',
                     },
                     {
                     backgroundColor: 'pink',
@@ -54,7 +57,7 @@ const doneButton = ({...props}) => {
                         </View>
                     ),
                       title: 'Our Vision',
-                      subtitle: 'Real-time tracking for efficient,eco-friendly commuting',
+                      subtitle: 'Real-time tracking for efficient, user-friendly commuting',
                     },
                     {
                     backgroundColor: '#a7f3d0',
@@ -63,11 +66,17 @@ const doneButton = ({...props}) => {
                                <LottieView source={require('../../assets/Map2.json')} autoPlay loop />
                         </View>
                     ),
-                    title: 'Be the Catalyst',
-                     subtitle: 'Shape the future of transit through your engagement.',
-                    },
+                      title: 'Revolutionizing College Transportation',
+                      subtitle: 'Explore exciting features and simplify your college journey.',
+
+                     
+                           
+                        
+                     
+                    }
+
                     
-                ]}
+                    ]}
                 />
         </View>
     )
