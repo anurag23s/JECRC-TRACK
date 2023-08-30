@@ -24,17 +24,17 @@ const AboutUsScreen = () => {
           <Text style={styles.description}>
           </Text>
           <Text style={styles.description}>
-          Say goodbye to waiting in uncertainty and hello to real-time tracking that puts you in control of your journey. With cutting-edge technologies and a user-centric approach, we're here to revolutionize how you experience college transportation. Join us on this journey towards a seamless and connected campus community. Your ride, your way, every day.
+          Say goodbye to waiting in uncertainty and hello to real-time tracking that puts you in control of your journey. With cutting-edge technologies and a user-centric approach, we're here to revolutionize how you experience college transportation. Your ride, your way, every day.
           </Text>
           <Text style={styles.description}>
           </Text>
           <Text style={styles.description}>
-          Welcome to the Bus Tracker App!
+          Welcome to the JECRC Track!
           </Text>
           <Text style={styles.description}>
           </Text>
           <Text style={styles.description}>
-          At Bus Tracker, our mission is to simplify your daily commute and enhance your travel experience by providing real-time tracking and information about buses in your city. Whether you're a student, a working professional, or a parent, our app is designed to make your journey smoother and more convenient.
+          At Bus Tracker, our mission is to simplify your daily commute and enhance your travel experience by providing real-time tracking and information about buses of your college. Our app is designed to make your journey smoother and more convenient.
           </Text>
           <Text style={styles.description}>
           </Text>
@@ -47,10 +47,7 @@ const AboutUsScreen = () => {
           - Real-time Bus Tracking: Get instant updates on the current location and status of buses on your route.
           </Text>
           <Text style={styles.description}>
-          - Accurate Arrival Times: Plan your trips with confidence using accurate arrival time estimates.
-          </Text>
-          <Text style={styles.description}>
-          - Notifications: Receive alerts about delays, route changes, and other important updates.
+          - Route Information Portal: Provides comprehensive information about bur routes, driver details, pick up and drop off points, timings etc.  
           </Text>
           <Text style={styles.description}>
           - Easy-to-Use Interface: Our user-friendly app ensures that you have all the information you need at your fingertips.
@@ -58,7 +55,7 @@ const AboutUsScreen = () => {
           <Text style={styles.description}>
           </Text>
           <Text style={styles.description}>
-          Why Choose the Bus Tracker App?
+          Why Choose JECRC TRACK?
           </Text>
           <Text style={styles.description}>
           </Text>
@@ -73,19 +70,8 @@ const AboutUsScreen = () => {
           </Text>
           <Text style={styles.description}>
           </Text>
-          <Text style={styles.description}>
-          Connect with Us:
-          </Text>
-          <Text style={styles.description}>
-          </Text>
-          <Text style={styles.description}>
-          Visit our website at www.bustrackerapp.com for more information and updates. You can also follow us on social media for the latest news and tips.
-          </Text>
-          <Text style={styles.description}>
-          </Text>
-          <Text style={styles.description}>
-          Join us in revolutionizing the way you travel. Download the JECRC Track App today and enjoy a seamless and stress-free commute!
-          </Text>
+          
+          
           <Text style={styles.description}>
           </Text>
           <Text style={styles.description}>
