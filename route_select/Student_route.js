@@ -114,14 +114,14 @@ const Student_route = () => {
          <Ionicons style={tw` p-3  absolute `}
          name="information-circle-outline" size={25} color="black" />
 
-           <Text style={tw` text-lg text-left  left-4`}>    About us</Text>
+           <Text style={tw` text-lg text-left  left-4`}>    About Us</Text>
          </TouchableOpacity>
          <TouchableOpacity style={tw` m-3    rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("ReportIssue")}>
         
          <MIcons style={tw` p-3  absolute `}
           name="report" size={22}  color="black" />
 
-          <Text style={tw` text-lg text-left  left-4`}>    ReportIssue</Text>
+          <Text style={tw` text-lg text-left  left-4`}>    Report Issue</Text>
         </TouchableOpacity>
 
          <TouchableOpacity style={tw` m-3   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("Tnc")}>
