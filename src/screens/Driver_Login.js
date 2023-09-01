@@ -84,11 +84,11 @@ const Driver_Login = (props) => {
 
   return (
     <ImageBackground
-      style={styles.container}
-      source={require('./login8.jpg')}
-    >
-      <View style={styles.innerContainer}>
-         <KeyboardAvoidingView behavior='padding'> 
+    style={styles.container}
+    source={require('./login8.jpg')}
+  >   
+  <View style={styles.innerContainer}>
+  <KeyboardAvoidingView behavior='padding'> 
           <Text style={styles.heading}>Driver's Login Page</Text>
           <View style={styles.loginBox}>
             <Text style={styles.subHeading}>Welcome Back</Text>
