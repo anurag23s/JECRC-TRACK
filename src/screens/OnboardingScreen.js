@@ -12,14 +12,14 @@ export default function OnboardingScreen() {
     const navigation = useNavigation();
     const handleDone = () => {
 
-      navigation.navigate('Home');
+      navigation.navigate('TncOB');
       setItem('onboarded','1');
     
   }
 const doneButton = ({...props}) => {
   return (
   <TouchableOpacity style={styles.doneButton} {...props}>
-      <Text style={styles.get}>Get Started</Text>
+      <Text style={styles.get}>Terms and Conditions</Text>
   </TouchableOpacity>
   )
 }
@@ -83,7 +83,7 @@ const styles =StyleSheet.create({
         width: width*1.5 , 
     },
     doneButton: {
-      padding: 20,
+      padding: 10,
       fontWeight:'bold',
       
   

@@ -66,9 +66,9 @@ const dummyBusRoutes = [
       { id: 10, name: 'Stop 10 : RIDDHI SIDDHI', Pickup: '07:45 AM', Dropoff: '04:50 PM' },
       { id: 11, name: 'Stop 11 : TRIVENI NAGAR CHAURAHA', Pickup: '07:50 AM', Dropoff: '04:45 PM' },
       { id: 12, name: 'Stop 12 : GOPAL PURA CHOKI', Pickup: '07:55 AM', Dropoff: '04:40 PM' },
-      { id: 10, name: 'Stop 13 : MAHAVEER NAGAR',Pickup: '08:07 AM', Dropoff: '04:27 PM'},
-      { id: 11, name: 'Stop 14 : DURGAPURA ROAD', Pickup: '08:13 AM', Dropoff: '04:20 PM' },
-      { id: 12, name: 'Stop 15 : JECRC COLLEGE', Pickup: '08:25 AM', Dropoff: '04:00 PM' },
+      { id: 13, name: 'Stop 13 : MAHAVEER NAGAR',Pickup: '08:07 AM', Dropoff: '04:27 PM'},
+      { id: 14, name: 'Stop 14 : DURGAPURA ROAD', Pickup: '08:13 AM', Dropoff: '04:20 PM' },
+      { id: 15, name: 'Stop 15 : JECRC COLLEGE', Pickup: '08:25 AM', Dropoff: '04:00 PM' },
     ],
   },
   {

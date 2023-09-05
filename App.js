@@ -23,6 +23,7 @@ import EmergencyContactsList from './EmergencyContactsList';
 import DriverProfileScreen from './src/screens/DriverDetailScreen';
 import OnboardingScreen from './src/screens/OnboardingScreen';
 import {getItem} from './src/screens/utils/asyncStorage'
+import TncOB from './src/screens/TncOB';
 //import AppNavigation from './Navigation/Appnavigation';
 
 const Stack = createStackNavigator();
@@ -55,7 +56,7 @@ if(showOnboarding){
 
   return (
     <NavigationContainer>
-   <Stack.Navigator initialRouteName={showOnboarding ? 'Home' : 'Jecrc-Track'}>
+   <Stack.Navigator initialRouteName={showOnboarding ? 'Chooseuser' : 'Jecrc-Track'}>
         {showOnboarding ? (
           <Stack.Screen
             name="Jecrc-Track"
@@ -64,14 +65,14 @@ if(showOnboarding){
           />
         ) : null}
         <Stack.Screen
-          name="Home"
+          name="Chooseuser"
           options={{ headerShown: false }}
           component={Chooseuser}
         />
           
       <Stack.Screen 
-        name="Tnc"
-        component={Tnc}
+        name="TncOB"
+        component={TncOB}
         options={{ headerShown: false,}}
       />
      
