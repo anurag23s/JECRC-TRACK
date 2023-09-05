@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect, useRef} from "react";
 import { StyleSheet, Text, View ,TouchableOpacity, FlatList, SafeAreaView, ImageBackground, Button ,Animated,Dimensions, Linking} from "react-native";
-import MapView, { Marker } from "react-native-maps";
+import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
 import { GOOGLE_MAPS_APIKEY } from "@env";
 import { db1 } from '../src/screens/firebase';
@@ -19,6 +19,7 @@ LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs();//Ignore all log notifications
 import { useNavigation } from '@react-navigation/native';
 import MCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+import * as Location from 'expo-location';
 
 const { width: screenWidth } = Dimensions.get('window');
 
@@ -261,6 +262,7 @@ export default function Route_Map3() {
      
     <MapView
     style={{ flex: 1 }}
+    provider={PROVIDER_GOOGLE}
     initialRegion={{
       latitude: 26.781937,
       longitude: 75.822563,

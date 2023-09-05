@@ -1,5 +1,13 @@
 {
   "expo": {
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ]
+    ],
     "name": "JECRC-TRACK",
     "slug": "JECRC-TRACK",
     "version": "1.0.0",
@@ -10,6 +18,8 @@
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+
+      
     },
     "assetBundlePatterns": [
       "**/*"
@@ -18,13 +28,25 @@
       "supportsTablet": true
     },
     "android": {
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "ACCESS_BACKGROUND_LOCATION"],
+      "package": "relatedtoanytrack.bustrack",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBQmKcTmf1eitwujufsbx8sttj-Z8Dow1U"
+        }
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "325695f6-bb59-4bdc-9bc1-c6b9a6e2a194"
+      }
     }
   }
 }

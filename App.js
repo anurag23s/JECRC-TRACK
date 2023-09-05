@@ -1,3 +1,4 @@
+import 'expo-dev-client';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer} from '@react-navigation/native' ;
@@ -144,6 +145,12 @@ if(showOnboarding){
       <Stack.Screen 
         name="EmergencyContactsList"
         component={EmergencyContactsList}
+        options={{ headerShown: false,}}
+      />
+
+      <Stack.Screen 
+        name="Tnc"
+        component={Tnc}
         options={{ headerShown: false,}}
       />
 
