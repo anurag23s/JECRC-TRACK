@@ -94,6 +94,9 @@ const DriverDetailScreen = ({ navigation }) => {
 
 
 
+
+
+
     
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         {/* Replace the UserProfile button with an avatar icon */}
@@ -106,7 +109,7 @@ const DriverDetailScreen = ({ navigation }) => {
       </View>
      
        <View  style={styles.Head}>
-        <LottieView source={require('../../assets/animation_llrutvad.json')} autoPlay loop />
+        <LottieView source={require('../../assets/animation_llvze8e8.json')} autoPlay loop />
             
 <View style={styles.logoutButtonContainer}>
           <TouchableOpacity onPress={logout} style={styles.logoutButton}>
@@ -162,7 +165,8 @@ const styles = StyleSheet.create({
     height: 120,
   
     marginTop:-40,
-    borderTopLeftRadius:30,
+    borderTopLeftRadius:90,
+    borderTopRightRadius:90,
     borderBottomRightRadius:90,
     borderBottomLeftRadius:90,
     
@@ -179,8 +183,8 @@ const styles = StyleSheet.create({
   },
   logoutButtonContainer: {
     position: 'absolute',
-    top:660,
-    right: 170,
+    top:670,
+    right: 160,
   },
   logoutButton: {
     backgroundColor: 'red',

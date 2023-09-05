@@ -503,14 +503,14 @@ export default function Route_Map2() {
          <Ionicons style={tw` p-3  absolute `}
          name="information-circle-outline" size={25} color="black" />
 
-           <Text style={tw` text-lg text-left  left-4`}>    About Us</Text>
+           <Text style={tw` text-lg text-left  left-4`}>    About us</Text>
          </TouchableOpacity>
          <TouchableOpacity style={tw` m-3    rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("ReportIssue")}>
         
          <MIcons style={tw` p-3  absolute `}
           name="report" size={22}  color="black" />
 
-          <Text style={tw` text-lg text-left  left-4`}>    Report Issue</Text>
+          <Text style={tw` text-lg text-left  left-4`}>    ReportIssue</Text>
         </TouchableOpacity>
 
          <TouchableOpacity style={tw` m-3 rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("Tnc")}>
@@ -550,7 +550,7 @@ export default function Route_Map2() {
     DRIVER DETAILS 
   </Text>
   <Text   style={tw` text-xl  text-center  font-bold ` }>
-  RJ14PB9250
+  RJ38GC7643
   </Text>
   
   <View style={tw `border-t border-black mt-2`}></View>

@@ -1,3 +1,4 @@
+
 import React, { useState,useRef,useEffect } from 'react';
 import {
   View,
@@ -113,9 +114,10 @@ const Driver_Login = (props) => {
 
   return (
     <ImageBackground
-      style={styles.container}
-      source={require('./login8.jpg')}
-    >
+    style={styles.container}
+    source={require('./login8.jpeg')}
+  >
+  
       <View style={styles.innerContainer}>
          <KeyboardAvoidingView behavior='padding'> 
           <Text style={styles.heading}>Driver's Login Page</Text>

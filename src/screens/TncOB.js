@@ -3,7 +3,6 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView ,TouchableOpacity} from 'react-native';
 import Chooseuser from './Chooseuser';
 import LottieView from 'lottie-react-native';
-//import { useNavigation } from '@react-navigation/native';
 
 const TncOB = () => {
   const navigation = useNavigation();
@@ -50,10 +49,9 @@ Location data is securely transmitted and stored.
         </Text>
         
 <View style={styles.buttonContainer}>
-              <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Chooseuser')}>
-                <Text style={styles.buttonText}>I AGREE</Text>
-              </TouchableOpacity>
-
+          <TouchableOpacity style={styles.button} onPress={()=>navigation.navigate(Chooseuser)}>
+            <Text style={styles.buttonText}>I AGREE</Text>
+          </TouchableOpacity>
         </View>
          
       </View>
