@@ -43,7 +43,7 @@ const doneButton = ({...props}) => {
                         </View>
                     ),
                     title: 'Commute Unleashed',
-                    subtitle: 'Real-time tracking for efficient,eco-friendly commuting',
+                    subtitle: 'Real-time tracking for efficient commuting',
                     },
                     {
                     backgroundColor: 'pink',
@@ -54,7 +54,7 @@ const doneButton = ({...props}) => {
                         </View>
                     ),
                       title: 'Our Vision',
-                      subtitle: 'Real-time tracking for efficient,eco-friendly commuting',
+                      subtitle: 'Transforming the navigation',
                     },
                     {
                     backgroundColor: '#a7f3d0',
@@ -63,8 +63,8 @@ const doneButton = ({...props}) => {
                                <LottieView source={require('../../assets/Map2.json')} autoPlay loop />
                         </View>
                     ),
-                    title: 'Be the Catalyst',
-                     subtitle: 'Shape the future of transit through your engagement.',
+                    title: 'Stay Informed',
+                     subtitle: 'Because we value your time!',
                     },
                     
                 ]}
