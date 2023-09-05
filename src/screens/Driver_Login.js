@@ -1,4 +1,3 @@
-
 import React, { useState,useRef,useEffect } from 'react';
 import {
   View,
@@ -18,33 +17,6 @@ import {
 import Driver_route_select from '../../route_select/Driver_route_select';
 import { useNavigation } from '@react-navigation/native';
 import { onValue, off, ref } from 'firebase/database';
-import * as Location from 'expo-location';
-
-const requestLocation = async () => {
-  try {
-    let { status } = await Location.requestForegroundPermissionsAsync({
-    accuracy: Location.Accuracy.High,
-    });
-    if (status == 'granted') {
-      console.log('Permission Granted')
-    }
-
-    if (status !== 'granted') {
-      setError('permission to access location was denied');
-      return;
-    }
-  } catch (error) {
-    console.log(error);
-    if (error.message === 'permission to access location was denied') {
-      alert('Permission to access location was denied. Please enable it in settings.');
-    } else {
-      alert('Sign in failed: ' + error.message);
-    }
-  } finally {
-    setLoading(false);
-  }
-  
-};
 
 const Driver_Login = (props) => {
   const [email, setEmail] = useState('');
@@ -86,8 +58,6 @@ const Driver_Login = (props) => {
         }
       );
 
-      requestLocation();
-
 
     } catch (error) {
       console.log(error);
@@ -114,10 +84,9 @@ const Driver_Login = (props) => {
 
   return (
     <ImageBackground
-    style={styles.container}
-    source={require('./login8.jpeg')}
-  >
-  
+      style={styles.container}
+      source={require('./login8.jpg')}
+    >
       <View style={styles.innerContainer}>
          <KeyboardAvoidingView behavior='padding'> 
           <Text style={styles.heading}>Driver's Login Page</Text>
