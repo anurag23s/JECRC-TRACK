@@ -289,13 +289,13 @@ const Driver_route_select = () => {
           <Text style={tw` text-lg text-left  left-4  text-white`}>   Terms and conditions </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={tw` m-3  top-40  rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Home")}>
+        {/*<TouchableOpacity style={tw` m-3  top-40  rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Home")}>
         
         < AntDesign style={tw` p-2  absolute `}
         name="stop-circle" size={35} color="black" />
 
-          <Text style={tw` text-xl  text-left  left-8  text-white`}>     Stop Sharing </Text>
-        </TouchableOpacity>
+      <Text style={tw` text-xl  text-left  left-8  text-white`}>     Stop Sharing </Text>
+      </TouchableOpacity>*/}
 
          
          
@@ -390,7 +390,7 @@ const Driver_route_select = () => {
       )}
         <Icon  style={tw `bg-gray-100 absolute top-2  right-7`}
        name="map-marker" size={28} color="red" />
-        <Text style={tw `bg-gray-100  absolute mr-6 left-64 m-4 font-bold`}>VIEW MAP</Text>
+        <Text style={tw `bg-gray-100 absolute mr-6 left-64 m-4 font-bold `}>VIEW MAP</Text>
         {menuVisible && ( // Only render the overlay when the menu is open
    <TouchableOpacity
      style={{

@@ -15,7 +15,7 @@ const Tnc = () => {
       <View style={styles.section}>
         <Text style={styles.heading}>1. App Usage</Text>
         <Text style={styles.paragraph}>
-          Welcome to JECRC Track! By using the App, you agree to be bound by these Terms. If you do not agree with any part of these Terms, please do not use the App.
+          Welcome to JECRC Track! By using the App, you agree to be bound by these Terms. If you do not agree with any part of these Terms, we kindly ask you not to proceed and to refrain from using the app.
         </Text>
       </View>
       <View style={styles.section}>
@@ -23,7 +23,7 @@ const Tnc = () => {
         <Text style={styles.paragraph}>
         Students can access the JECRC Track App without the need for authentication.
 The App provides real-time tracking of college buses to help students monitor bus locations and estimated arrival times.
-The accuracy of bus locations and arrival times may vary based on several factors, including but not limited to traffic conditions and technical limitations.
+The accuracy of bus locations and arrival times may vary based on several factors, but not limited to traffic conditions and technical limitations.
 Students are encouraged to use the App responsibly and refrain from any misuse, abuse, or unauthorized access.
         </Text>
       </View>
