@@ -66,7 +66,7 @@ const Driver_Login = (props) => {
       console.log(response);
       //navigation.navigate(Driver_route_select);
       const sanitizedEmail = email.replace(/[^a-zA-Z0-9]/g, '_');
-      const dbPath = `users/userDetail_${sanitizedEmail}`;
+      const dbPath = `user/userDetail_${sanitizedEmail}`;
       const userRef = ref(db1, dbPath);
 
       onValue(

@@ -69,7 +69,7 @@ const Driver_route_select = () => {
 
   const handleOptionPress = async (optionId) => {
     try {
-      await requestLocation();
+      await requestLocation(optionId);
       //navigation.navigate(optionId); // Navigate to the desired map screen
     
       
@@ -86,16 +86,16 @@ const Driver_route_select = () => {
         //navigation.navigate(`${optionId}`);
 
         const intervalId = setInterval(() => {
-            requestLocation();
+            requestLocation(optionId);
           }, 10000);
       
           // Clean up interval when component unmounts
           return () => clearInterval(intervalId);
-        }, []);
+        }, [optionId]);
       
 
 
-    const requestLocation = async () => {
+      const requestLocation = async (selectedMap) => {
       try {
         let { status } = await Location.requestBackgroundPermissionsAsync({
         accuracy: Location.Accuracy.High,
@@ -117,7 +117,7 @@ const Driver_route_select = () => {
             const db = db1;
             const timeStampString = new Date().toISOString();
             const validPathString = timeStampString.replace(/[\.\-:#\[\]]/g, '_');
-            const dbPath = `${optionId}/${validPathString}`;
+            const dbPath = `${selectedMap}/${validPathString}`;
             //alert('LOCATION SENT!');
             await set(ref(db, dbPath), {
                 longitude: location.coords.longitude,
