@@ -24,7 +24,7 @@ const DriverDetailScreen = ({ navigation }) => {
   const logout = async () => {
     try {
       await signOut(auth1); // Assuming `auth1` is your Firebase authentication instance
-      navigation.navigate('Home'); // Navigate to the ChooseUser screen
+      navigation.navigate('Chooseuser'); // Navigate to the ChooseUser screen
     } catch (error) {
       console.error('Error during logout:', error);
     }
@@ -55,7 +55,7 @@ const DriverDetailScreen = ({ navigation }) => {
 
         if (user.email) {
           const sanitizedEmail = user.email.replace(/[^a-zA-Z0-9]/g, '_');
-          const dbPath = `users/userDetail_${sanitizedEmail}`;
+          const dbPath = `user/userDetail_${sanitizedEmail}`;
           const userRef = ref(db, dbPath);
 
           onValue(
@@ -128,9 +128,9 @@ const DriverDetailScreen = ({ navigation }) => {
 
           <Text style={styles.detail}>Contact: {userInfo.Contact}</Text>
 
-          <Text style={styles.detail}>Route_No: {userInfo.Route_No}</Text>
+          <Text style={styles.detail}>Route: {userInfo.Route_No}</Text>
 
-          <Text style={styles.detail}>Bus_No: {userInfo.Bus_No}</Text>
+          <Text style={styles.detail}>Bus: {userInfo.Bus_No}</Text>
         </View>
       ) : null}
     
@@ -158,7 +158,9 @@ const styles = StyleSheet.create({
 
   text: {
     marginBottom: 380,
-    paddingLeft:20 
+    alignContent: 'center',
+    justifyContent: 'center',
+    //paddingLeft:20 
   },
   profileImage: {
     width: 130,
@@ -177,13 +179,15 @@ const styles = StyleSheet.create({
   detail: {
     fontSize: 28,
     marginTop: 20,
-    paddingLeft:90,
+    alignContent: 'center',
+    justifyContent: 'center',
+    paddingLeft:50,
     color: 'white'
   
   },
   logoutButtonContainer: {
     position: 'absolute',
-    top:670,
+    top:700,
     right: 160,
   },
   logoutButton: {
