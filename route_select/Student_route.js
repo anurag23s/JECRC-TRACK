@@ -196,9 +196,9 @@ const Student_route = () => {
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
-      <Icon  style={tw `bg-gray-100 absolute top-0  right-10`}
-       name="location-arrow" size={32} color="black" />
-        <Text style={tw `p-2  font-bold text-blue-50  absolute z-30 mr-12 right-4 rounded-full `}backgroundColor="#191970">TRACK</Text>
+      <Icon  style={tw `bg-gray-100 absolute top-0  right-1`}
+       name="location-arrow" size={32} color="green" />
+        <Text style={tw `p-2  font-bold text-blue-50 rounded-full  absolute z-30 mr-6 right-2`}backgroundColor="#191970">TRACK</Text>
        </View>
        </TouchableOpacity>
        <View style={tw `border-t border-black mt-10`}></View>
@@ -245,9 +245,9 @@ onPress={() => navigation.navigate('Map2')}
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
-      <Icon  style={tw `bg-gray-100  absolute  flex-1  mr-7  right-4`}
-       name="location-arrow" size={32} color="black" />
-        <Text style={tw `p-2  font-bold text-blue-50 rounded-full  absolute z-30 mr-7 right-4 mr-12 `}backgroundColor="#191970">TRACK</Text>
+      <Icon  style={tw `bg-gray-100  absolute  flex-1 right-1`}
+       name="location-arrow" size={32} color="green" />
+        <Text style={tw `p-2  font-bold text-blue-50 rounded-full  absolute z-30 mr-6 right-2`}backgroundColor="#191970">TRACK</Text>
        </View>
  </TouchableOpacity>
  <View style={tw `border-t border-black mt-10`}></View>
@@ -278,9 +278,9 @@ onPress={() => navigation.navigate('Map2')}
     <TouchableOpacity 
     onPress={() => navigation.navigate('Map3')}
     >
-<Icon  style={tw `bg-gray-100  absolute z-30 mr-7 right-4 `}
- name="location-arrow" size={32} color="black" />
-  <Text style={tw `p-2  font-bold text-blue-50 rounded-full  absolute z-30 mr-7 right-4 mr-12 `}backgroundColor="#191970">TRACK</Text>
+<Icon  style={tw `bg-gray-100  absolute z-30 right-1 `}
+ name="location-arrow" size={32} color="green" />
+  <Text style={tw `p-2  font-bold text-blue-50 rounded-full  absolute z-30 mr-6 right-2 `}backgroundColor="#191970">TRACK</Text>
  
  </TouchableOpacity>
  <View style={tw `border-t border-black mt-10`}></View>
@@ -311,9 +311,9 @@ onPress={() => navigation.navigate('Map2')}
  onPress={() => navigation.navigate('Map4')}>
 <View>
 
-<Icon  style={tw `bg-gray-100  absolute z-50 mr-7 right-3 `}
- name="location-arrow" size={32} color="black" />
- <Text style={tw `p-2  font-bold text-blue-50 rounded-full  absolute z-30 mr-7 right-4 mr-12 `}backgroundColor="#191970">TRACK</Text>
+<Icon  style={tw `bg-gray-100  absolute z-50  right-1 `}
+ name="location-arrow" size={32} color="green" />
+ <Text style={tw `p-2  font-bold text-blue-50 rounded-full  absolute z-30 mr-6 right-2  `}backgroundColor="#191970">TRACK</Text>
  </View>
  </TouchableOpacity> 
  <View style={tw `border-t border-black mt-10`}></View>

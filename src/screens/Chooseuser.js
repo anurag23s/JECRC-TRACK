@@ -48,7 +48,7 @@ const handleReset = async () => {
 
 
         <View style={{justifyContent: 'flex-start', alignItems: 'center', flex: 1}}>
-           <Text style={{fontSize: 24 ,color:'#302a75', marginTop: 80, fontWeight: "bold"}}>
+           <Text style={{fontSize: 24 ,color:'#302a75', marginTop: 50, fontWeight: "bold"}}>
          Welcome to</Text>
          <Text style={{fontSize: 52 ,color:'#302a75', fontWeight: "bold"}}>
          JECRC TRACK </Text>
@@ -93,7 +93,7 @@ const handleReset = async () => {
 
 
 
-      <View><Text style={{color: '#FFF'}}>Let's Navigate with Ease!</Text></View>  
+      <View><Text style={{color: '#FFF'}}>Navigate with Ease!</Text></View>  
            
 
         

@@ -19,7 +19,7 @@ import { useNavigation } from '@react-navigation/native';
 import { onValue, off, ref } from 'firebase/database';
 import * as Location from 'expo-location';
 
-const requestLocation = async () => {
+/*const requestLocation = async () => {
   try {
     let { status } = await Location.requestBackgroundPermissionsAsync({
     accuracy: Location.Accuracy.High,
@@ -44,7 +44,7 @@ const requestLocation = async () => {
   }
   
 };
-
+*/
 const Driver_Login = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -85,7 +85,7 @@ const Driver_Login = (props) => {
         }
       );
 
-      requestLocation();
+      //requestLocation();
 
 
     } catch (error) {
