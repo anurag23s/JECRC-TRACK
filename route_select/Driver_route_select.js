@@ -388,9 +388,9 @@ const Driver_route_select = () => {
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
-        <Icon  style={tw `bg-gray-100 absolute top-2  right-7`}
+        <Icon  style={tw `bg-gray-100 absolute top-2  right-1`}
        name="map-marker" size={28} color="red" />
-        <Text style={tw `bg-gray-100  absolute mr-6 left-64 m-4 font-bold`}>VIEW MAP</Text>
+        <Text style={tw `p-1 bg-yellow-300  absolute right-3 m-3 font-bold rounded-full`}>VIEW MAP</Text>
         {menuVisible && ( // Only render the overlay when the menu is open
    <TouchableOpacity
      style={{
@@ -422,9 +422,9 @@ const Driver_route_select = () => {
      onPress={closeMenu} // Close the menu when overlay is pressed
    />
  )}
-        <Icon  style={tw `bg-gray-100 absolute bottom-4  right-7`}
+        <Icon  style={tw `bg-gray-100 absolute bottom-4  right-1`}
        name="location-arrow" size={28} color="green" />
-        <Text style={tw `bg-gray-100  absolute z-30 mr-12 right-1 bottom-4 font-bold `}>SHARE LOCATION </Text>
+        <Text style={tw `p-1 bg-yellow-300  absolute z-30 mr-7 right-0 bottom-4 font-bold rounded-full`}>SHARE LOCATION </Text>
         </View>
        </TouchableOpacity>
                     
@@ -487,9 +487,9 @@ const Driver_route_select = () => {
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
-        <Icon  style={tw `bg-gray-100 absolute top-2  right-7`}
+        <Icon  style={tw `bg-gray-100 absolute top-2  right-1`}
        name="map-marker" size={28} color="red" />
-        <Text style={tw `bg-gray-100  absolute mr-6 left-64 m-4 font-bold`}>VIEW MAP</Text>
+        <Text style={tw `p-1 bg-yellow-300  absolute right-3 m-3 font-bold rounded-full`}>VIEW MAP</Text>
        </View>
        </TouchableOpacity>
        <TouchableOpacity onPress={() => {setOptionId('Map2');
@@ -508,9 +508,9 @@ const Driver_route_select = () => {
      onPress={closeMenu} // Close the menu when overlay is pressed
    />
  )}
-        <Icon  style={tw `bg-gray-100 absolute bottom-6  right-7`}
+        <Icon  style={tw `bg-gray-100 absolute bottom-6  right-1`}
        name="location-arrow" size={28} color="green" />
-        <Text style={tw `bg-gray-100  absolute z-30 mr-12 right-1 bottom-6 font-bold `}>SHARE LOCATION </Text>
+        <Text style={tw `p-1 bg-yellow-300  absolute z-30 mr-7 right-0 bottom-6 font-bold rounded-full`}>SHARE LOCATION </Text>
         </View>
        </TouchableOpacity>
  <View style={tw `border-t border-black mt-10`}></View>
@@ -555,9 +555,9 @@ const Driver_route_select = () => {
           onPress={closeMenu} // Close the menu when overlay is pressed
         />
       )}
-        <Icon  style={tw `bg-gray-100 absolute top-2  right-7`}
+        <Icon  style={tw `bg-gray-100 absolute top-2  right-1`}
        name="map-marker" size={28} color="red" />
-        <Text style={tw `bg-gray-100  absolute mr-6 left-64 m-4 font-bold`}>VIEW MAP</Text>
+        <Text style={tw `p-1 bg-yellow-300  absolute right-3 m-3 font-bold rounded-full`}>VIEW MAP</Text>
        </View>
        </TouchableOpacity>
        <TouchableOpacity onPress={() => {setOptionId('Map3');
@@ -576,9 +576,9 @@ const Driver_route_select = () => {
      onPress={closeMenu} // Close the menu when overlay is pressed
    />
  )}
-        <Icon  style={tw `bg-gray-100 absolute bottom-6  right-7`}
+        <Icon  style={tw `bg-gray-100 absolute bottom-6  right-1`}
        name="location-arrow" size={28} color="green" />
-        <Text style={tw `bg-gray-100  absolute z-30 mr-12 right-1 bottom-6 font-bold `}>SHARE LOCATION </Text>
+        <Text style={tw `p-1 bg-yellow-300  absolute z-30 mr-7 right-0 bottom-6 font-bold rounded-full`}>SHARE LOCATION </Text>
         </View>
        </TouchableOpacity>
  <View style={tw `border-t border-black mt-10`}></View>
@@ -634,9 +634,9 @@ const Driver_route_select = () => {
      onPress={closeMenu} // Close the menu when overlay is pressed
    />
  )}
-        <Icon  style={tw `bg-gray-100 absolute top-2  right-7`}
+        <Icon  style={tw `bg-gray-100 absolute top-2  right-1`}
        name="map-marker" size={28} color="red" />
-        <Text style={tw `bg-gray-100  absolute mr-6 left-56 m-4 font-bold left-64`}>VIEW MAP</Text>
+        <Text style={tw `p-1 bg-yellow-300  absolute right-3 m-3 font-bold rounded-full`}>VIEW MAP</Text>
        </View>
        </TouchableOpacity>
        <TouchableOpacity onPress={() => {setOptionId('Map4');
@@ -655,9 +655,9 @@ const Driver_route_select = () => {
      onPress={closeMenu} // Close the menu when overlay is pressed
    />
  )}
-        <Icon  style={tw `bg-gray-100 absolute bottom-6  right-7`}
+        <Icon  style={tw `bg-gray-100 absolute bottom-6  right-1`}
        name="location-arrow" size={28} color="green" />
-        <Text style={tw `bg-gray-100  absolute z-30 mr-12 right-1 bottom-6 font-bold `}>SHARE LOCATION </Text>
+        <Text style={tw `p-1 bg-yellow-300  absolute z-30 mr-7 right-0 bottom-6 font-bold rounded-full`}>SHARE LOCATION </Text>
         </View>
        </TouchableOpacity>
 

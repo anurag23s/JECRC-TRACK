@@ -550,7 +550,7 @@ export default function Route_Map3() {
     DRIVER DETAILS 
   </Text>
   <Text   style={tw` text-xl  text-center  font-bold ` }>
-  RJ20GC7643
+  RJ14PB9257
   </Text>
   
   <View style={tw `border-t border-black mt-2`}></View>
