@@ -382,7 +382,7 @@ const AboutUsScreen = () => {
       </View>
 
       <View>
-      <View style={tw `border-t border-black mt-09`}></View>
+      <View style={tw `border-t border-black `}></View>
       <View style={styles.textContainer}>
         <Text style={styles.heading}>Revolutionizing College Transportation</Text>
         <Text style={styles.description}>
@@ -448,12 +448,12 @@ const AboutUsScreen = () => {
           The JECRC Track Team
         </Text>
         </View>
-        <View style={tw `border-t border-black mt-09`}></View>
+        <View style={tw `border-t border-black `}></View>
       </View>
 
       <Text style={styles.sectionHeading}>Meet Our Team</Text>
       <View style={styles.teamMember}>
-      <View style={tw `border-t border-black mt-09`}></View>
+      <View style={tw `border-t border-black`}></View>
         <View style={styles.memberInfo}>
           <View>
             <Text style={styles.memberName}>   Aarushi Goyal</Text>
@@ -465,12 +465,12 @@ const AboutUsScreen = () => {
             style={styles.avatar}
           />
         </View>
-        <View style={tw `border-t border-black mt-09`}></View>
+        <View style={tw `border-t border-black `}></View>
       </View>
 
 
       <View style={styles.teamMember}>
-      <View style={tw `border-t border-black mt-09`}></View>
+      <View style={tw `border-t border-black `}></View>
         <View style={styles.memberInfo}>
           <View>
             <Text style={styles.memberName}>   Aayushi Jain</Text>
@@ -482,12 +482,12 @@ const AboutUsScreen = () => {
             style={styles.avatar}
           />
         </View>
-        <View style={tw `border-t border-black mt-09`}></View>
+        <View style={tw `border-t border-black `}></View>
       </View>
 
 
       <View style={styles.teamMember}>
-      <View style={tw `border-t border-black mt-09`}></View>
+      <View style={tw `border-t border-black `}></View>
         <View style={styles.memberInfo}>
           <View>
             <Text style={styles.memberName}>   Ansh Goyal</Text>
@@ -499,12 +499,12 @@ const AboutUsScreen = () => {
             style={styles.avatar}
           />
         </View>
-        <View style={tw `border-t border-black mt-09`}></View>
+        <View style={tw `border-t border-black `}></View>
       </View>
 
 
       <View style={styles.teamMember}>
-      <View style={tw `border-t border-black mt-09`}></View>
+      <View style={tw `border-t border-black `}></View>
         <View style={styles.memberInfo}>
           <View>
             <Text style={styles.memberName}>   Anurag Sinha</Text>
@@ -516,7 +516,7 @@ const AboutUsScreen = () => {
             style={styles.avatar}
           />
         </View>
-        <View style={tw `border-t border-black mt-09`}></View>
+        <View style={tw `border-t border-black `}></View>
       </View>
       {/* Add more team members as needed */}
 
@@ -526,7 +526,7 @@ const AboutUsScreen = () => {
 
 
       <View style={styles.teamMember}>
-      <View style={tw `border-t border-black mt-09`}></View>
+      <View style={tw `border-t border-black `}></View>
         <View style={styles.memberInfo}>
           <View>
             <Text style={styles.memberName}>   Dr. Arpit Agrawal</Text>
@@ -538,12 +538,12 @@ const AboutUsScreen = () => {
             style={styles.avatar}
           />
         </View>
-        <View style={tw `border-t border-black mt-09`}></View>
+        <View style={tw `border-t border-black `}></View>
       </View>
 
 
       <View style={styles.teamMember}>
-      <View style={tw `border-t border-black mt-09`}></View>
+      <View style={tw `border-t border-black `}></View>
         <View style={styles.memberInfo}>
         
           <View>
@@ -556,11 +556,11 @@ const AboutUsScreen = () => {
             style={styles.avatar}
           />
         </View>
-        <View style={tw `border-t border-black mt-09`}></View>
+        <View style={tw `border-t border-black `}></View>
       </View>
 
       <View style={styles.teamMember}>
-      <View style={tw `border-t border-black mt-09`}></View>
+      <View style={tw `border-t border-black `}></View>
         <View style={styles.memberInfo}>
           <View>
             <Text style={styles.memberName}>   Dr. Sanjay Gour</Text>
@@ -572,12 +572,12 @@ const AboutUsScreen = () => {
             style={styles.avatar}
           />
         </View>
-        <View style={tw `border-t border-black mt-09`}></View>
+        <View style={tw `border-t border-black `}></View>
       </View>
 
 
       <View style={styles.teamMember}>
-      <View style={tw `border-t border-black mt-09`}></View>
+      <View style={tw `border-t border-black `}></View>
         <View style={styles.memberInfo}>
           <View>
             <Text style={styles.memberName}>   Dr. Vijeta Kumawat</Text>
@@ -589,12 +589,12 @@ const AboutUsScreen = () => {
             style={styles.avatar}
           />
         </View>
-        <View style={tw `border-t border-black mt-09`}></View>
+        <View style={tw `border-t border-black `}></View>
         </View>
 
 
       <View style={styles.teamMember}>
-      <View style={tw `border-t border-black mt-09`}></View>
+      <View style={tw `border-t border-black `}></View>
         <View style={styles.memberInfo}>
           <View>
             <Text style={styles.memberName}>   Ms. Madhu Choudhary</Text>
@@ -606,7 +606,7 @@ const AboutUsScreen = () => {
             style={styles.avatar}
           />
         </View>
-        <View style={tw `border-t border-black mt-09`}></View>
+        <View style={tw `border-t border-black `}></View>
       </View>
 
       
