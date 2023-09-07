@@ -289,13 +289,13 @@ const Driver_route_select = () => {
           <Text style={tw` text-lg text-left  left-4  text-white`}>   Terms and conditions </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={tw` m-3  top-40  rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Home")}>
+        {/*<TouchableOpacity style={tw` m-3  top-40  rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Home")}>
         
         < AntDesign style={tw` p-2  absolute `}
         name="stop-circle" size={35} color="black" />
 
-          <Text style={tw` text-xl  text-left  left-8  text-white`}>     Stop Sharing </Text>
-        </TouchableOpacity>
+      <Text style={tw` text-xl  text-left  left-8  text-white`}>     Stop Sharing </Text>
+      </TouchableOpacity>*/}
 
          
          
