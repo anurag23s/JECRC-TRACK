@@ -47,7 +47,7 @@ const Student_route = () => {
 
   return (
     
-    <View  style={tw` p-1   top-7`} >
+    <View  style={tw` p-1   top-1  flex-1`} >
       <TouchableOpacity  style={tw` top-10 z-10   left-4 mr-60   	 	 `} 
          
          onPress={toggleMenu}   >

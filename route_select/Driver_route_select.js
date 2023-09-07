@@ -185,7 +185,7 @@ const Driver_route_select = () => {
   
   
   return (
-    <View  style={tw` p-1   top-1`} >
+    <View  style={tw` p-1   top-1  flex-1` } >
 <TouchableOpacity  style={tw` top-12 z-10  left-4 mr-60  `} 
                 
                 onPress={toggleMenu}   >
