@@ -668,7 +668,7 @@ const {loca,locb,locc,locd,loce,locf,locg,loch,loci,locj,lockk,locl,locm,locn,lo
     DRIVER DETAILS 
   </Text>
   <Text   style={tw` text-xl  text-center  font-bold ` }>
-  BR06GC7643
+  RJ14PC8903
   </Text>
   
   <View style={tw `border-t border-black mt-2`}></View>

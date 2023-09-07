@@ -611,7 +611,7 @@ export default function Route_Map1() {
     DRIVER DETAILS 
   </Text>
   <Text   style={tw` text-xl  text-center  font-bold ` }>
-  RJ26GC7643
+  RJ14PA9384
   </Text>
   
   <View style={tw `border-t border-black mt-2`}></View>
