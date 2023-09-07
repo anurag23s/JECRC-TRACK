@@ -29,7 +29,7 @@ import TncOB from './src/screens/TncOB';
 const Stack = createStackNavigator();
 
 export default function App(){
-  const [showOnboarding,setShowOnboarding]=useState(null);
+ {/*} const [showOnboarding,setShowOnboarding]=useState(null);
 useEffect(()=>{
   checkIfAlreadyOnboarded();
 },[])
@@ -51,19 +51,27 @@ if(showOnboarding==null)
 
 
 
-if(showOnboarding){
-  
+if(showOnboarding){ 
+*/}
 
   return (
     <NavigationContainer>
-   <Stack.Navigator initialRouteName={showOnboarding ? 'Chooseuser' : 'Jecrc-Track'}>
-        {showOnboarding ? (
+   <Stack.Navigator >
+        {/*{showOnboarding ? (
           <Stack.Screen
             name="Jecrc-Track"
             options={{ headerShown: false }}
             component={OnboardingScreen}
           />
-        ) : null}
+        ) : null}*/}
+
+        <Stack.Screen
+            name="Jecrc-Track"
+            options={{ headerShown: false }}
+            component={OnboardingScreen}
+          />
+
+        
         <Stack.Screen
           name="Chooseuser"
           options={{ headerShown: false }}
@@ -157,7 +165,7 @@ if(showOnboarding){
 </NavigationContainer>
 )
 }
-  }
+  
 
 
 const styles = StyleSheet.create({
