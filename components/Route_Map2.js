@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect, useRef} from "react";
-import { StyleSheet, Text, View ,TouchableOpacity, FlatList, SafeAreaView, ImageBackground, Button,Animated,Dimensions, Linking} from "react-native";
+import { StyleSheet, Text, View ,TouchableOpacity, FlatList, SafeAreaView, ImageBackground, Button,Animated,Dimensions, Linking,Image} from "react-native";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
 import { GOOGLE_MAPS_APIKEY } from "@env";
@@ -221,7 +221,13 @@ export default function Route_Map2() {
     })
     
   const {loca,locb,locc,locd,loce,locf,loch,loci,locj,lockk,locl,locm,locn,loco,locp} = state
-  
+  const CustomMarker = ({ imageSource, markerSize }) => {
+    return (
+      <View style={{ width: markerSize, height: markerSize }}>
+        <Image source={imageSource} style={{ width: '100%', height: '100%' }} />
+      </View>
+    );
+  };
     return (
       <SafeAreaView>
       <View style={tw` bg-white `}>
@@ -273,14 +279,16 @@ export default function Route_Map2() {
   }}
 >
 
- 
-      <Marker
+<Marker
             coordinate={{ latitude, longitude }}
             title="Bus Location"
             description="Bus Number 2"
-            pinColor="yellow"
-      />
-     
+      >
+   <CustomMarker
+   imageSource={require('.././assets/LOCD.png')}
+   markerSize={80}
+ />
+      </Marker>
     <Marker
     coordinate={{ latitude: 26.92275, longitude: 75.84584}}
     title="MEENA PETROL PUMP"
