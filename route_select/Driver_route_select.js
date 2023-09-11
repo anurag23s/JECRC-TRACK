@@ -1,4 +1,4 @@
-import {Text, TouchableOpacity, View, StyleSheet, Alert,Animated,Dimensions } from 'react-native';
+import {Text, TouchableOpacity, View, StyleSheet, Alert,Animated,Dimensions ,SafeAreaView} from 'react-native';
 import React from 'react';
 import { useState, useEffect ,useRef} from 'react';
 import tw from 'tailwind-react-native-classnames';
@@ -156,14 +156,6 @@ const Driver_route_select = () => {
     };
   
 
-   
- 
-
-
-
-
-
-
 
     const closeMenu = () => {
       Animated.timing(menuAnimation, {
@@ -172,9 +164,6 @@ const Driver_route_select = () => {
         useNativeDriver: false,
       }).start();
       setMenuVisible(false);
-
-    
-
     };
     const translateX = menuAnimation.interpolate({
       inputRange: [0, 1],
@@ -185,19 +174,20 @@ const Driver_route_select = () => {
   
   
   return (
+    <SafeAreaView>
     <View  style={tw` p-1   top-1  flex-1` } >
-<TouchableOpacity  style={tw` top-12 z-10  left-4 mr-60  `} 
+<TouchableOpacity  style={tw` top-5 z-10  left-4 mr-60  `} 
                 
                 onPress={toggleMenu}   >
      <AntDesign name={"menu"} size={50} color={"#0E3386"} />
    </TouchableOpacity>
-   <View style={tw`   bottom-4 m-2 bg-yellow-300 rounded-full `}>
+   <View style={tw`   bottom-12  m-2 bg-yellow-300 rounded-full `}>
        
        <Text style={tw`  top-4  text-center justify-evenly text-3xl  font-bold`} color="white"> Select Route </Text>
 
 
        <TouchableOpacity
-       style={tw`top-4 z-20 absolute right-3 p-2 bg-red-600 font-bold, rounded-full`}
+       style={tw`top-4 z-20 absolute right-3 p-2 bg-red-600 font-bold rounded-full`}
        onPress={handleLogout}
      >
        <Text>Logout</Text>
@@ -218,7 +208,7 @@ const Driver_route_select = () => {
         style={{
           position: 'absolute',
           left: -10,
-          top: 30,
+          top: 0,
           width: '70%',
           height: "1200%",
           backgroundColor: 'white',
@@ -232,7 +222,7 @@ const Driver_route_select = () => {
          onPress={ () => navigation.navigate("DriverDetailScreen")} >
 
         <Avatar.Image  
-        style={tw`  left-4 top-16 `}
+        style={tw`  left-4 top-16  `}
         size={48}  source={require('../assets/Driver_Avatar.png')} /> 
         <Text style={tw`text-3xl  left-20 top-6  text-white ` }> Profile  </Text>
       <Text></Text>
@@ -306,7 +296,7 @@ const Driver_route_select = () => {
 
 
 
-    <View style={tw`h-1/5 w-full `}>
+    <View style={tw`h-1/5  `}>
     {menuVisible && ( // Only render the overlay when the menu is open
         <TouchableOpacity
           style={{
@@ -667,6 +657,7 @@ const Driver_route_select = () => {
 </View>
 
 </View> 
+</SafeAreaView>
   )
 }
 

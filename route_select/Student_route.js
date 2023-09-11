@@ -1,4 +1,4 @@
-import {Text, TouchableOpacity, View, StyleSheet ,Animated,Dimensions, ScrollView } from 'react-native';
+import {Text, TouchableOpacity, View, StyleSheet ,Animated,Dimensions, SafeAreaView } from 'react-native';
 import React  ,{useRef,useState}from 'react';
 import tw from 'tailwind-react-native-classnames';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -46,7 +46,7 @@ const Student_route = () => {
 
 
   return (
-    
+    <SafeAreaView>
     <View  style={tw` p-1   top-1  flex-1`} >
       <TouchableOpacity  style={tw` top-10 z-10   left-4 mr-60   	 	 `} 
          
@@ -335,6 +335,7 @@ onPress={() => navigation.navigate('Map2')}
 
 
     </View> 
+    </SafeAreaView>
     
   )
 }
