@@ -187,10 +187,10 @@ const Driver_route_select = () => {
 
 
        <TouchableOpacity
-       style={tw`top-4 z-20 absolute right-3 p-2 bg-red-600 font-bold rounded-full`}
+       style={tw `top-4 z-20 absolute right-3 p-2 bg-red-600 font-bold  rounded-full`}
        onPress={handleLogout}
      >
-       <Text>Logout</Text>
+       <Text style={tw`font-bold `}>Logout</Text>
      </TouchableOpacity>
 
 
@@ -231,7 +231,7 @@ const Driver_route_select = () => {
 
         <View style={tw `border-t  border-black  `}></View>
         <Text>
-          
+
         </Text>
 
          <TouchableOpacity style={tw` m-3    rounded-full bg-blue-300 p-2`} onPress={ () => navigation.navigate("BusStop")}>
