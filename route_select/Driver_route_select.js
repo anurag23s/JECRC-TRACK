@@ -174,7 +174,7 @@ const Driver_route_select = () => {
   
   
   return (
-    <SafeAreaView>
+   
     <View  style={tw` p-1   top-1  flex-1` } >
 <TouchableOpacity  style={tw` top-5 z-10  left-4 mr-60  `} 
                 
@@ -230,22 +230,25 @@ const Driver_route_select = () => {
         </TouchableOpacity> 
 
         <View style={tw `border-t  border-black  `}></View>
+        <Text>
+          
+        </Text>
 
-         <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-300 p-2`} onPress={ () => navigation.navigate("BusStop")}>
+         <TouchableOpacity style={tw` m-3    rounded-full bg-blue-300 p-2`} onPress={ () => navigation.navigate("BusStop")}>
          <MIcon style={tw` p-3 absolute  `}
           name="route" size={15} color="black" />
            <Text style={tw`  text-left  text-lg  left-4 text-white`}>   Bus Route</Text>
          </TouchableOpacity>
 
 
-         <TouchableOpacity style={tw` m-3 top-2 p-2 rounded-full bg-blue-300   `} onPress={ () => navigation.navigate("DriverList")}>
+         <TouchableOpacity style={tw` m-3  p-2 rounded-full bg-blue-300   `} onPress={ () => navigation.navigate("DriverList")}>
           <Ionicons style={tw` p-3   absolute `}
           
           name="person-outline" size={22} color="black" />
            <Text style={tw` text-lg text-left  left-4 text-white`}>    Driver Details </Text>
          </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3   top-1 rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
+         <TouchableOpacity style={tw` m-3   rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
           
          
          <Ionicons style={tw` p-3   absolute `}
@@ -263,6 +266,12 @@ const Driver_route_select = () => {
 
            <Text style={tw` text-lg text-left  left-4 text-white`}>    About Us</Text>
          </TouchableOpacity>
+         <TouchableOpacity style={tw` m-3    rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("AboutJECRC")}>       
+        <Ionicons style={tw` p-3  absolute `}
+        name="information-circle-outline" size={25} color="black" />
+          <Text style={tw` text-lg text-left  left-4 text-white`}>    About JECRC</Text>
+        </TouchableOpacity>
+
          <TouchableOpacity style={tw` m-3    rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("ReportIssue")}>
         
          <MIcons style={tw` p-3  absolute `}
@@ -277,6 +286,14 @@ const Driver_route_select = () => {
         name="clipboard-pencil" size={25} color="black" />
 
           <Text style={tw` text-lg text-left  left-4  text-white`}>   Terms and conditions </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={tw` m-3    rounded-full bg-blue-300  p-2`} onPress={ () => navigation.navigate("Tnc")}>
+        
+        < MIcons style={tw` p-3  absolute `}
+        name="question-answer" size={25} color="black" />
+
+          <Text style={tw` text-lg text-left  left-4  text-white`}>    FAQ </Text>
         </TouchableOpacity>
 
         {/*<TouchableOpacity style={tw` m-3  top-40  rounded-full bg-red-600  p-3`} onPress={ () => navigation.navigate("Home")}>
@@ -657,7 +674,7 @@ const Driver_route_select = () => {
 </View>
 
 </View> 
-</SafeAreaView>
+
   )
 }
 

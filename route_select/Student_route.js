@@ -46,7 +46,7 @@ const Student_route = () => {
 
 
   return (
-    <SafeAreaView>
+    
     <View  style={tw` p-1   top-1  flex-1`} >
       <TouchableOpacity  style={tw` top-10 z-10   left-4 mr-60   	 	 `} 
          
@@ -84,21 +84,24 @@ const Student_route = () => {
       
         <View style={tw `border-t  border-2 border-black mt-8 `}></View>
 
-         <TouchableOpacity style={tw` m-3  top-4  rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("BusStop")}>
+        <Text>
+        </Text>
+
+         <TouchableOpacity style={tw` m-3    rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("BusStop")}>
          <MIcon style={tw` p-3 absolute  `}
           name="route" size={15} color="black" />
            <Text style={tw`  text-left  text-lg  left-4`}>   Bus Route</Text>
          </TouchableOpacity>
 
 
-         <TouchableOpacity style={tw` m-3 top-2 p-2 rounded-full bg-blue-400   `} onPress={ () => navigation.navigate("DriverList")}>
+         <TouchableOpacity style={tw` m-3  p-2 rounded-full bg-blue-400   `} onPress={ () => navigation.navigate("DriverList")}>
           <Ionicons style={tw` p-3   absolute `}
           
           name="person-outline" size={22} color="black" />
            <Text style={tw` text-lg text-left  left-4`}>    Driver Details </Text>
          </TouchableOpacity>
 
-         <TouchableOpacity style={tw` m-3   top-1 rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
+         <TouchableOpacity style={tw` m-3    rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("EmergencyContactsList")}>
           
          
          <Ionicons style={tw` p-3   absolute `}
@@ -116,6 +119,16 @@ const Student_route = () => {
 
            <Text style={tw` text-lg text-left  left-4`}>    About us</Text>
          </TouchableOpacity>
+
+         <TouchableOpacity style={tw` m-3   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("AboutJECRC")}>
+        
+         <Ionicons style={tw` p-3  absolute `}
+         name="information-circle-outline" size={25} color="black" />
+
+          <Text style={tw` text-lg text-left  left-4`}>   About JECRC </Text>
+        </TouchableOpacity>
+
+
          <TouchableOpacity style={tw` m-3    rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("ReportIssue")}>
         
          <MIcons style={tw` p-3  absolute `}
@@ -132,6 +145,18 @@ const Student_route = () => {
           <Text style={tw` text-lg text-left  left-4`}>   Terms and conditions </Text>
         </TouchableOpacity>
         
+   
+        
+        <TouchableOpacity style={tw` m-3   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("Tnc")}>
+        
+        < MIcons style={tw` p-3  absolute `}
+        name="question-answer" size={25} color="black" />
+
+          <Text style={tw` text-lg text-left  left-4`}>    FAQ </Text>
+        </TouchableOpacity>
+        
+
+
          </Animated.View>  
 
     
@@ -335,7 +360,6 @@ onPress={() => navigation.navigate('Map2')}
 
 
     </View> 
-    </SafeAreaView>
     
   )
 }

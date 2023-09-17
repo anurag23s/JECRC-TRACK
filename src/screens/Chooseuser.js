@@ -30,10 +30,7 @@ export default function Chooseuser() {
   const navigation = useNavigation();
 
   
-const handleReset = async () => {
-  await removeItem('onboarded');
-  navigation.push('Jecrc-Track');
-}
+
 
   return (
  
@@ -83,14 +80,7 @@ const handleReset = async () => {
      )}
     />
             
-            <View >
-          <TouchableOpacity style={styles.resetButton} onPress={handleReset} >
-      <Text style={styles.text}>
-        Reset
-      </Text>
-    </TouchableOpacity>
-</View>
-
+ 
 
 
       <View><Text style={{color: '#FFF'}}>Navigate with Ease!</Text></View>  

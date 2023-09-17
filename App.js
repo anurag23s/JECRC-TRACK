@@ -24,6 +24,7 @@ import DriverProfileScreen from './src/screens/DriverDetailScreen';
 import OnboardingScreen from './src/screens/OnboardingScreen';
 import {getItem} from './src/screens/utils/asyncStorage'
 import TncOB from './src/screens/TncOB';
+import AboutJECRC from './src/screens/AboutJECRC';
 //import AppNavigation from './Navigation/Appnavigation';
 
 const Stack = createStackNavigator();
@@ -158,7 +159,11 @@ if(showOnboarding){
         component={Tnc}
         options={{ headerShown: false,}}
       />
-
+      <Stack.Screen 
+        name="AboutJECRC"
+        component={AboutJECRC}
+        options={{ headerShown: false,}}
+      />
 
 
 </Stack.Navigator>
