@@ -63,17 +63,11 @@ const Driver_route_select = () => {
 
     
 
-
-
-
-
   const handleOptionPress = async (optionId) => {
     try {
       await requestLocation(optionId);
       //navigation.navigate(optionId); // Navigate to the desired map screen
     
-      
-
     } catch (error) {
       console.error('Error sharing location:', error);
     }

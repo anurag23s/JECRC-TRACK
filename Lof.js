@@ -22,7 +22,6 @@ const LocF = () => {
       
 
 
-  
     const requestLocation = async () => {
       try {
         let { status } = await Location.requestForegroundPermissionsAsync();

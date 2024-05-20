@@ -58,7 +58,7 @@ export default function Route_Map2() {
     fetchData();
 
     // Set up interval to fetch data every 15 seconds
-    const intervalId = setInterval(fetchData, 30000);
+    const intervalId = setInterval(fetchData, 25000);
 
     // Clean up interval and data listener when component unmounts
     return () => {

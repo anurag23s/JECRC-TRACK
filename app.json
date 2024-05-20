@@ -4,7 +4,8 @@
       [
         "expo-location",
         {
-          "isAndroidBackgroundLocationEnabled": true
+          "isAndroidBackgroundLocationEnabled":true
+      
         }
       ]
     ],
@@ -51,7 +52,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "46c24ac4-50dc-41e3-bdb7-88e863e612cd"
+        "projectId": "220e4871-85fb-417c-a78f-a1f2a3caea03"
       }
     }
   }

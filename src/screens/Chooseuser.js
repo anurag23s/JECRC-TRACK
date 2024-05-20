@@ -20,7 +20,7 @@ const data =[
 {
 id:"456",
 title: "DRIVER",
-image: require("../../assets/drivericon.png"),
+image: require("../../images/download.jpg"),
 screen: 'Driver_Login',
 
 },

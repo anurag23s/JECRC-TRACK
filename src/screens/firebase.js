@@ -3,15 +3,15 @@ import { getAuth } from 'firebase/auth';
 import { getDatabase } from 'firebase/database';
 
 const firebase = {
-    apiKey: "AIzaSyA0xlJovyMEAUeXfkeFQZndNF5sMNPZdMA",
-    authDomain: "jt-db-682b5.firebaseapp.com",
-    databaseURL: "https://jt-db-682b5-default-rtdb.firebaseio.com",
-    projectId: "jt-db-682b5",
-    storageBucket: "jt-db-682b5.appspot.com",
-    messagingSenderId: "959561125777",
-    appId: "1:959561125777:web:67bf37007fc99db440d430",
-    measurementId: "G-Z1BXZXNZYD"
+  apiKey: "AIzaSyCIl5crzedJqD0BLWAQidICFt2v8iuE3Y4",
+  authDomain: "jt1504-8a0a8.firebaseapp.com",
+  projectId: "jt1504-8a0a8",
+  storageBucket: "jt1504-8a0a8.appspot.com",
+  messagingSenderId: "943029802227",
+  appId: "1:943029802227:web:ee351ea321914ed1345386"
+
 };
+
 
 // Initialize Firebase app
 const app = initializeApp(firebase);

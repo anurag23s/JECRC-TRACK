@@ -109,7 +109,7 @@ const BusRoutesList = () => {
         data={item.stops}
         renderItem={({ item: stop }) => (
           <View style={styles.busStopItem}>
-            <Image source={require('./images/Bus.png')} style={styles.busAvatar} />
+            <Image source={require('./images/stop.jpg')} style={styles.busAvatar} />
             <View style={styles.busStopInfo}>
               <Text style={styles.busStopName}>{stop.name}</Text>
               <Text>Expected Pick up: {stop.Pickup}</Text>

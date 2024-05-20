@@ -375,7 +375,7 @@ const AboutUsScreen = () => {
       <Text style={styles.pageHeading}>Welcome to JECRCTrack</Text>
       <View style={styles.imageContainer}>
         <Image
-          source={require('./images/JECRC.png')}
+          source={require('./images/Building.jpg')}
           style={styles.image}
           resizeMode="cover"
         />
@@ -552,7 +552,7 @@ const AboutUsScreen = () => {
             <Text style={styles.memberYear}>     Principal</Text>
           </View>
           <Image
-            source={require('./images/Principal.png')} // Replace with actual avatar image
+            source={require('./images/chandana.jpg')} // Replace with actual avatar image
             style={styles.avatar}
           />
         </View>

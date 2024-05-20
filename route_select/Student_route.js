@@ -47,7 +47,7 @@ const Student_route = () => {
 
   return (
     
-    <View  style={tw` p-1   top-1  flex-1`} >
+    <View  style={tw` p-1   top-3  flex-1`} >
       <TouchableOpacity  style={tw` top-10 z-10   left-4 mr-60   	 	 `} 
          
          onPress={toggleMenu}   >
@@ -90,7 +90,7 @@ const Student_route = () => {
          <TouchableOpacity style={tw` m-3    rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("BusStop")}>
          <MIcon style={tw` p-3 absolute  `}
           name="route" size={15} color="black" />
-           <Text style={tw`  text-left  text-lg  left-4`}>   Bus Route</Text>
+           <Text style={tw`  text-left  text-lg  left-4`}>   Bus Routes</Text>
          </TouchableOpacity>
 
 
@@ -147,13 +147,7 @@ const Student_route = () => {
         
    
         
-        <TouchableOpacity style={tw` m-3   rounded-full bg-blue-400  p-2`} onPress={ () => navigation.navigate("Tnc")}>
         
-        < MIcons style={tw` p-3  absolute `}
-        name="question-answer" size={25} color="black" />
-
-          <Text style={tw` text-lg text-left  left-4`}>    FAQ </Text>
-        </TouchableOpacity>
         
 
 

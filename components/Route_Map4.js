@@ -57,7 +57,7 @@ export default function Route_Map4() {
     fetchData();
 
     // Set up interval to fetch data every 15 seconds
-    const intervalId = setInterval(fetchData, 5000);
+    const intervalId = setInterval(fetchData, 15000);
 
     // Clean up interval and data listener when component unmounts
     return () => {
@@ -69,7 +69,6 @@ export default function Route_Map4() {
 
   const [menuVisible, setMenuVisible] = useState(false);
   const menuAnimation = useRef(new Animated.Value(0)).current;
-
   const toggleMenu = () => {
     const toValue = menuVisible ? 0 : 1;
     Animated.timing(menuAnimation, {

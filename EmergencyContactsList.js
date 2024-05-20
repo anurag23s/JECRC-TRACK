@@ -2,10 +2,10 @@ import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, Linking, Image, StyleSheet } from 'react-native';
 
 const emergencyContacts = [
-  { name: 'Principal', phoneNumber: '0141-2770232', avatar: require('./images/Principal.png') },
-  { name: 'Transport Incharge', phoneNumber: '9024149459', avatar: require('./images/AvatarIncharge.png') },
-  { name: 'Security Officer', phoneNumber: '987-654-XXXX', avatar: require('./images/AvatarSecuruty.png') },
-  { name: 'Health Center', phoneNumber: '555-123-XXXX', avatar: require('./images/AvatarMedical.png') },
+  { name: 'Principal', phoneNumber: '0141-2770232', avatar: require('./images/chandana.jpg') },
+  { name: 'Transport Incharge', phoneNumber: '9024149459', avatar: require('./images/transport.jpg') },
+  { name: 'Security Officer', phoneNumber: '987-654-XXXX', avatar: require('./images/sec.jpg') },
+  { name: 'Health Center', phoneNumber: '555-123-XXXX', avatar: require('./images/medical.jpg') },
   
   // Add more emergency contacts as needed
 ];
