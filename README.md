@@ -1,10 +1,10 @@
 # JECRC Track
 
-##Contributors:
-Aarushi Goyal @20aarushigoyal.gmail.com
-Aayushi Jain @aayushij04
-Ansh Goyal @officialanshgoyal
-Anurag Sinha @anurag23s
+## Contributors:
+- [Aarushi Goyal](https://github.com/20aarushigoyal)
+- [Ansh Goyal](https://github.com/officialanshgoyal)
+- [Aayushi Jain](https://github.com/aayushij04)
+- [Anurag Sinha](https://github.com/anurag23s)
 
 ## Introduction
 
@@ -39,46 +39,37 @@ The APK is valid till DATE. (Since we have used the free tier service of Firebas
 
 To get started with the project, follow these steps:
 
-- Clone the repository:
--- git clone https://github.com/yourusername/JECRCTrack.git
--- cd JECRCTrack
+Clone the repository:
+  	
+   	- git clone https://github.com/yourusername/JECRCTrack.git
+	- cd JECRCTrack
 
 Install dependencies:
 
-npm install
+	- npm install
 
 Run the application:
 
-npm start
+	- npm start
 
 Build for Android/iOS:
 
-npx react-native run-android
+	- npx react-native run-android
 
 ## PLEASE NOTE
 
-We have restricted the .env file due to security reasons.To run our codebase on your local system, you need to create your own .env file and use your own API Key.  In the .env file write GOOGLE_MAPS_APIKEY=$API_KEY (Replace API_KEY with our own API Key. Please make sure the below mentioned APIs are enabled, DIRECTIONS API and Google Map SDK for Android.) 
-Since we have used the free tier service of Firebase as our DB, it has limited free validity. The current firebase is valid till DATE. However we will try to regularly update the latest Firebase Config.
-To use this app as a Driver (in order to share the location of the bus), you would require login credentials:
+1. We have restricted the .env file due to security reasons.To run our codebase on your local system, you need to create your own .env file and use your own API Key.  In the .env file write GOOGLE_MAPS_APIKEY=$API_KEY (Replace API_KEY with our own API Key. Please make sure the below mentioned APIs are enabled, DIRECTIONS API and Google Map SDK for Android.)
+2. Since we have used the free tier service of Firebase as our DB, it has limited free validity. The current firebase is valid till DATE. However we will try to regularly update the latest Firebase Config.
+3. To use this app as a Driver (in order to share the location of the bus), you would require login credentials:
+	User ID 1:
+	Email: jecrctrack.driver1@gmail.com
+	Password: 123456789
 	
- 
- User ID 1:
-	
- 
- Email: jecrctrack.driver1@gmai.com
-	
- Password: 123456789
-	
- 
- User ID 2:
-
-
-Email: jecrctrack.driver2@gmai.com
-
-
-Password: 123456789
+ 	User ID 2:
+	Email: jecrctrack.driver2@gmail.com
+	Password: 123456789
 
 
 ## Contact
 
-For any queries or feedback, please contact us at anurag2311s.as@gmail.com,.
+For any queries or feedback, please contact us at anurag2311s.as@gmail.com.
