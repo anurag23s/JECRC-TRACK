@@ -33,7 +33,7 @@ The project aims to help students and administrators by improving the efficiency
 ## APK LINK:
 https://drive.google.com/file/d/11eSw13kUBVT6SigkhVPpYVGM5xVIzuZI/view?usp=drivesdk
 
-The APK is valid till 25 July 2023. (Since we have used the free tier service of Firebase as our DB, it has limited free validity).
+The APK is valid till 25 July 2024. (Since we have used the free tier service of Firebase as our DB, it has limited free validity).
 
 ## Getting Started  
 
@@ -61,13 +61,11 @@ Build for Android/iOS:
 1. We have restricted the .env file due to security reasons.To run our codebase on your local system, you need to create your own .env file and use your own API Key.  In the .env file write GOOGLE_MAPS_APIKEY=$API_KEY (Replace API_KEY with our own API Key. Please make sure the below mentioned APIs are enabled, DIRECTIONS API and Google Map SDK for Android.)
 2. Since we have used the free tier service of Firebase as our DB, it has limited free validity. The current firebase is valid till DATE. However we will try to regularly update the latest Firebase Config.
 3. To use this app as a Driver (in order to share the location of the bus), you would require login credentials:
-	User ID 1:
-	Email: jecrctrack.driver1@gmail.com
-	Password: 123456789
+   	
+ 	User ID 1:
+	Email: anurag@gmail.com
+	Password: 123456
 	
- 	User ID 2:
-	Email: jecrctrack.driver2@gmail.com
-	Password: 123456789
 
 
 ## Contact
