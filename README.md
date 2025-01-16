@@ -33,7 +33,7 @@ The project aims to help students and administrators by improving the efficiency
 ## APK LINK:
 [CLICK HERE](https://drive.google.com/file/d/1EbMygYTYTvuFpOBx8NQFo6hU8rpgEN6k/view?usp=sharing)
 
-The APK is valid till 25 July 2024. (Since we have used the free tier service of Firebase as our DB, it has limited free validity).
+The APK is valid till 30 Jan 2025.
 
 ## Getting Started  
 
