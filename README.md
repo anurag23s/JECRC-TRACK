@@ -31,7 +31,7 @@ The project aims to help students and administrators by improving the efficiency
 - Google Maps API
 
 ## APK LINK:
-https://drive.google.com/file/d/11eSw13kUBVT6SigkhVPpYVGM5xVIzuZI/view?usp=drivesdk
+[CLICK HERE](https://drive.google.com/file/d/1EbMygYTYTvuFpOBx8NQFo6hU8rpgEN6k/view?usp=sharing)
 
 The APK is valid till 25 July 2024. (Since we have used the free tier service of Firebase as our DB, it has limited free validity).
 
