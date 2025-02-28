@@ -3,7 +3,7 @@ import { StyleSheet, Text, View ,TouchableOpacity, FlatList, SafeAreaView, Image
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
 import { GOOGLE_MAPS_APIKEY } from "@env";
-import { db1 } from '../src/screens/firebase';
+import { db1 } from '../firebase';
 import { onValue, off, ref } from 'firebase/database';
 import tw from 'tailwind-react-native-classnames';
 //import * as Location from 'expo-location';
@@ -14,7 +14,6 @@ import AntDesign from "react-native-vector-icons/Feather";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {LinearGradient} from 'expo-linear-gradient';
 import { LogBox } from 'react-native';
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs();//Ignore all log notifications
@@ -699,3 +698,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+

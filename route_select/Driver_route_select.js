@@ -13,7 +13,7 @@ import { ChevronLeftIcon} from 'react-native-heroicons/solid';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 import { User, getAuth, onAuthStateChanged } from 'firebase/auth';
 import * as Location from 'expo-location';
-import { db1, auth1 } from '../src/screens/firebase';
+import { db1, auth1 } from '../firebase';
 import LottieView from 'lottie-react-native';
 import { onValue, off, ref, set } from 'firebase/database';
 import { Avatar } from 'react-native-paper';

@@ -9,7 +9,7 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity,
 } from 'react-native';
-import { db1, auth1 } from './firebase';
+import { db1, auth1 } from '../../firebase';
 import {
   signInWithEmailAndPassword,
   sendPasswordResetEmail,

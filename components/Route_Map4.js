@@ -3,23 +3,20 @@ import { StyleSheet, Text, View ,TouchableOpacity, FlatList, SafeAreaView, Image
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
 import { GOOGLE_MAPS_APIKEY } from "@env";
-import { db1 } from '../src/screens/firebase';;
 import { onValue, off, ref } from 'firebase/database';
 import MIco from 'react-native-vector-icons/Foundation';
 import MIconss from 'react-native-vector-icons/FontAwesome5';
 import MIcons from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from "react-native-vector-icons/Feather";
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import MIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import tw from 'tailwind-react-native-classnames';
-import {LinearGradient} from 'expo-linear-gradient';
 import { LogBox } from 'react-native';
+import { db1 } from '../firebase';
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs();//Ignore all log notifications
 import { useNavigation } from '@react-navigation/native';
 import MCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import * as Location from 'expo-location';
 
 
 const { width: screenWidth } = Dimensions.get('window');
